@@ -41,3 +41,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 2-5: component thought introduce
 - ✨
+
+
+## 2-6: component thought use
+- ✨✨
