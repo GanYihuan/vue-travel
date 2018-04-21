@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="inputValue">
+  <button @click="handleBtnClick">submit</button>
+  <ul>
+    <li v-for="(item, index) in list" :key="index">{{item}}</li>
+  </ul>
+</div>
+
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      inputValue: '',
+      list: []
+    },
+    methods: {
+      handleBtnClick: function () {
+        this.list.push(this.inputValue)
+        this.inputValue = ''
+      }
+    }
+  })
+</script>
+</body>
+</html>
