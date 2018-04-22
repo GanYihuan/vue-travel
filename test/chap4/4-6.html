@@ -24,7 +24,11 @@
   })
 
   Vue.component('body-content', {
-    template: '<div><slot name="header"></slot><div class="content">content</div><slot name="footer"></slot></div>'
+    template: `<div>
+      <slot name="header"></slot>
+      <div class="content">content</div>
+      <slot name="footer"></slot>
+    </div>`
   })
 
   let vm = new Vue({

@@ -124,3 +124,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 4-6: slot
 *(chap4/4-6.html)*
 - ✨✨
+
+
+## 4-7: slot scope
+*(chap4/4-7.html)*
+- ✨✨
