@@ -119,3 +119,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 4-5: not father child component pass data
 *(chap4/4-5.html)*
 - ✨✨
+
+
+## 4-6: slot
+*(chap4/4-6.html)*
+- ✨✨
