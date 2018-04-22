@@ -94,3 +94,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 3-9: set
 *(chap3/3-8.html)*
 - ✨✨
+
+
+## 4-1: $refs, ref
+*(chap4/4-1.html)*
+- ✨✨
