@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="inputValue">
+  <button @click="handleBtnClick">submit</button>
+  <ul>
+    <!--<li v-for="(item, index) in list" :key="index">{{item}}</li>-->
+    <todo-item v-for="(item, index) in list" :key="index" :content="item" @delete="handleItemDelete"></todo-item>
+  </ul>
+</div>
+
+<script>
+  // M tier (yourself)
+  // V tier (yourself)
+  // VM tier (vue auto)
+
+  // global component
+  //  Vue.component('TodoItem', {
+  //    props: ['content'],
+  //    template: '<li>{{content}}</li>'
+  //  })
+
+  // local component
+  var TodoItem = {
+    props: ['content', 'index'],
+    template: '<li @click="handleBtnClick">{{content}}</li>',
+    methods: {
+      handleBtnClick () {
+        this.$emit('delete', this.index)
+      }
+    }
+  }
+
+  let app = new Vue({
+    el: '#app',
+    // M tier
+    data: {
+      inputValue: '',
+      list: []
+    },
+    methods: {
+      handleBtnClick () {
+        this.list.push(this.inputValue)
+        this.inputValue = ''
+      },
+      handleItemDelete (index) {
+        this.list.splice(index, 1)
+      }
+    },
+    components: {
+      TodoItem: TodoItem
+    }
+  })
+</script>
+</body>
+</html>
