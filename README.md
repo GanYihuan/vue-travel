@@ -59,3 +59,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 3-2: vue life circle
 *(chap3/3-2.html)*
 - ✨✨
+
+
+## 3-3: vue module
+*(chap3/3-3.html)*
+- ✨✨
