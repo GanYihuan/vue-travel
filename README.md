@@ -74,3 +74,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 3-4: computed getter setter
 *(chap3/3-5.html)*
 - ✨✨
+
+
+## 3-5: set style
+*(chap3/3-6.html)*
+- ✨✨

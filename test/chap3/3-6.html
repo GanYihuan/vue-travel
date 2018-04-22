@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .activated {
+      color: #f00
+    }
+
+    .activatedOne {
+      color: #0f0
+    }
+  </style>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div @click="handleDivClick" :class="{activated: isActivated}">
+    hello world
+  </div>
+  <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">
+    hello vue
+  </div>
+  <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">
+    hello React
+  </div>
+</div>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      isActivated: false,
+      activatedOne: '',
+      activatedTwo: 'activatedTwo',
+      styleObj: {
+        color: 'black'
+      }
+    },
+    methods: {
+      handleDivClick () {
+        this.isActivated = !this.isActivated
+      },
+      handleDivClickVue () {
+//        if (this.activatedOne === 'activatedOne') {
+//          this.activatedOne = ''
+//        } else {
+//          this.activatedOne = 'activatedOne'
+//        }
+        this.activatedOne = this.activatedOne === 'activatedOne' ? '' : 'activatedOne'
+      },
+      handleDivClickReact () {
+        this.styleObj.color = this.styleObj.color === 'black' ? 'blue' : 'black'
+      }
+    }
+  })
+</script>
+</body>
+</html>
