@@ -51,21 +51,26 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 3-1: vue instance
+## 3-1: instance
 - ✨
 ##### chrome check vue instance
 
 
-## 3-2: vue life circle
+## 3-2: life circle
 *(chap3/3-2.html)*
 - ✨✨
 
 
-## 3-3: vue module
+## 3-3: module
 *(chap3/3-3.html)*
 - ✨✨
 
 
-## 3-4: vue computed
+## 3-4: computed
 *(chap3/3-4.html)*
+- ✨✨
+
+
+## 3-4: computed getter setter
+*(chap3/3-5.html)*
 - ✨✨

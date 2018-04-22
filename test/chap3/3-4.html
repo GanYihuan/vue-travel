@@ -21,8 +21,8 @@
     },
     computed: {
       // Caching, high performance.
-      fullName() {
-        return this.firstName + ' ' + this.lastName;
+      fullName () {
+        return this.firstName + ' ' + this.lastName
       }
     },
 //    methods: {
@@ -30,17 +30,17 @@
 //        return this.firstName + ' ' + this.lastName;
 //      }
 //    }
-    watch: {
-      // Caching, high performance. more complex
-      firstName() {
-        console.log('watch once')
-        this.fullName = this.firstName + ' ' + this.lastName
-      },
-      lastName() {
-        console.log('watch once')
-        this.fullName = this.firstName + ' ' + this.lastName
-      }
-    }
+//    watch: {
+//      // Caching, high performance. more complex
+//      firstName() {
+//        console.log('watch once')
+//        this.fullName = this.firstName + ' ' + this.lastName
+//      },
+//      lastName() {
+//        console.log('watch once')
+//        this.fullName = this.firstName + ' ' + this.lastName
+//      }
+//    }
   })
 </script>
 </body>
