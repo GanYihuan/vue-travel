@@ -106,6 +106,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 4-3: component parameter check
+## 4-3: component parameter check, props features, no't props features
 *(chap4/4-3.html)*
+- ✨✨
+
+
+## 4-4: native event
+*(chap4/4-4.html)*
 - ✨✨

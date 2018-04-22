@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <child @click="handleClick">click</child>
+  <!-- .native trigger native event -->
+  <child @click.native="handleClick">native</child>
+</div>
+
+<script>
+  Vue.component('child', {
+    template: '<div @click="handleChildClick">child</div>',
+    methods: {
+      // native event
+      handleChildClick() {
+        alert('child click')
+        // this.$emit('click')
+      }
+    }
+  })
+
+  let em = new Vue({
+    el: '#app',
+    methods: {
+      // custom event
+      handleClick() {
+        alert('click')
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
