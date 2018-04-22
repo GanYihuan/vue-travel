@@ -84,3 +84,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 3-7: condition rendering
 *(chap3/3-7.html)*
 - ✨✨
+
+
+## 3-8: cycle
+*(chap3/3-8.html)*
+- ✨✨

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- operate array: push pop shift unshift splice sort reverse -->
+  <!-- operate array:  chrome: vm.list = {[...]} -->
+  <!-- :key="index.id" :  A unique identifier -->
+  <div v-for="(item, index) of list" :key="index.id">
+    {{item.text}} --- {{index}}
+  </div>
+  <hr/>
+  <!-- when cycle, template will not render in page -->
+  <template v-for="(item, index) of list" :key="index.id">
+    <div>
+      {{item.text}} --- {{index}}
+    </div>
+    <span>
+      {{item.text}}
+    </span>
+  </template>
+  <hr/>
+  <!-- operate obj:  chrome: vm.userInfo = {home: 'USA'} -->
+  <div v-for="(item, key, index) of userInfo">
+    {{item}} --- {{key}} --- {{index}}
+  </div>
+</div>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      list: [
+        {
+          id: '01',
+          text: 'Vue'
+        },
+        {
+          id: '02',
+          text: 'React'
+        },
+        {
+          id: '03',
+          text: 'Angular'
+        }
+      ],
+      userInfo: {
+        name: 'mike',
+        age: 28,
+        gender: 'male'
+      }
+    }
+  })
+</script>
+</body>
+</html>
