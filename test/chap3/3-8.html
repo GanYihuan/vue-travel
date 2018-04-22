@@ -24,8 +24,16 @@
     </span>
   </template>
   <hr/>
-  <!-- operate obj:  chrome: vm.userInfo = {home: 'USA'} -->
+  <!-- operate obj:   chrome: vm.userInfo = {home: 'USA'} -->
+  <!-- operate obj:   chrome: Vue.set(vm.userInfo, 'address', 'guangzhou') -->
+  <!-- operate obj:   chrome: Vue.$set(vm.userInfo, 'address', 'guangzhou') -->
   <div v-for="(item, key, index) of userInfo">
+    {{item}} --- {{key}} --- {{index}}
+  </div>
+  <hr/>
+  <!-- operate obj:   chrome: Vue.set(vm.userInfoArray, 1, 5) -->
+  <!-- operate obj:   chrome: Vue.$set(vm.userInfoArray, 2, 6) -->
+  <div v-for="(item, key, index) of userInfoArray">
     {{item}} --- {{key}} --- {{index}}
   </div>
 </div>
@@ -51,7 +59,8 @@
         name: 'mike',
         age: 28,
         gender: 'male'
-      }
+      },
+      userInfoArray: [1, 2, 3]
     }
   })
 </script>
