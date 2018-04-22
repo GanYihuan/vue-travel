@@ -25,17 +25,17 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## 2-2: hello vue
-*test/2-2.html*
+*(chap2/2-2.html*
 - ✨
 
 
 ## 2-3: TodoList
-*test/2-3.html*
+*(chap2/2-3.html)*
 - ✨
 
 
 ## 2-4: MVVM, MVP
-*test/2-3.html*
+*(chap2/2-4.html)*
 - ✨✨
 
 
@@ -53,3 +53,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 3-1: vue instance
 - ✨
+##### chrome check vue instance
+
+
+## 3-2: vue life circle
+*(chap3/3-2.html)*
+- ✨✨
