@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- dom element delete -->
+  <div v-if="show === 'a'">{{message}}</div>
+  <!-- v-if, v-else stick together -->
+  <!-- chrome: vm.show = 'b' -->
+  <div v-else-if="show === b">This is B</div>
+  <!-- v-if, v-else stick together -->
+  <!-- chrome: vm.show = 'c' -->
+  <div v-else>Bye</div>
+  <!-- compare v-if, high performance -->
+  <!-- setStyle: {display: none} -->
+  <div v-show="show">{{message}}</div>
+
+  <!-- chrome: vm.show = true -->
+  <!-- when show change, define key, input will clear before content -->
+  <div v-if="show">
+    userName: <input key="username"/>
+  </div>
+  <div v-else>
+    password: <input key="password"/>
+  </div>
+</div>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      show: 'a',
+      message: 'hello vue'
+    }
+  })
+</script>
+</body>
+</html>

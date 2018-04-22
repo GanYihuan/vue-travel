@@ -71,11 +71,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 3-4: computed getter setter
+## 3-5: computed getter setter
 *(chap3/3-5.html)*
 - ✨✨
 
 
-## 3-5: set style
+## 3-6: set style
 *(chap3/3-6.html)*
+- ✨✨
+
+
+## 3-7: condition rendering
+*(chap3/3-7.html)*
 - ✨✨
