@@ -99,3 +99,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 4-1: $refs, ref
 *(chap4/4-1.html)*
 - ✨✨
+
+
+## 4-2: father child transfer data
+*(chap4/4-2.html)*
+- ✨✨

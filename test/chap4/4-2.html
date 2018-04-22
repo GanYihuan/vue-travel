@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+<div id="root">
+  <!-- count="0" it's string, :count="0" it's number -->
+  <counter :count="1" @change="handleChange"></counter>
+  <counter :count="2" @change="handleChange"></counter>
+  <div>I'am: {{total}}</div>
+</div>
+
+<script>
+  let counter = {
+    // access father data
+    props: ['count'],
+    data() {
+      return {
+        // change to itself data
+        number: this.count
+      }
+    },
+    // child component can't change father data
+    // template: '<div @click="handleClick">{{count}}</div>',
+    // child component use itself data
+    template: '<div @click="handleClick">{{this.number}}</div>',
+    methods: {
+      handleClick() {
+        // this.count ++
+        this.number ++
+        this.$emit('change', 1)
+      }
+    }
+  }
+
+  let vm = new Vue({
+    el: '#root',
+    data: {
+      total: 3
+    },
+    components: {
+      counter: counter
+    },
+    methods: {
+      handleChange(data) {
+        this.total += data
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
