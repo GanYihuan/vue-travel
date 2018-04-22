@@ -104,3 +104,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 4-2: father child transfer data
 *(chap4/4-2.html)*
 - ✨✨
+
+
+## 4-3: component parameter check
+*(chap4/4-3.html)*
+- ✨✨
