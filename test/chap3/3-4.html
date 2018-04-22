@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+  {{fullName}}
+  {{age}}
+</div>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      firstName: 'Dell',
+      lastName: 'Lee',
+      fullName: 'Dell Lee',
+      age: 28
+    },
+    computed: {
+      // Caching, high performance.
+      fullName() {
+        return this.firstName + ' ' + this.lastName;
+      }
+    },
+//    methods: {
+//      fullName() {
+//        return this.firstName + ' ' + this.lastName;
+//      }
+//    }
+    watch: {
+      // Caching, high performance. more complex
+      firstName() {
+        console.log('watch once')
+        this.fullName = this.firstName + ' ' + this.lastName
+      },
+      lastName() {
+        console.log('watch once')
+        this.fullName = this.firstName + ' ' + this.lastName
+      }
+    }
+  })
+</script>
+</body>
+</html>

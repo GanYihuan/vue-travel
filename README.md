@@ -64,3 +64,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 3-3: vue module
 *(chap3/3-3.html)*
 - ✨✨
+
+
+## 3-4: vue computed
+*(chap3/3-4.html)*
+- ✨✨
