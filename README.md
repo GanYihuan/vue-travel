@@ -134,3 +134,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 4-8: Dynamic components and v-once instructions.
 *(chap4/4-8.html)*
 - ✨✨
+
+
+## 5-1: animate
+*(chap5/5-1.html)*
+- ✨✨
