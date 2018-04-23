@@ -202,49 +202,50 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## 7-1: Header component
-*(Header.vue)*
+*(home/Header.vue)*
 - ✨✨✨
 ##### 1rem = html font-size=50px
 ##### <style lang="stylus" scoped>   scoped: only use for this component
 
 
 ## 7-2: Header component
-*(Header.vue)*
+*(home/Header.vue)*
 - ✨✨
 
 
 ## 7-3: carousel component
-*(Swiper.vue)*
+*(home/Swiper.vue)*
 - ✨✨
 
 
 ## 7-4: Icons area component
-*(Icons.vue)*
+*(home/Icons.vue)*
 - ✨✨
 
 
 ## 7-5: Icons area component
-*(Icons.vue)*
+*(home/Icons.vue)*
 - ✨✨
 
 
 ## 7-6: recommend component
-*(Recommend.vue)*
+*(home/Recommend.vue)*
 - ✨✨
 
 
 ## 7-7: weekend component
-*(Weekend.vue)*
+*(home/Weekend.vue)*
 - ✨✨
 
 
 ## 7-8: back-end data
-*(Home.vue)*
+*(home/Home.vue)*
 *(config/index.js)*
 - ✨✨✨
-##### static file can use chrome check
+##### static file can check in chrome
 > http://localhost:8080/static/mock/index.json
-##### *(config/index.js)* forwarding
+##### forwarding
+*(config/index.js)*
 ```
     proxyTable: {
           '/api': {
@@ -255,13 +256,26 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
             }
     },
 ```
+*(home/Home.vue)*
+```
+axios.get('/api/index.json?city=')
+```
+> will forwarding to
+```
+axios.get('/static/mock/index.json?city=' + this.city)
+```
 
 
 ## 7-9: father child component transfer data
-*(Home.vue)*
-*(Header.vue)*
-*(Icons.vue)*
-*(Recommend.vue)*
-*(Swiper.vue)*
-*(Weekend.vue)*
+*(home/Home.vue)*
+*(home/Header.vue)*
+*(home/Icons.vue)*
+*(home/Recommend.vue)*
+*(home/Swiper.vue)*
+*(home/Weekend.vue)*
+- ✨✨✨
+
+
+## 8-1: city Header component
+*(city/Header.vue)*
 - ✨✨✨

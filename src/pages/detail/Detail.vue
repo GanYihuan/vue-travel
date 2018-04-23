@@ -59,6 +59,5 @@
 </script>
 
 <style lang="stylus" scoped>
-  .content
-    height: 50rem
+  @import "./Detail.styl";
 </style>
