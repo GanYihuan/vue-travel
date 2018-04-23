@@ -9,7 +9,7 @@
         :key="item.id"
         :to="'/detail/' + item.id"
       >
-        <img class="item-img" :src="item.imgUrl" />
+        <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
@@ -21,15 +21,16 @@
 </template>
 
 <script>
-export default {
-  name: 'HomeRecommend',
-  props: {
-    list: Array
+  export default {
+    name: 'HomeRecommend',
+    props: {
+      list: Array
+    }
   }
-}
 </script>
 
 <style lang="stylus" scoped>
-  @import '~styles/mixins.styl'
+  /*@import '~styles/mixins.styl'*/
+  @import '../../../assets/styles/varibles.styl';
   @import "./Recommend.styl";
 </style>

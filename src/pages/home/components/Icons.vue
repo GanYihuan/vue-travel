@@ -8,7 +8,7 @@
           :key="item.id"
         >
           <div class='icon-img'>
-            <img class='icon-img-content' :src='item.imgUrl' />
+            <img class='icon-img-content' :src='item.imgUrl'/>
           </div>
           <p class="icon-desc">{{item.desc}}</p>
         </div>
@@ -18,36 +18,37 @@
 </template>
 
 <script>
-export default {
-  name: 'HomeIcons',
-  props: {
-    list: Array
-  },
-  data () {
-    return {
-      swiperOption: {
-        autoplay: false
+  export default {
+    name: 'HomeIcons',
+    props: {
+      list: Array
+    },
+    data () {
+      return {
+        swiperOption: {
+          autoplay: false
+        }
+      }
+    },
+    computed: {
+      pages () {
+        const pages = []
+        this.list.forEach((item, index) => {
+          const page = Math.floor(index / 8)
+          if (!pages[page]) {
+            pages[page] = []
+          }
+          pages[page].push(item)
+        })
+        return pages
       }
     }
-  },
-  computed: {
-    pages () {
-      const pages = []
-      this.list.forEach((item, index) => {
-        const page = Math.floor(index / 8)
-        if (!pages[page]) {
-          pages[page] = []
-        }
-        pages[page].push(item)
-      })
-      return pages
-    }
   }
-}
 </script>
 
 <style lang="stylus" scoped>
   /*@import '~styles/varibles.styl'*/
   /*@import '~styles/mixins.styl'*/
+  @import '../../../assets/styles/varibles.styl';
   @import "./Icons.styl";
 </style>
