@@ -19,13 +19,6 @@
 
   export default {
     name: 'Home',
-    components: {
-      HomeHeader,
-      HomeSwiper,
-      HomeIcons,
-      HomeRecommend,
-      HomeWeekend
-    },
     data () {
       return {
         lastCity: '',
@@ -37,6 +30,16 @@
     },
     computed: {
       ...mapState(['city'])
+    },
+    mounted () {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    },
+    activated () {
+      if (this.lastCity !== this.city) {
+        this.lastCity = this.city
+        this.getHomeInfo()
+      }
     },
     methods: {
       getHomeInfo () {
@@ -55,15 +58,12 @@
         }
       }
     },
-    mounted () {
-      this.lastCity = this.city
-      this.getHomeInfo()
-    },
-    activated () {
-      if (this.lastCity !== this.city) {
-        this.lastCity = this.city
-        this.getHomeInfo()
-      }
+    components: {
+      HomeHeader,
+      HomeSwiper,
+      HomeIcons,
+      HomeRecommend,
+      HomeWeekend
     }
   }
 </script>

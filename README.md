@@ -231,3 +231,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 7-6: recommend component
 *(Recommend.vue)*
 - ✨✨
+
+
+## 7-6: weekend component
+*(Weekend.vue)*
+- ✨✨
