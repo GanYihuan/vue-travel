@@ -22,6 +22,7 @@
           </div>
         </div>
       </div>
+      <!-- cities it's object, so use (item, key) -->
       <div
         class="area"
         v-for="(item, key) of cities"

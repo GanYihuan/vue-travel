@@ -36,9 +36,13 @@
         letter: ''
       }
     },
+    mounted () {
+      this.getCityInfo()
+    },
     methods: {
       getCityInfo () {
-        axios.get('/api/city.json')
+        axios
+          .get('/api/city.json')
           .then(this.handleGetCityInfoSucc)
       },
       handleGetCityInfoSucc (res) {
@@ -52,9 +56,6 @@
       handleLetterChange (letter) {
         this.letter = letter
       }
-    },
-    mounted () {
-      this.getCityInfo()
     }
   }
 </script>

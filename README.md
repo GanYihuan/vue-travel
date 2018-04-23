@@ -238,7 +238,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 7-8: back-end data
+## 7-8: dynamic data rendering
 *(home/Home.vue)*
 *(config/index.js)*
 - ✨✨✨
@@ -296,3 +296,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(city/Alphabet.vue)*
 - ✨✨
 ##### better-scroll
+
+
+## 8-5: dynamic data rendering
+*(city/City.vue)*
+*(city/List.vue)*
+- ✨✨✨
+##### Ajax
