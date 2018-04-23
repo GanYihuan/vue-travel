@@ -238,7 +238,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 7-8: data
+## 7-8: back-end data
 *(Home.vue)*
 *(config/index.js)*
 - ✨✨✨
@@ -255,3 +255,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
             }
     },
 ```
+
+
+## 7-9: father child component transfer data
+*(Home.vue)*
+*(Header.vue)*
+*(Icons.vue)*
+*(Recommend.vue)*
+*(Swiper.vue)*
+*(Weekend.vue)*
+- ✨✨✨
