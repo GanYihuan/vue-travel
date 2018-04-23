@@ -164,3 +164,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 5-6: list animate, transition-group
 *(chap5/5-6.html)*
 - ✨✨
+
+
+## 5-7: animate package
+*(chap5/5-7.html)*
+- ✨✨
