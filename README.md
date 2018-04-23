@@ -194,3 +194,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 *(static/know1.png))*
 *(static/know2.png))*
 - ✨
+
+
+## 6-5: init project
+- ✨
+##### Travel icons
