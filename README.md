@@ -179,3 +179,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 6-1: environment config
 - ✨
+##### github ssh
