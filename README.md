@@ -325,6 +325,12 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ##### better-scroll
 
 
-## 8-9: Vuex
+## 8-9, 8-10: Vuex
+*(city/Search.vue)*
+- ✨✨✨✨
+##### if cache wrong, close chrome
+
+
+## 8-11: 
 *(city/Search.vue)*
 - ✨✨✨✨
