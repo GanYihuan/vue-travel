@@ -54,7 +54,7 @@
           if (this.timer) {
             clearTimeout(this.timer)
           }
-          // function closure
+          // Throttling function
           this.timer = setTimeout(() => {
             // e.touches[0].clientY: click position to window top distance
             // 79: 城市选择 header height

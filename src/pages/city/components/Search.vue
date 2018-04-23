@@ -1,12 +1,13 @@
 <template>
   <div>
     <div class="search">
+      <!-- Two-way binding: v-model -->
       <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音"/>
     </div>
     <div
       class="search-content"
-      ref="search"
       v-show="keyword"
+      ref="search"
     >
       <ul>
         <li
@@ -46,6 +47,16 @@
         return !this.list.length
       }
     },
+    mounted () {
+      this.scroll = new Bscroll(this.$refs.search)
+    },
+    methods: {
+      handleCityClick (city) {
+        this.changeCity(city)
+        this.$router.push('/')
+      },
+      ...mapMutations(['changeCity'])
+    },
     watch: {
       keyword () {
         if (this.timer) {
@@ -55,10 +66,12 @@
           this.list = []
           return
         }
+        // Throttling function
         this.timer = setTimeout(() => {
           const result = []
           for (let i in this.cities) {
             this.cities[i].forEach((value) => {
+              // can through spell and name search keyword
               if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
                 result.push(value)
               }
@@ -67,16 +80,6 @@
           this.list = result
         }, 100)
       }
-    },
-    methods: {
-      handleCityClick (city) {
-        this.changeCity(city)
-        this.$router.push('/')
-      },
-      ...mapMutations(['changeCity'])
-    },
-    mounted () {
-      this.scroll = new Bscroll(this.$refs.search)
     }
   }
 </script>

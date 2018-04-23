@@ -316,4 +316,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(city/Alphabet.vue)*
 - ✨✨✨
 ##### Performance optimization
-##### function closure
+##### Throttling function
+
+
+## 8-8: Search function
+*(city/Search.vue)*
+- ✨✨✨✨
+##### better-scroll
