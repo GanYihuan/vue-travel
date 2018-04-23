@@ -183,3 +183,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 6-2: dialog introduce
 - ✨
+
+
+## 6-3: router
+*(router/route.js)*
+- ✨
