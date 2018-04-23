@@ -188,3 +188,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 6-3: router
 *(router/route.js)*
 - ✨
+
+
+## 6-4: know
+*(static/know1.png))*
+*(static/know2.png))*
+- ✨
