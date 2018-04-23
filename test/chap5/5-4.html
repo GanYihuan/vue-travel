@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>use Animate.css and transition at the same time</title>
+  <link rel="stylesheet" href="../animate.css">
+  <style>
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 1s;
+    }
+  </style>
+  <script src="../vue.js"></script>
+  <script src="../velocity.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <transition
+    name="fade"
+    @before-enter="handleBeforeEnter"
+    @enter="handleEnter"
+    @after-enter="handleAfterEnter"
+    @before-leave="handleBeforeLeave"
+    @leave="handleLeave"
+    @after-leave="handleAfterLeave"
+  >
+    <div v-show="show">hello world 3</div>
+  </transition>
+  <button @click="handleClick">click3</button>
+</div>
+
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      show: true
+    },
+    methods: {
+      handleClick () {
+        this.show = !this.show
+      },
+      handleBeforeEnter (el) {
+        el.style.color = 'red'
+      },
+      handleEnter (el, done) {
+        setTimeout(() => {
+          el.style.color = 'green'
+        }, 2000)
+        setTimeout(() => {
+          // animate finished
+          done()
+        }, 4000)
+      },
+      handleAfterEnter (el, done) {
+        el.style.color = 'blue'
+        Velocity(el, {fontSize: 30}, {duration: 2000, complete: done})
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
