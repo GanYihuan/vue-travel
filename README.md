@@ -216,3 +216,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 7-3: carousel
 *(Swiper.vue)*
 - ✨✨
+
+
+## 7-4: Icons area
+*(Icons.vue)*
+- ✨✨
