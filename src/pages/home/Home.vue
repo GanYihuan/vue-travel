@@ -35,8 +35,11 @@
       this.lastCity = this.city
       this.getHomeInfo()
     },
+    // App.vue, when use keep-alive, will add-on activated
+    // when page repeat will run
     activated () {
       if (this.lastCity !== this.city) {
+        // save preCity
         this.lastCity = this.city
         this.getHomeInfo()
       }

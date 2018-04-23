@@ -326,11 +326,20 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 
 ## 8-9, 8-10: Vuex
+*(city/List.vue)*
 *(city/Search.vue)*
+*(home/Header.vue)*
+*(store/state.js)*
+*(store/store.js)*
+*(store/mutations.js)*
 - ✨✨✨✨
 ##### if cache wrong, close chrome
 
 
-## 8-11: 
-*(city/Search.vue)*
+## 8-11: performed optimization
+*(App.vue)*
+*(Home.vue)*
 - ✨✨✨✨
+##### keep-alive
+##### Ajax
+
