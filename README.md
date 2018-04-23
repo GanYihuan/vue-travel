@@ -199,3 +199,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 6-5: init project
 - ✨
 ##### Travel icons
+
+
+## 7-1: Header
+*(Header.vue)*
+- ✨✨✨
+##### 1rem = html font-size=50px
+##### <style lang="stylus" scoped>   scoped: only use for this component
