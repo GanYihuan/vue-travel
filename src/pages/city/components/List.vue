@@ -67,6 +67,7 @@
     },
     methods: {
       handleCityClick (city) {
+        // vuex/mutations
         this.changeCity(city)
         this.$router.push('/')
       },

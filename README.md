@@ -323,3 +323,8 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(city/Search.vue)*
 - ✨✨✨✨
 ##### better-scroll
+
+
+## 8-9: Vuex bug!
+*(city/Search.vue)*
+- ✨✨✨✨
