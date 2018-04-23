@@ -139,3 +139,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 5-1: animate
 *(chap5/5-1.html)*
 - ✨✨
+
+
+## 5-2: Animate.css library
+*(chap5/5-2.html)*
+- ✨✨

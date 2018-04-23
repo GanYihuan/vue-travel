@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>动画库</title>
+  <link rel="stylesheet" href="../animate.css">
+  <style>
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .fade-enter-active {
+      transform-origin: left center;
+      animation: bounce-in 2s;
+    }
+
+    .fade-leave-active {
+      transform-origin: left center;
+      animation: bounce-in 2s reverse;
+    }
+
+    .active {
+      transform-origin: left center;
+      animation: bounce-in 2s;
+    }
+
+    .leave {
+      transform-origin: left center;
+      animation: bounce-in 2s reverse;
+    }
+  </style>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <transition name="fade">
+    <div v-if="show">hello world</div>
+  </transition>
+  <button @click="handleClick">click</button>
+  <hr/>
+  <!-- 自定义动画名称 -->
+  <transition
+    enter-active-class="active"
+    leave-active-class="leave"
+  >
+    <div v-if="show">hello world 2</div>
+  </transition>
+  <button @click="handleClick">click2</button>
+  <hr/>
+  <!-- 使用Animate.css库 -->
+  <transition
+    enter-active-class="animated swing"
+    leave-active-class="animated shake"
+  >
+    <div v-if="show">hello world 3</div>
+  </transition>
+  <button @click="handleClick">click3</button>
+</div>
+
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      show: true
+    },
+    methods: {
+      handleClick () {
+        this.show = !this.show
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
