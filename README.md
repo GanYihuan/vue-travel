@@ -303,3 +303,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(city/List.vue)*
 - ✨✨✨
 ##### Ajax
+
+
+## 8-6: Brother component linkage, Alphabet scroll
+*(city/Alphabet.vue)*
+*(city/City.vue)*
+*(city/List.vue)*
+- ✨✨✨✨

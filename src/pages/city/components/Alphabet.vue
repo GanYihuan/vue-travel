@@ -27,6 +27,7 @@
         for (let i in this.cities) {
           letters.push(i)
         }
+        // [A,B,C...]
         return letters
       }
     },
@@ -38,6 +39,7 @@
       }
     },
     updated () {
+      // startY: 'A' to father top distance
       this.startY = this.$refs['A'][0].offsetTop
     },
     methods: {
@@ -53,6 +55,8 @@
             clearTimeout(this.timer)
           }
           this.timer = setTimeout(() => {
+            // e.touches[0].clientY: click position to window top distance
+            // 79: 城市选择 header height
             const touchY = e.touches[0].clientY - 79
             const index = Math.floor((touchY - this.startY) / 20)
             if (index >= 0 && index < this.letters.length) {

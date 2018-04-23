@@ -23,6 +23,7 @@
         </div>
       </div>
       <!-- cities it's object, so use (item, key) -->
+      <!-- (item,key)-> key: a,b,c..., :ref='a,b,c...' -->
       <div
         class="area"
         v-for="(item, key) of cities"
@@ -73,8 +74,12 @@
     },
     watch: {
       letter () {
+        // if letter !== null
         if (this.letter) {
           const element = this.$refs[this.letter][0]
+          // console.log(this.$refs[this.letter])
+          // this.$refs[this.letter]: isArray
+          // better-scroll: scrollToElement
           this.scroll.scrollToElement(element)
         }
       }
