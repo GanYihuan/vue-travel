@@ -169,3 +169,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 5-7: animate package
 *(chap5/5-7.html)*
 - ✨✨
+
+
+## 5-8: conclusion
+- ✨
+##### dynamic transition
+##### state transition
