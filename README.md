@@ -310,3 +310,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(city/City.vue)*
 *(city/List.vue)*
 - ✨✨✨✨
+
+
+## 8-7: Alphabet Performance optimization
+*(city/Alphabet.vue)*
+- ✨✨✨
+##### Performance optimization
+##### function closure
