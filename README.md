@@ -233,6 +233,25 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 7-6: weekend component
+## 7-7: weekend component
 *(Weekend.vue)*
 - ✨✨
+
+
+## 7-8: data
+*(Home.vue)*
+*(config/index.js)*
+- ✨✨✨
+##### static file can use chrome check
+> http://localhost:8080/static/mock/index.json
+##### *(config/index.js)* forwarding
+```
+    proxyTable: {
+          '/api': {
+              target: 'http://localhost:8080',
+              pathRewrite: {
+                '^/api': '/static/mock'
+              }
+            }
+    },
+```
