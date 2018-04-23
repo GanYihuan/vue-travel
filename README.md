@@ -278,4 +278,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 ## 8-1: city Header component
 *(city/Header.vue)*
-- ✨✨✨
+- ✨
+
+
+## 8-2: city Search component
+*(city/Search.vue)*
+- ✨
