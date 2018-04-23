@@ -60,6 +60,9 @@
         currentCity: 'city'
       })
     },
+    mounted () {
+      this.scroll = new Bscroll(this.$refs.wrapper)
+    },
     methods: {
       handleCityClick (city) {
         this.changeCity(city)
@@ -74,9 +77,6 @@
           this.scroll.scrollToElement(element)
         }
       }
-    },
-    mounted () {
-      this.scroll = new Bscroll(this.$refs.wrapper)
     }
   }
 </script>

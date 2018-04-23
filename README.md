@@ -287,5 +287,12 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 
 ## 8-3: city List component
-*(city/Search.vue)*
+*(city/List.vue)*
 - ✨✨
+
+
+## 8-4: city List component better-scroll
+*(city/Search.vue)*
+*(city/Alphabet.vue)*
+- ✨✨
+##### better-scroll
