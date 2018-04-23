@@ -144,3 +144,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 5-2: Animate.css library
 *(chap5/5-2.html)*
 - ✨✨
+
+
+## 5-3: use Animate.css and transition at the same time
+*(chap5/5-3.html)*
+- ✨✨
