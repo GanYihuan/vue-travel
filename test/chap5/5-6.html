@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>list transition</title>
+  <link rel="stylesheet" href="../animate.css">
+  <style>
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 2s;
+    }
+  </style>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <transition-group name="fade">
+    <div v-for="(item, index) of list" :key="item.id">
+      {{item.title}}
+    </div>
+  </transition-group>
+  <button @click="handleClick">click3</button>
+</div>
+
+<script>
+  let count = 0
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      list: []
+    },
+    methods: {
+      handleClick () {
+        this.list.push({
+          id: count++,
+          title: 'hello world'
+        })
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
