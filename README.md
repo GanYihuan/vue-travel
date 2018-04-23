@@ -151,6 +151,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 
 
-## 5-4: many component animate
+## 5-4: js animate and velocity.js
 *(chap5/5-4.html)*
+- ✨✨
+
+
+## 5-5: many component animate
+*(chap5/5-5.html)*
 - ✨✨
