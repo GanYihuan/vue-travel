@@ -201,23 +201,33 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ##### Travel icons
 
 
-## 7-1: Header
+## 7-1: Header component
 *(Header.vue)*
 - ✨✨✨
 ##### 1rem = html font-size=50px
 ##### <style lang="stylus" scoped>   scoped: only use for this component
 
 
-## 7-2: Header icon
+## 7-2: Header component
 *(Header.vue)*
 - ✨✨
 
 
-## 7-3: carousel
+## 7-3: carousel component
 *(Swiper.vue)*
 - ✨✨
 
 
-## 7-4: Icons area
+## 7-4: Icons area component
 *(Icons.vue)*
+- ✨✨
+
+
+## 7-5: Icons area component
+*(Icons.vue)*
+- ✨✨
+
+
+## 7-6: recommend component
+*(Recommend.vue)*
 - ✨✨
