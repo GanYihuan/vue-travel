@@ -211,3 +211,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 7-2: Header icon
 *(Header.vue)*
 - ✨✨
+
+
+## 7-3: carousel
+*(Swiper.vue)*
+- ✨✨
