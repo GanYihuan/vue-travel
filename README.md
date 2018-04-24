@@ -392,7 +392,7 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(config/index.js)*
 *(package.json)*
 *(city/Alphabet.vue)*
-- ✨✨
+- ✨✨✨
 ##### get IP
 ```
 ifconfig
@@ -414,3 +414,18 @@ IP:8080
 > fix bug
 ##### babel-polyfill
 > when your mobile too low, add some promise grammar
+
+
+## 10-3: package
+*(config/index.js)*
+- ✨✨✨
+```
+npm run build
+```
+*(config/index.js)*
+> App put into project file, need to config path, Back-end access project file can run App
+```
+build: {
+    assetsPublicPath: '/project',
+}
+```
