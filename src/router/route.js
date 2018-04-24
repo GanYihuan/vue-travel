@@ -19,6 +19,7 @@ export default new Router({
       component: City
     },
     {
+      // transfer parameter
       path: '/detail/:id',
       name: 'Detail',
       component: Detail

@@ -343,3 +343,7 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ##### keep-alive
 ##### Ajax
 
+
+## 9-1: Banner component
+*(Banner.vue)*
+- ✨✨
