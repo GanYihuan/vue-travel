@@ -358,3 +358,8 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ## 9-3: Header component animate
 *(Header.vue)*
 - ✨✨✨
+
+
+## 9-4: fix bug
+*(Header.vue)*
+- ✨✨✨
