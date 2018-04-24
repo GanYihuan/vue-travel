@@ -375,3 +375,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(route.js)*
 - ✨✨✨
 ##### route
+
+
+## 9-7: animate
+*(FadeAnimation.vue)*
+*(Banner.vue)*
+- ✨✨
