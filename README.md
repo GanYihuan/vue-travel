@@ -381,3 +381,8 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(FadeAnimation.vue)*
 *(Banner.vue)*
 - ✨✨
+
+
+## 10-1: Front-end Back-end intermodulation.
+*(config/index.js)*
+- ✨✨
