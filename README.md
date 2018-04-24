@@ -429,3 +429,10 @@ build: {
     assetsPublicPath: '/project',
 }
 ```
+
+
+## 10-4: video can't open
+
+
+## 10-5: summary
+- ✨
