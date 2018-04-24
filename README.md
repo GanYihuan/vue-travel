@@ -383,6 +383,34 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - ✨✨
 
 
-## 10-1: Front-end Back-end intermodulation.
+## 10-1: Front-end Back-end intermodulation
 *(config/index.js)*
 - ✨✨
+
+
+## 10-2: mobile test
+*(config/index.js)*
+*(package.json)*
+*(city/Alphabet.vue)*
+- ✨✨
+##### get IP
+```
+ifconfig
+```
+> inet: IP
+*(package.json)*
+```
+"dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
+```
+##### chrome:
+```
+IP:8080
+```
+##### mobile in the same Local area network, access
+```
+IP:8080
+```
+*(city/Alphabet.vue)*
+> fix bug
+##### babel-polyfill
+> when your mobile too low, add some promise grammar
