@@ -353,3 +353,8 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(Gallary.vue)*
 - ✨✨✨
 ##### Swiper official website
+
+
+## 9-3: Header component animate
+*(Header.vue)*
+- ✨✨✨

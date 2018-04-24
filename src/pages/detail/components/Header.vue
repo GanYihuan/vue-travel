@@ -4,7 +4,8 @@
       tag="div"
       to="/"
       class="header-abs"
-      v-show="showAbs">
+      v-show="showAbs"
+    >
       <div class="iconfont header-abs-back">&#xe624;</div>
     </router-link>
     <div
@@ -31,24 +32,26 @@
         }
       }
     },
+    mounted () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    unmounted () {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
     methods: {
       handleScroll () {
         const top = document.documentElement.scrollTop
         if (top > 60) {
           let opacity = top / 140
           opacity = opacity > 1 ? 1 : opacity
+          // key === value, just write one
+          // this.opacityStyle = {opacity: opacity}
           this.opacityStyle = {opacity}
           this.showAbs = false
         } else {
           this.showAbs = true
         }
       }
-    },
-    mounted () {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    unmounted () {
-      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 </script>
