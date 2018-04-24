@@ -33,11 +33,15 @@
         list: []
       }
     },
+    mounted () {
+      this.getDetailInfo()
+    },
     methods: {
       getDetailInfo () {
         axios
           .get('/api/detail.json', {
             params: {
+              // get router parameter
               id: this.$route.params.id
             }
           })
@@ -53,9 +57,6 @@
           this.list = data.categoryList
         }
       }
-    },
-    mounted () {
-      this.getDetailInfo()
     }
   }
 </script>

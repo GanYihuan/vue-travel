@@ -25,6 +25,7 @@ export default new Router({
       component: Detail
     }
   ],
+  // route jump, page always locate at top
   scrollBehavior (to, from, savedPosition) {
     return {x: 0, y: 0}
   }

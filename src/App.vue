@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <!-- 路由加载后内容缓存起来, 在此进入时读取缓存, 防止不停的加载 -->
+    <!--
+      keep-alive: The content is cached after the route is loaded,
+      and the cache is read when loaded to prevent continuous loading.
+    -->
+    <!-- name = Detail component Do not do cache processing. -->
     <keep-alive exclude="Detail">
       <router-view/>
     </keep-alive>

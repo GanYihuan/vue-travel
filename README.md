@@ -368,3 +368,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ## 9-5: Recursive components
 *(List.vue)*
 - ✨✨✨
+
+
+## 9-6: dynamic data rendering
+*(Detail.vue)*
+*(route.js)*
+- ✨✨✨
+##### route
