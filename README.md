@@ -347,3 +347,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ## 9-1: Banner component
 *(Banner.vue)*
 - ✨✨
+
+
+## 9-2: Gallary component, Swiper
+*(Gallary.vue)*
+- ✨✨✨
+##### Swiper official website
