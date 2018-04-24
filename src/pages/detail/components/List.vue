@@ -18,6 +18,7 @@
 
 <script>
   export default {
+    // use for Recursive
     name: 'DetailList',
     props: {
       list: Array

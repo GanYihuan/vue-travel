@@ -363,3 +363,8 @@ axios.get('/static/mock/index.json?city=' + this.city)
 ## 9-4: fix bug
 *(Header.vue)*
 - ✨✨✨
+
+
+## 9-5: Recursive components
+*(List.vue)*
+- ✨✨✨
