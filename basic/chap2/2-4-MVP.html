@@ -6,9 +6,7 @@
   <script src="../jquery-3.2.1.js"></script>
 </head>
 <body>
-
 <!-- MVP mode -->
-
 <div>
   <input id="input" type="text"/>
   <button id="btn">submit</button>
@@ -25,13 +23,13 @@
       this.bindEvents()
     },
     bindEvents: function () {
-      var btn = $('#btn')
+      let btn = $('#btn')
       btn.on('click', $.proxy(this.handleBtnClick, this))
     },
     handleBtnClick: function () {
-      var inputElem = $('#input')
-      var inputValue = inputElem.val()
-      var ulElem = $('#list')
+      let inputElem = $('#input')
+      let inputValue = inputElem.val()
+      let ulElem = $('#list')
       ulElem.append('<li>' +
         inputValue +
         '</li>')
@@ -39,9 +37,8 @@
     }
   })
 
-  var page = new Page()
+  let page = new Page()
   page.init()
 </script>
-
 </body>
 </html>
