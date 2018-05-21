@@ -14,6 +14,7 @@
   import HomeIcons from './components/Icons'
   import HomeRecommend from './components/Recommend'
   import HomeWeekend from './components/Weekend'
+  // Ajax
   import axios from 'axios'
   import { mapState } from 'vuex'
 

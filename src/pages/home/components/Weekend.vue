@@ -29,7 +29,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~styles/mixins.styl'*/
-  @import '../../../assets/styles/varibles.styl';
+  /* @import '../../../assets/styles/varibles.styl'; */
+  @import '~styles/mixins.styl'
   @import "./Weekend.styl";
 </style>

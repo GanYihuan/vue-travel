@@ -265,14 +265,14 @@ npm install vue-awesome-swiper --save
 ##### forwarding
 *(config/index.js)*
 ```
-    proxyTable: {
-          '/api': {
-              target: 'http://localhost:8080',
-              pathRewrite: {
-                '^/api': '/static/mock'
-              }
-            }
-    },
+proxyTable: {
+  '/api': {
+      target: 'http://localhost:8080',
+      pathRewrite: {
+        '^/api': '/static/mock'
+      }
+    }
+},
 ```
 *(home/Home.vue)*
 ```
