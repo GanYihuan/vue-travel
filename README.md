@@ -179,6 +179,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 6-1: environment config
 - ✨
+```
+node -v
+npm -v
+```
 
 
 ## 6-2: dialog introduce
@@ -197,8 +201,14 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## 6-5: init project
-- ✨
+- ✨✨
 ##### Travel icons
+##### index.html
+##### reset.css
+##### border.css
+```
+npm install fastclick
+```
 
 
 ## 7-1: Header component
