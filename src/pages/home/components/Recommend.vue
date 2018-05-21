@@ -3,8 +3,8 @@
     <div class="title">热销推荐</div>
     <ul>
       <router-link
-        tag="li"
         class="item border-bottom"
+        tag="li"
         v-for="item of list"
         :key="item.id"
         :to="'/detail/' + item.id"
@@ -30,7 +30,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~styles/mixins.styl'*/
-  @import '../../../assets/styles/varibles.styl';
+  /* @import '../../../assets/styles/varibles.styl'; */
+  @import '~styles/mixins.styl'
   @import "./Recommend.styl";
 </style>
