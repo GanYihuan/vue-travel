@@ -229,7 +229,11 @@ npm install stylus-loader --save
 
 ## 7-3: carousel component
 *(home/Swiper.vue)*
-- ✨✨
+- ✨✨✨
+```
+npm install vue-awesome-swiper --save
+```
+##### prevent shake, inside css .wrapper
 
 
 ## 7-4: Icons area component
