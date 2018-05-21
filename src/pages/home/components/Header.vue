@@ -29,7 +29,7 @@
 
 <style lang="stylus" scoped>
   /* scoped: only use for this component */
-  /*@import '~styles/varibles.styl';*/
-  @import '../../../assets/styles/varibles.styl';
+  /* @import '../../../assets/styles/varibles.styl'; */
+  @import '~styles/varibles.styl';
   @import "./Header.styl";
 </style>
