@@ -216,6 +216,10 @@ npm install fastclick
 - ✨✨✨
 ##### 1rem = html font-size=50px
 ##### <style lang="stylus" scoped>   scoped: only use for this component
+```
+npm install stylus --save
+npm install stylus-loader --save
+```
 
 
 ## 7-2: Header component
