@@ -2,10 +2,9 @@
   <div class="icons">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
-        <div
-          class="icon"
-          v-for="item of page"
-          :key="item.id"
+        <div class="icon"
+             v-for="item of page"
+             :key="item.id"
         >
           <div class='icon-img'>
             <img class='icon-img-content' :src='item.imgUrl'/>
@@ -47,8 +46,8 @@
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~styles/varibles.styl'*/
   /*@import '~styles/mixins.styl'*/
-  @import '../../../assets/styles/varibles.styl';
+  /*@import '../../../assets/styles/varibles.styl';*/
+  @import '~styles/varibles.styl'
   @import "./Icons.styl";
 </style>
