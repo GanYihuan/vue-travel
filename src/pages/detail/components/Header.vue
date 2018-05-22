@@ -1,9 +1,9 @@
 <template>
   <div>
     <router-link
+      class="header-abs"
       tag="div"
       to="/"
-      class="header-abs"
       v-show="showAbs"
     >
       <div class="iconfont header-abs-back">&#xe624;</div>
