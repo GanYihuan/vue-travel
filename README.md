@@ -352,6 +352,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 *(store/mutations.js)*
 - ✨✨✨✨
 ##### if cache wrong, close chrome
+##### install vuex
+```
+npm install vuex --save
+```
 
 
 ## 8-11: performed optimization
