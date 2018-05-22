@@ -330,7 +330,7 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - ✨✨✨✨
 
 
-## 8-7: Alphabet Performance optimization
+## 8-5: dynamic data rendering
 *(city/Alphabet.vue)*
 - ✨✨✨
 ##### Performance optimization
