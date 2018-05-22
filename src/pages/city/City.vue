@@ -6,11 +6,13 @@
       :cities="cities"
       :hot="hotCities"
       :letter="letter"
-    ></city-list>
+    >
+    </city-list>
     <city-alphabet
       :cities="cities"
       @change="handleLetterChange"
-    ></city-alphabet>
+    >
+    </city-alphabet>
   </div>
 </template>
 
