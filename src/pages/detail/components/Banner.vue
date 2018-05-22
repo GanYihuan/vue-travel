@@ -14,10 +14,11 @@
     </div>
     <fade-animation>
       <common-gallary
-        :imgs="bannerImgs"
         v-show="showGallary"
+        :imgs="bannerImgs"
         @close="handleGallaryClose"
-      ></common-gallary>
+      >
+      </common-gallary>
     </fade-animation>
   </div>
 </template>
