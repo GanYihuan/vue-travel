@@ -390,6 +390,11 @@ npm install vuex --save
 ## 9-5: Recursive components
 *(List.vue)*
 - ✨✨✨
+##### 
+```
+// name use for Recursive
+name: 'DetailList',
+```
 
 
 ## 9-6: dynamic data rendering

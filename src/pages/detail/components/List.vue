@@ -9,7 +9,7 @@
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
-      <div v-if="item.children" class="item-chilren">
+      <div class="item-chilren" v-if="item.children">
         <detail-list :list="item.children"></detail-list>
       </div>
     </div>
@@ -18,7 +18,7 @@
 
 <script>
   export default {
-    // use for Recursive
+    // name use for Recursive
     name: 'DetailList',
     props: {
       list: Array
