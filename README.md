@@ -30,11 +30,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 -**chap2/2-3.html**
 
-## 2-4: MVVM, MVP ✨✨
+## 2-4: MVVM, MVP ✨✨✨✨
 
 -**chap2/2-4.html**
-
-- ✨✨✨✨
 
 ## 2-5: component thought introduce
 
