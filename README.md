@@ -38,19 +38,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 2-6: component thought use ✨✨
 
-## 2-7: father child pass data ✨✨
+## 2-7: father child pass data ✨✨✨
 
-## 3-1: instance
+## 3-1: vue instance ✨
 
-- ✨
+## 3-2: life circle ✨✨
 
-##### chrome check vue instance
-
-## 3-2: life circle
-
-_(chap3/3-2.html)_
-
-- ✨✨
+- **chap3/3-2.html**
 
 ## 3-3: module
 
