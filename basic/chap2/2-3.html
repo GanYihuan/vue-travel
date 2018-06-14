@@ -7,6 +7,7 @@
 </head>
 <body>
 <div id="app">
+  <!-- v-model: double bind -->
   <input type="text" v-model="inputValue">
   <button @click="handleBtnClick">submit</button>
   <ul>
@@ -15,12 +16,8 @@
 </div>
 
 <script>
-  // M tier (yourself)
-  // V tier (yourself)
-  // VM tier (vue auto)
   let app = new Vue({
     el: '#app',
-    // M tier
     data: {
       inputValue: '',
       list: []

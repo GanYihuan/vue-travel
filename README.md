@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -20,250 +20,300 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## 慕课网: Vue2.5 开发去哪儿网 App 从零基础入门到实战项目
 
-## 慕课网: Vue2.5开发去哪儿网App 从零基础入门到实战项目
+## 2-2: hello vue ✨
 
+-**chap2/2-2.html**
 
-## 2-2: hello vue
-*(chap2/2-2.html*
-- ✨
+## 2-3: TodoList ✨
 
-
-## 2-3: TodoList
-*(chap2/2-3.html)*
-- ✨
-
+-**chap2/2-3.html**
 
 ## 2-4: MVVM, MVP
-*(chap2/2-4.html)*
+
+-**chap2/2-4.html**
+
 - ✨✨✨✨
 
-
 ## 2-5: component thought introduce
-- ✨
 
+- ✨
 
 ## 2-6: component thought use
-- ✨✨
 
+- ✨✨
 
 ## 2-7: father child pass data
-- ✨✨
 
+- ✨✨
 
 ## 3-1: instance
+
 - ✨
+
 ##### chrome check vue instance
 
-
 ## 3-2: life circle
-*(chap3/3-2.html)*
-- ✨✨
 
+_(chap3/3-2.html)_
+
+- ✨✨
 
 ## 3-3: module
-*(chap3/3-3.html)*
-- ✨✨
 
+_(chap3/3-3.html)_
+
+- ✨✨
 
 ## 3-4: computed
-*(chap3/3-4.html)*
-- ✨✨
 
+_(chap3/3-4.html)_
+
+- ✨✨
 
 ## 3-5: computed getter setter
-*(chap3/3-5.html)*
-- ✨✨
 
+_(chap3/3-5.html)_
+
+- ✨✨
 
 ## 3-6: set style
-*(chap3/3-6.html)*
-- ✨✨
 
+_(chap3/3-6.html)_
+
+- ✨✨
 
 ## 3-7: condition rendering
-*(chap3/3-7.html)*
-- ✨✨
 
+_(chap3/3-7.html)_
+
+- ✨✨
 
 ## 3-8: cycle
-*(chap3/3-8.html)*
-- ✨✨
 
+_(chap3/3-8.html)_
+
+- ✨✨
 
 ## 3-9: set
-*(chap3/3-8.html)*
-- ✨✨
 
+_(chap3/3-8.html)_
+
+- ✨✨
 
 ## 4-1: $refs, ref
-*(chap4/4-1.html)*
-- ✨✨
 
+_(chap4/4-1.html)_
+
+- ✨✨
 
 ## 4-2: father child transfer data
-*(chap4/4-2.html)*
-- ✨✨
 
+_(chap4/4-2.html)_
+
+- ✨✨
 
 ## 4-3: component parameter check, props features, no't props features
-*(chap4/4-3.html)*
-- ✨✨
 
+_(chap4/4-3.html)_
+
+- ✨✨
 
 ## 4-4: native event
-*(chap4/4-4.html)*
-- ✨✨
 
+_(chap4/4-4.html)_
+
+- ✨✨
 
 ## 4-5: not father child component pass data
-*(chap4/4-5.html)*
-- ✨✨
 
+_(chap4/4-5.html)_
+
+- ✨✨
 
 ## 4-6: slot
-*(chap4/4-6.html)*
-- ✨✨
 
+_(chap4/4-6.html)_
+
+- ✨✨
 
 ## 4-7: slot scope
-*(chap4/4-7.html)*
-- ✨✨
 
+_(chap4/4-7.html)_
+
+- ✨✨
 
 ## 4-8: Dynamic components and v-once instructions.
-*(chap4/4-8.html)*
-- ✨✨
 
+_(chap4/4-8.html)_
+
+- ✨✨
 
 ## 5-1: animate
-*(chap5/5-1.html)*
-- ✨✨
 
+_(chap5/5-1.html)_
+
+- ✨✨
 
 ## 5-2: Animate.css library
-*(chap5/5-2.html)*
-- ✨✨
 
+_(chap5/5-2.html)_
+
+- ✨✨
 
 ## 5-3: use Animate.css and transition at the same time
-*(chap5/5-3.html)*
-- ✨✨
 
+_(chap5/5-3.html)_
+
+- ✨✨
 
 ## 5-4: js animate and velocity.js
-*(chap5/5-4.html)*
-- ✨✨
 
+_(chap5/5-4.html)_
+
+- ✨✨
 
 ## 5-5: many component animate
-*(chap5/5-5.html)*
-- ✨✨
 
+_(chap5/5-5.html)_
+
+- ✨✨
 
 ## 5-6: list animate, transition-group
-*(chap5/5-6.html)*
-- ✨✨
 
+_(chap5/5-6.html)_
+
+- ✨✨
 
 ## 5-7: animate package
-*(chap5/5-7.html)*
+
+_(chap5/5-7.html)_
+
 - ✨✨
 
-
 ## 5-8: conclusion
+
 - ✨
+
 ##### dynamic transition
+
 ##### state transition
 
-
 ## 6-1: environment config
+
 - ✨
+
 ```
 node -v
 npm -v
 ```
 
-
 ## 6-2: dialog introduce
-- ✨
 
+- ✨
 
 ## 6-3: router
-*(router/route.js)*
-- ✨
 
+_(router/route.js)_
+
+- ✨
 
 ## 6-4: know
-*(static/know1.png))*
-*(static/know2.png))*
+
+_(static/know1.png))_
+_(static/know2.png))_
+
 - ✨
 
-
 ## 6-5: init project
+
 - ✨✨
+
 ##### Travel icons
+
 ##### index.html
+
 ##### reset.css
+
 ##### border.css
+
 ```
 npm install fastclick
 ```
 
-
 ## 7-1: Header component
-*(home/Header.vue)*
+
+_(home/Header.vue)_
+
 - ✨✨✨
+
 ##### 1rem = html font-size=50px
-##### <style lang="stylus" scoped>   scoped: only use for this component
+
+##### <style lang="stylus" scoped> scoped: only use for this component
+
 ```
 npm install stylus --save
 npm install stylus-loader --save
 ```
 
-
 ## 7-2: Header component
-*(home/Header.vue)*
+
+_(home/Header.vue)_
+
 - ✨✨
 
-
 ## 7-3: carousel component
-*(home/Swiper.vue)*
+
+_(home/Swiper.vue)_
+
 - ✨✨✨
+
 ```
 npm install vue-awesome-swiper --save
 ```
+
 ##### prevent shake, inside css .wrapper
 
-
 ## 7-4: Icons area component
-*(home/Icons.vue)*
-- ✨✨
 
+_(home/Icons.vue)_
+
+- ✨✨
 
 ## 7-5: Icons area component
-*(home/Icons.vue)*
-- ✨✨
 
+_(home/Icons.vue)_
+
+- ✨✨
 
 ## 7-6: recommend component
-*(home/Recommend.vue)*
-- ✨✨
 
+_(home/Recommend.vue)_
+
+- ✨✨
 
 ## 7-7: weekend component
-*(home/Weekend.vue)*
+
+_(home/Weekend.vue)_
+
 - ✨✨
 
-
 ## 7-8: dynamic data rendering
-*(home/Home.vue)*
-*(config/index.js)*
+
+_(home/Home.vue)_
+_(config/index.js)_
+
 - ✨✨✨
+
 ##### static file can check in chrome
+
 > http://localhost:8080/static/mock/index.json
+
 ##### forwarding
-*(config/index.js)*
+
+_(config/index.js)_
+
 ```
 proxyTable: {
   '/api': {
@@ -274,192 +324,246 @@ proxyTable: {
     }
 },
 ```
-*(home/Home.vue)*
+
+_(home/Home.vue)_
+
 ```
 axios.get('/api/index.json?city=')
 ```
+
 > will forwarding to
+
 ```
 axios.get('/static/mock/index.json?city=' + this.city)
 ```
 
-
 ## 7-9: father child component transfer data
-*(home/Home.vue)*
-*(home/Header.vue)*
-*(home/Icons.vue)*
-*(home/Recommend.vue)*
-*(home/Swiper.vue)*
-*(home/Weekend.vue)*
-- ✨✨✨
 
+_(home/Home.vue)_
+_(home/Header.vue)_
+_(home/Icons.vue)_
+_(home/Recommend.vue)_
+_(home/Swiper.vue)_
+_(home/Weekend.vue)_
+
+- ✨✨✨
 
 ## 8-1: city Header component
-*(city/Header.vue)*
-- ✨
 
+_(city/Header.vue)_
+
+- ✨
 
 ## 8-2: city Search component
-*(city/Search.vue)*
+
+_(city/Search.vue)_
+
 - ✨
 
-
 ## 8-3: city List component
-*(city/List.vue)*
-- ✨✨
 
+_(city/List.vue)_
+
+- ✨✨
 
 ## 8-4: city List component better-scroll
-*(city/Search.vue)*
-*(city/Alphabet.vue)*
-- ✨✨
-##### better-scroll
 
+_(city/Search.vue)_
+_(city/Alphabet.vue)_
+
+- ✨✨
+
+##### better-scroll
 
 ## 8-5: dynamic data rendering
-*(city/City.vue)*
-*(city/List.vue)*
+
+_(city/City.vue)_
+_(city/List.vue)_
+
 - ✨✨✨
+
 ##### Ajax
 
-
 ## 8-6: Brother component linkage, Alphabet scroll
-*(city/Alphabet.vue)*
-*(city/City.vue)*
-*(city/List.vue)*
-- ✨✨✨✨
 
+_(city/Alphabet.vue)_
+_(city/City.vue)_
+_(city/List.vue)_
+
+- ✨✨✨✨
 
 ## 8-7: Alphabet Performance optimization
-*(city/Alphabet.vue)*
+
+_(city/Alphabet.vue)_
+
 - ✨✨✨
+
 ##### Performance optimization
+
 ##### Throttling function
 
-
 ## 8-8: Search function
-*(city/Search.vue)*
+
+_(city/Search.vue)_
+
 - ✨✨✨✨
+
 ##### better-scroll
 
-
 ## 8-9, 8-10: Vuex
-*(city/List.vue)*
-*(city/Search.vue)*
-*(home/Header.vue)*
-*(store/state.js)*
-*(store/store.js)*
-*(store/mutations.js)*
+
+_(city/List.vue)_
+_(city/Search.vue)_
+_(home/Header.vue)_
+_(store/state.js)_
+_(store/store.js)_
+_(store/mutations.js)_
+
 - ✨✨✨✨
+
 ##### if cache wrong, close chrome
+
 ##### install vuex
+
 ```
 npm install vuex --save
 ```
 
-
 ## 8-11: performed optimization
-*(App.vue)*
-*(Home.vue)*
+
+_(App.vue)_
+_(Home.vue)_
+
 - ✨✨✨✨
+
 ##### keep-alive
+
 ##### Ajax
 
-
 ## 9-1: Banner component
-*(Banner.vue)*
+
+_(Banner.vue)_
+
 - ✨✨
 
-
 ## 9-2: Gallary component, Swiper
-*(Gallary.vue)*
+
+_(Gallary.vue)_
+
 - ✨✨✨
+
 ##### Swiper official website
 
-
 ## 9-3: Header component animate
-*(Header.vue)*
-- ✨✨✨
 
+_(Header.vue)_
+
+- ✨✨✨
 
 ## 9-4: fix bug
-*(Header.vue)*
-- ✨✨✨
 
+_(Header.vue)_
+
+- ✨✨✨
 
 ## 9-5: Recursive components
-*(List.vue)*
+
+_(List.vue)_
+
 - ✨✨✨
-##### 
+
+#####
+
 ```
 // name use for Recursive
 name: 'DetailList',
 ```
 
-
 ## 9-6: dynamic data rendering
-*(Detail.vue)*
-*(route.js)*
+
+_(Detail.vue)_
+_(route.js)_
+
 - ✨✨✨
+
 ##### route
 
-
 ## 9-7: animate
-*(FadeAnimation.vue)*
-*(Banner.vue)*
-- ✨✨
 
+_(FadeAnimation.vue)_
+_(Banner.vue)_
+
+- ✨✨
 
 ## 10-1: Front-end Back-end intermodulation
-*(config/index.js)*
+
+_(config/index.js)_
+
 - ✨✨
 
-
 ## 10-2: mobile test
-*(config/index.js)*
-*(package.json)*
-*(city/Alphabet.vue)*
+
+_(config/index.js)_
+_(package.json)_
+_(city/Alphabet.vue)_
+
 - ✨✨✨
+
 ##### get IP
+
 ```
 ifconfig
 ```
+
 > inet: IP
-*(package.json)*
+> _(package.json)_
+
 ```
 "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
 ```
+
 ##### chrome:
+
 ```
 IP:8080
 ```
+
 ##### mobile in the same Local area network, access
+
 ```
 IP:8080
 ```
-*(city/Alphabet.vue)*
+
+_(city/Alphabet.vue)_
+
 > fix bug
+
 ##### babel-polyfill
+
 > when your mobile too low, add some promise grammar
 
-
 ## 10-3: package
-*(config/index.js)*
+
+_(config/index.js)_
+
 - ✨✨✨
+
 ```
 npm run build
 ```
-*(config/index.js)*
+
+_(config/index.js)_
+
 > App put into project file, need to config path, Back-end access project file can run App
+
 ```
 build: {
     assetsPublicPath: '/project',
 }
 ```
 
-
 ## 10-4: video can't open
 
-
 ## 10-5: summary
+
 - ✨
