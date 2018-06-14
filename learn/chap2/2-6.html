@@ -16,17 +16,13 @@
 </div>
 
 <script>
-  // M tier (yourself)
-  // V tier (yourself)
-  // VM tier (vue auto)
-
-  // global component
+  /* global component */
   //  Vue.component('TodoItem', {
   //    props: ['content'],
   //    template: '<li>{{content}}</li>'
   //  })
 
-  // local component
+  /* local component */
   var TodoItem = {
     props: ['content'],
     template: '<li>{{content}}</li>'
@@ -34,7 +30,6 @@
 
   let app = new Vue({
     el: '#app',
-    // M tier
     data: {
       inputValue: '',
       list: []

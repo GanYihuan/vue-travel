@@ -34,13 +34,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 -**chap2/2-4.html**
 
-## 2-5: component thought introduce
+## 2-5: component thought introduce ✨
 
-- ✨
-
-## 2-6: component thought use
-
-- ✨✨
+## 2-6: component thought use ✨✨
 
 ## 2-7: father child pass data
 
