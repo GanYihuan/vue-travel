@@ -46,9 +46,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap3/3-2.html**
 
-## 3-3: module
+## 3-3: v-text, v-html ✨✨
 
-_(chap3/3-3.html)_
+- **chap3/3-3.html**
 
 - ✨✨
 
