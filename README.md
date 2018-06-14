@@ -38,9 +38,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 2-6: component thought use ✨✨
 
-## 2-7: father child pass data
-
-- ✨✨
+## 2-7: father child pass data ✨✨
 
 ## 3-1: instance
 
