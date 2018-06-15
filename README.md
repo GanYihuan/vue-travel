@@ -50,11 +50,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap3/3-3.html**
 
-- ✨✨
+## 3-4: computed, method, watch
 
-## 3-4: computed
-
-_(chap3/3-4.html)_
+- **chap3/3-4.html**
 
 - ✨✨
 
