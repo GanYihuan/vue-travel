@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>use Animate.css and transition at the same time</title>
+  <title>在Vue中同时使用过渡和动画</title>
   <link rel="stylesheet" href="../animate.css">
   <style>
     .fade-enter, .fade-leave-to {
@@ -19,16 +19,16 @@
 
 <div id="app">
   <!-- Use Animate.css library -->
-  <!-- appear: when div load, has animate -->
-  <!-- type="transition": animate time depend on transition animate -->
-  <!-- :duration="5000": total animate time: 5s, 5s after, animate class will clear -->
+  <!-- appear: 刚刚加载就出现动画 -->
+  <!-- type="transition": 动画效果以自己定义的transition为最优先 -->
+  <!-- :duration="5000": total animate time 5s, 5s after, animate class will clear -->
   <!-- :duration="{enter: 5000, leave: 10000}": 5s after, enter animateClass will clear, 10s after, leave animateClass will clear -->
   <transition
     :duration="{enter: 5000, leave: 10000}"
     type="transition"
     name="fade"
     appear
-    appearClass="animated swing"
+    appear-active-class="animated swing"
     enter-active-class="animated swing fade-enter-active"
     leave-active-class="animated shake fade-leave-active"
   >

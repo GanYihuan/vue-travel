@@ -129,11 +129,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **chap5/5-2.html**
 - Animate.css library
 
-## 5-3: use Animate.css and transition at the same time
+## 5-3: use Animate.css and transition at the same time ✨✨
 
-_(chap5/5-3.html)_
-
-- ✨✨
+- **chap5/5-3.html**
 
 ## 5-4: js animate and velocity.js
 
