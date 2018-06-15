@@ -109,11 +109,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap4/4-6.html**
 
-## 4-7: slot scope
+## 4-7: slot scope ✨✨
 
-_(chap4/4-7.html)_
-
-- ✨✨
+- **chap4/4-7.html**
 
 ## 4-8: Dynamic components and v-once instructions.
 

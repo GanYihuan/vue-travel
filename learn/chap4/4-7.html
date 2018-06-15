@@ -10,7 +10,7 @@
 <div id="app">
   <child>
     <template slot-scope="props">
-      <li>{{props.item}} --- hello</li>
+      <h1>{{props.item}} --- hello</h1>
     </template>
   </child>
 </div>
@@ -22,11 +22,12 @@
         list: [1, 2, 3]
       }
     },
+    // slot: <template></template>
     template: `<div>
-      <ul>
-        <slot v-for='item of list' :item=item></slot>
-      </ul>
-    </div>`
+                <ul>
+                  <slot v-for='item of list' :item=item></slot>
+                </ul>
+              </div>`
   })
 
   let vm = new Vue({
