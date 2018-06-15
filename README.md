@@ -105,11 +105,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - bus
 
-## 4-6: slot
+## 4-6: slot ✨✨
 
-_(chap4/4-6.html)_
-
-- ✨✨
+- **chap4/4-6.html**
 
 ## 4-7: slot scope
 
