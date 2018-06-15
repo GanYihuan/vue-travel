@@ -99,11 +99,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap4/4-4.html**
 
-## 4-5: not father child component pass data
+## 4-5: Passing values between non-parent-child components ✨✨
 
-_(chap4/4-5.html)_
+- **chap4/4-5.html**
 
-- ✨✨
+- bus
 
 ## 4-6: slot
 
