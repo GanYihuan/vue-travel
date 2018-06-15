@@ -62,11 +62,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap3/3-6.html**
 
-## 3-7: condition rendering
+## 3-7: condition render ✨✨
 
-_(chap3/3-7.html)_
+- **chap3/3-7.html**
 
-- ✨✨
+- v-if, v-show
+- input define key
 
 ## 3-8: cycle
 
