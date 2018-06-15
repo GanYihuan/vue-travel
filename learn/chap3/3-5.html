@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>computed getter setter</title>
   <script src="../vue.js"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@
           return this.firstName + ' ' + this.lastName
         },
         // chrome: call set()
-        // vm.fullName = 'mike'
+        // vm.fullName = 'mike wang'
         set (value) {
           let arr = value.split(' ')
           this.firstName = arr[0]
