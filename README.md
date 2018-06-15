@@ -145,11 +145,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - mode
 - 动态组件
 
-## 5-6: list animate, transition-group
+## 5-6: list animate, transition-group ✨✨
 
-_(chap5/5-6.html)_
-
-- ✨✨
+- **chap5/5-6.html**
 
 ## 5-7: animate package
 
