@@ -73,7 +73,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap3/3-8.html**
 
-## 4-1 使用组件的细节点 ✨✨✨
+## chap4: In-depth understanding of Vue components
+
+## 4-1 Use the details of the component ✨✨✨
 
 - **chap4/4-1.html**
 
@@ -81,7 +83,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - data must function
 - ref
 
-## 4-2 父子组件间的数据传递 ✨✨
+## 4-2 Data transfer between parent and child components ✨✨
 
 - **chap4/4-2.html**
 
@@ -89,12 +91,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - $emit
 - child component data must function
 
-## 4-3: component parameter check, props features, no't props features ✨✨
+## 4-3 Component parameter validation and non-props features ✨✨
 
 - **chap4/4-3.html**
 
 ## 4-4: native event
-
+ 
 _(chap4/4-4.html)_
 
 - ✨✨
