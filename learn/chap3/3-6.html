@@ -7,7 +7,6 @@
     .activated {
       color: #f00
     }
-
     .activatedOne {
       color: #0f0
     }
@@ -19,9 +18,11 @@
   <div @click="handleDivClick" :class="{activated: isActivated}">
     hello world
   </div>
+  <!-- 数组里面是变量 -->
   <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">
     hello vue
   </div>
+  <!-- 数组里面是对象 -->
   <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">
     hello React
   </div>
