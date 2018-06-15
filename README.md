@@ -113,11 +113,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap4/4-7.html**
 
-## 4-8: Dynamic components and v-once instructions.
+## 4-8: Dynamic components with v-once instructions ✨✨
 
-_(chap4/4-8.html)_
+- **chap4/4-8.html**
 
-- ✨✨
+- 动态组件
+- v-once
 
 ## 5-1: animate
 
