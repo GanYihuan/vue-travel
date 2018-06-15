@@ -69,11 +69,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - v-if, v-show
 - input define key
 
-## 3-8: cycle
+## 3-8: cycle ✨✨
 
-_(chap3/3-8.html)_
-
-- ✨✨
+- **chap3/3-8.html**
 
 ## 3-9: set
 

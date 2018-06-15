@@ -7,14 +7,15 @@
 </head>
 <body>
 <div id="app">
-  <!-- operate array: push pop shift unshift splice sort reverse -->
-  <!-- operate array:  chrome: vm.list = {[...]} -->
-  <!-- :key="index.id" :  A unique identifier -->
+  <!-- operate array: push,pop,shift,unshift,splice,sort,reverse -->
+  <!-- operate array: chrome: vm.list = {[...]} -->
+  <!-- :key="index.id": A unique identifier -->
   <div v-for="(item, index) of list" :key="index.id">
     {{item.text}} --- {{index}}
   </div>
   <hr/>
-  <!-- when cycle, template will not render in page -->
+
+  <!-- when cycle, template not render in page -->
   <template v-for="(item, index) of list" :key="index.id">
     <div>
       {{item.text}} --- {{index}}
@@ -24,13 +25,15 @@
     </span>
   </template>
   <hr/>
-  <!-- operate obj:   chrome: vm.userInfo = {home: 'USA'} -->
-  <!-- operate obj:   chrome: Vue.set(vm.userInfo, 'address', 'guangzhou') -->
-  <!-- operate obj:   chrome: Vue.$set(vm.userInfo, 'address', 'guangzhou') -->
+
+  <!-- operate obj: chrome: vm.userInfo = {home: 'USA'} -->
+  <!-- operate obj: chrome: Vue.set(vm.userInfo, 'address', 'guangzhou') -->
+  <!-- operate obj: chrome: Vue.$set(vm.userInfo, 'address', 'guangzhou') -->
   <div v-for="(item, key, index) of userInfo">
     {{item}} --- {{key}} --- {{index}}
   </div>
   <hr/>
+
   <!-- operate obj:   chrome: Vue.set(vm.userInfoArray, 1, 5) -->
   <!-- operate obj:   chrome: Vue.$set(vm.userInfoArray, 2, 6) -->
   <div v-for="(item, key, index) of userInfoArray">
