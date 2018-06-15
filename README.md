@@ -73,23 +73,25 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap3/3-8.html**
 
-## 4-1: $refs, ref
+## 4-1 使用组件的细节点 ✨✨✨
 
-_(chap4/4-1.html)_
+- **chap4/4-1.html**
 
-- ✨✨
+- is: 解决H5上的小bug
+- data must function
+- ref
 
-## 4-2: father child transfer data
+## 4-2 父子组件间的数据传递 ✨✨
 
-_(chap4/4-2.html)_
+- **chap4/4-2.html**
 
-- ✨✨
+- 单项数据流
+- $emit
+- child component data must function
 
-## 4-3: component parameter check, props features, no't props features
+## 4-3: component parameter check, props features, no't props features ✨✨
 
-_(chap4/4-3.html)_
-
-- ✨✨
+- **chap4/4-3.html**
 
 ## 4-4: native event
 

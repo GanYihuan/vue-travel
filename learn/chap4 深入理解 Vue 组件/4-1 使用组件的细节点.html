@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>使用组件的细节点</title>
   <script src="../vue.js"></script>
 </head>
 <body>
@@ -10,10 +10,10 @@
 <div id="root">
   <table>
     <tbody>
-    <!-- because tbody inside need tr, when use Vue component, 'is' can solve it -->
-    <tr is="row"></tr>
-    <tr is="row"></tr>
-    <tr is="row"></tr>
+      <!-- tbody inside must need tr, when use Vue component, 'is' can solve it -->
+      <tr is="row"></tr>
+      <tr is="row"></tr>
+      <tr is="row"></tr>
     </tbody>
   </table>
   <div ref="hello" @click="handleClick">click me</div>
@@ -56,9 +56,11 @@
     },
     methods: {
       handleClick() {
+        // 获取到的是dom元素
         alert(this.$refs.hello.innerHeight)
       },
       handleChange() {
+        // 在组件上,获取到的是子组件的引用
         this.total = this.$refs.one.number + this.$refs.two.number
       }
     }
