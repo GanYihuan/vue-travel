@@ -124,11 +124,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap5/5-1.html**
 
-## 5-2: Animate.css library
+## 5-2: Animate.css library ✨✨
 
-_(chap5/5-2.html)_
-
-- ✨✨
+- **chap5/5-2.html**
+- Animate.css library
 
 ## 5-3: use Animate.css and transition at the same time
 
