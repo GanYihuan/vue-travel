@@ -138,11 +138,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **chap5/5-4.html**
 - Velocity.js library
 
-## 5-5: many component animate
+## 5-5: many component animate ✨✨✨
 
-_(chap5/5-5.html)_
-
-- ✨✨
+- **chap5/5-5.html**
+- key
+- mode
+- 动态组件
 
 ## 5-6: list animate, transition-group
 
