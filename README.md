@@ -133,11 +133,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap5/5-3.html**
 
-## 5-4: js animate and velocity.js
+## 5-4: js animate and velocity.js ✨✨
 
-_(chap5/5-4.html)_
-
-- ✨✨
+- **chap5/5-4.html**
+- Velocity.js library
 
 ## 5-5: many component animate
 
