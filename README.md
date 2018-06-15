@@ -149,15 +149,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap5/5-6.html**
 
-## 5-7: animate package
+## 5-7: animate package ✨✨
 
-_(chap5/5-7.html)_
-
-- ✨✨
-
-## 5-8: conclusion
-
-- ✨
+- **chap5/5-7.html**
 
 ##### dynamic transition
 

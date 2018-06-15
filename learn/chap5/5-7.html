@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>list transition</title>
+  <title>Vue中的动画封装</title>
   <link rel="stylesheet" href="../animate.css">
   <script src="../vue.js"></script>
 </head>
@@ -18,9 +18,12 @@
 <script>
   Vue.component('fade', {
     props: ['show'],
-    template: `<transition @before-enter="handleBeforeEnter" @enter="handleEnter">
-      <slot v-if="show"></slot>
-    </transition>`,
+    template: `<transition 
+                @before-enter="handleBeforeEnter" 
+                @enter="handleEnter"
+              >
+                <slot v-if="show"></slot>
+              </transition>`,
     methods: {
       handleBeforeEnter (el) {
         el.style.color = '#f00'
