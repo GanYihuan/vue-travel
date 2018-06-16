@@ -223,17 +223,14 @@ npm install vue-awesome-swiper --save
 - swiper 样式设置
 - css 显示...
 
-## 7-6: recommend component
+## 7-6 Vue项目首页 - 热销推荐组件开发 ✨✨
 
-_(home/Recommend.vue)_
+- **home/Recommend.vue**
 
-- ✨✨
+## 7-7 Vue项目首页 - 开发周末游组件 ✨✨
 
-## 7-7: weekend component
-
-_(home/Weekend.vue)_
-
-- ✨✨
+- **home/Weekend.vue**
+- Weekend.styl 固定宽高比
 
 ## 7-8: dynamic data rendering
 
