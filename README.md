@@ -297,12 +297,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 ## 8-5 Vue项目城市选择页 - 页面的动态数据渲染 ✨✨✨
 
-_(city/City.vue)_
-_(city/List.vue)_
+- **city/City.vue**
+- **city/List.vue**
 
-- ✨✨✨
-
-##### Ajax
+- Ajax
 
 ## 8-6: Brother component linkage, Alphabet scroll
 
