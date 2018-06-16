@@ -276,23 +276,17 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **home/Swiper.vue**
 - **home/Weekend.vue**
 
-## 8-1: city Header component
+## 8-1 Vue项目城市选择页 - 路由配置 ✨
 
-_(city/Header.vue)_
+- **city/Header.vue**
 
-- ✨
+## 8-2 Vue项目城市选择页 - 搜索框布局 ✨
 
-## 8-2: city Search component
+- **city/Search.vue**
 
-_(city/Search.vue)_
+## 8-3 Vue项目城市选择页 - 列表布局 ✨✨
 
-- ✨
-
-## 8-3: city List component
-
-_(city/List.vue)_
-
-- ✨✨
+- **city/List.vue**
 
 ## 8-4: city List component better-scroll
 

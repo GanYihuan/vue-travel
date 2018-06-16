@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="search">
-      <!-- Two-way binding: v-model -->
+      <!-- 双向绑定: v-model -->
       <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音"/>
     </div>
     <div

@@ -74,7 +74,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// @import '../../../assets/styles/varibles.styl';
 @import '~styles/varibles.styl';
 @import './Alphabet.styl';
 </style>
