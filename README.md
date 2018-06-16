@@ -153,57 +153,41 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **chap5/5-7.html**
 
-##### dynamic transition
+## 6-1: 环境配置 ✨
 
-##### state transition
-
-## 6-1: environment config
-
-- ✨
-
-```
+```shell
 node -v
 npm -v
+vue init webpack imooc-travel
+npm run dev
 ```
 
-## 6-2: dialog introduce
+## 6-2: 项目代码介绍 ✨
 
-- ✨
+## 6-3: 单文件组件与Vue中的路由 ✨
 
-## 6-3: router
+- **router/route.js**
 
-_(router/route.js)_
+## 6-4: 单页应用VS多页应用 ✨
 
-- ✨
+- **static/know1.png**
+- **static/know2.png**
 
-## 6-4: know
+## 6-5: 项目代码初始化 ✨✨
 
-_(static/know1.png))_
-_(static/know2.png))_
+- index.html/meta
+- iconfont
+- reset.css
+- border.css
+- fastclick 移动端延迟300ms解决
 
-- ✨
-
-## 6-5: init project
-
-- ✨✨
-
-##### Travel icons
-
-##### index.html
-
-##### reset.css
-
-##### border.css
-
-```
+```shell
 npm install fastclick
 ```
 
-## 7-1: Header component
+## 7-1: Header component ✨✨✨
 
-_(home/Header.vue)_
-
-- ✨✨✨
+- **home/Header.vue**
 
 ##### 1rem = html font-size=50px
 

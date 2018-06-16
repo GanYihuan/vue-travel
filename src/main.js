@@ -4,6 +4,7 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router/route'
+// 移动端延迟300ms解决
 import fastClick from 'fastclick'
 import store from './store/store'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
