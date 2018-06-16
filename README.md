@@ -200,17 +200,17 @@ npm install stylus-loader --save
 - **home/Header.vue**
 - 别名配置 webpack.base.conf.js
 
-## 7-3: carousel component
+## 7-3 Vue项目首页 - 首页轮播图 ✨✨✨
 
-_(home/Swiper.vue)_
+- **home/Swiper.vue**
+- prevent shake, inside css .wrapper
+- vue-awesome-swiper
+- 图片宽高比固定比值 Swpier.styl
+- >>>: 样式穿透
 
-- ✨✨✨
-
-```
+```shell
 npm install vue-awesome-swiper --save
 ```
-
-##### prevent shake, inside css .wrapper
 
 ## 7-4: Icons area component
 

@@ -1,11 +1,15 @@
-// .wrapper inside has .swiper-pagination-bullet-active
+// >>>: 样式穿透
+// 不受 scoped 影响
+// .wrapper 里面出现 .swiper-pagination-bullet-active就可以添加样式
 .wrapper >>> .swiper-pagination-bullet-active
   background: #fff
 .wrapper
+  // 图片宽高比固定比值
   overflow: hidden
-  width: 100%
-  height: 0
   padding-bottom: 31.25%
+  height: 0
+  // 图片宽高比固定比值
+  width: 100%
   background: #eee
   .swiper-img
     width: 100%
