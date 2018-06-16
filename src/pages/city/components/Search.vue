@@ -2,7 +2,12 @@
   <div>
     <div class="search">
       <!-- 双向绑定: v-model -->
-      <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音"/>
+      <input 
+        v-model="keyword" 
+        class="search-input" 
+        type="text"
+        placeholder="输入城市名或拼音"
+      />
     </div>
     <div
       class="search-content"
@@ -59,14 +64,14 @@ export default {
 	},
 	watch: {
 		keyword() {
-			if (this.timer) {
+      if (this.timer) {
 				clearTimeout(this.timer)
 			}
 			if (!this.keyword) {
 				this.list = []
 				return
 			}
-			// Throttling function
+			// 节流函数
 			this.timer = setTimeout(() => {
 				const result = []
 				for (let i in this.cities) {

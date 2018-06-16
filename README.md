@@ -315,13 +315,10 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - Performance optimization
 - Throttling function
 
-## 8-8: Search function
+## 8-8 Vue项目城市选择页 - 搜索逻辑实现 ✨✨✨✨
 
-_(city/Search.vue)_
-
-- ✨✨✨✨
-
-##### better-scroll
+- **city/Search.vue**
+- better-scroll
 
 ## 8-9, 8-10: Vuex
 
