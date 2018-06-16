@@ -288,16 +288,14 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 - **city/List.vue**
 
-## 8-4: city List component better-scroll
+## 8-4 Vue项目城市选择页 - BetterScroll 的使用和字母表布局 ✨✨
 
-_(city/Search.vue)_
-_(city/Alphabet.vue)_
+- **city/Search.vue**
+- **city/Alphabet.vue**
 
-- ✨✨
+- better-scroll
 
-##### better-scroll
-
-## 8-5: dynamic data rendering
+## 8-5 Vue项目城市选择页 - 页面的动态数据渲染 ✨✨✨
 
 _(city/City.vue)_
 _(city/List.vue)_
