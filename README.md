@@ -216,9 +216,12 @@ npm install vue-awesome-swiper --save
 
 - **home/Icons.vue**
 
-## 7-5: Icons area component ✨✨
+## 7-5 Vue项目首页 - 图标区域逻辑实现 ✨✨✨
 
 - **home/Icons.vue**
+- swiper 无法分页, 解决
+- swiper 样式设置
+- css 显示...
 
 ## 7-6: recommend component
 

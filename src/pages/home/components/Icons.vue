@@ -31,6 +31,7 @@
       }
     },
     computed: {
+      // swiper 无法分页
       pages () {
         const pages = []
         this.list.forEach((item, index) => {
