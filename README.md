@@ -185,15 +185,12 @@ npm run dev
 npm install fastclick
 ```
 
-## 7-1: Header component ✨✨✨
+## 7-1 Vue项目首页 - header区域开发 ✨✨✨
 
 - **home/Header.vue**
+- 1rem = html font-size=50px
 
-##### 1rem = html font-size=50px
-
-##### <style lang="stylus" scoped> scoped: only use for this component
-
-```
+```shell
 npm install stylus --save
 npm install stylus-loader --save
 ```

@@ -27,6 +27,7 @@
   }
 </script>
 
+// scoped 只用于此组件
 <style lang="stylus" scoped>
   /* scoped: only use for this component */
   /* @import '../../../assets/styles/varibles.styl'; */
