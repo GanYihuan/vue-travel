@@ -21,16 +21,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeRecommend',
-    props: {
-      list: Array
-    }
-  }
+export default {
+	name: 'HomeRecommend',
+	props: {
+		list: Array
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  /* @import '../../../assets/styles/varibles.styl'; */
-  @import '~styles/mixins.styl'
-  @import "./Recommend.styl";
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/mixins.styl';
+@import './Recommend.styl';
 </style>

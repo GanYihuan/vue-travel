@@ -27,65 +27,68 @@
 </template>
 
 <script>
-  import Bscroll from 'better-scroll'
-  import { mapMutations } from 'vuex'
+import Bscroll from 'better-scroll'
+import { mapMutations } from 'vuex'
 
-  export default {
-    name: 'CitySearch',
-    props: {
-      cities: Object
-    },
-    data () {
-      return {
-        keyword: '',
-        list: [],
-        timer: null
-      }
-    },
-    computed: {
-      hasNoData () {
-        return !this.list.length
-      }
-    },
-    mounted () {
-      this.scroll = new Bscroll(this.$refs.search)
-    },
-    methods: {
-      handleCityClick (city) {
-        this.changeCity(city)
-        this.$router.push('/')
-      },
-      ...mapMutations(['changeCity'])
-    },
-    watch: {
-      keyword () {
-        if (this.timer) {
-          clearTimeout(this.timer)
-        }
-        if (!this.keyword) {
-          this.list = []
-          return
-        }
-        // Throttling function
-        this.timer = setTimeout(() => {
-          const result = []
-          for (let i in this.cities) {
-            this.cities[i].forEach((value) => {
-              // can through spell and name search keyword
-              if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
-                result.push(value)
-              }
-            })
-          }
-          this.list = result
-        }, 100)
-      }
-    }
-  }
+export default {
+	name: 'CitySearch',
+	props: {
+		cities: Object
+	},
+	data() {
+		return {
+			keyword: '',
+			list: [],
+			timer: null
+		}
+	},
+	computed: {
+		hasNoData() {
+			return !this.list.length
+		}
+	},
+	mounted() {
+		this.scroll = new Bscroll(this.$refs.search)
+	},
+	methods: {
+		handleCityClick(city) {
+			this.changeCity(city)
+			this.$router.push('/')
+		},
+		...mapMutations(['changeCity'])
+	},
+	watch: {
+		keyword() {
+			if (this.timer) {
+				clearTimeout(this.timer)
+			}
+			if (!this.keyword) {
+				this.list = []
+				return
+			}
+			// Throttling function
+			this.timer = setTimeout(() => {
+				const result = []
+				for (let i in this.cities) {
+					this.cities[i].forEach(value => {
+						// can through spell and name search keyword
+						if (
+							value.spell.indexOf(this.keyword) > -1 ||
+							value.name.indexOf(this.keyword) > -1
+						) {
+							result.push(value)
+						}
+					})
+				}
+				this.list = result
+			}, 100)
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  /* @import '../../../assets/styles/varibles.styl'; */
-  @import '~styles/varibles.styl'
-  @import "./Search.styl";
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/varibles.styl';
+@import './Search.styl';
 </style>

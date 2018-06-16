@@ -16,65 +16,65 @@
 </template>
 
 <script>
-  export default {
-    name: 'CityAlphabet',
-    props: {
-      cities: Object
-    },
-    computed: {
-      letters () {
-        const letters = []
-        for (let i in this.cities) {
-          letters.push(i)
-        }
-        // [A,B,C...]
-        return letters
-      }
-    },
-    data () {
-      return {
-        touchStatus: false,
-        startY: 0,
-        timer: null
-      }
-    },
-    updated () {
-      // startY: 'A' to father top distance
-      this.startY = this.$refs['A'][0].offsetTop
-    },
-    methods: {
-      handleLetterClick (e) {
-        this.$emit('change', e.target.innerText)
-      },
-      handleTouchStart () {
-        this.touchStatus = true
-      },
-      handleTouchMove (e) {
-        if (this.touchStatus) {
-          if (this.timer) {
-            clearTimeout(this.timer)
-          }
-          // Throttling function
-          this.timer = setTimeout(() => {
-            // e.touches[0].clientY: click position to window top distance
-            // 79: 城市选择 header height
-            const touchY = e.touches[0].clientY - 79
-            const index = Math.floor((touchY - this.startY) / 20)
-            if (index >= 0 && index < this.letters.length) {
-              this.$emit('change', this.letters[index])
-            }
-          }, 16)
-        }
-      },
-      handleTouchEnd () {
-        this.touchStatus = false
-      }
-    }
-  }
+export default {
+	name: 'CityAlphabet',
+	props: {
+		cities: Object
+	},
+	computed: {
+		letters() {
+			const letters = []
+			for (let i in this.cities) {
+				letters.push(i)
+			}
+			// [A,B,C...]
+			return letters
+		}
+	},
+	data() {
+		return {
+			touchStatus: false,
+			startY: 0,
+			timer: null
+		}
+	},
+	updated() {
+		// startY: 'A' to father top distance
+		this.startY = this.$refs['A'][0].offsetTop
+	},
+	methods: {
+		handleLetterClick(e) {
+			this.$emit('change', e.target.innerText)
+		},
+		handleTouchStart() {
+			this.touchStatus = true
+		},
+		handleTouchMove(e) {
+			if (this.touchStatus) {
+				if (this.timer) {
+					clearTimeout(this.timer)
+				}
+				// Throttling function
+				this.timer = setTimeout(() => {
+					// e.touches[0].clientY: click position to window top distance
+					// 79: 城市选择 header height
+					const touchY = e.touches[0].clientY - 79
+					const index = Math.floor((touchY - this.startY) / 20)
+					if (index >= 0 && index < this.letters.length) {
+						this.$emit('change', this.letters[index])
+					}
+				}, 16)
+			}
+		},
+		handleTouchEnd() {
+			this.touchStatus = false
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  // @import '../../../assets/styles/varibles.styl';
-  @import '~styles/varibles.styl';
-  @import "./Alphabet.styl";
+// @import '../../../assets/styles/varibles.styl';
+@import '~styles/varibles.styl';
+@import './Alphabet.styl';
 </style>

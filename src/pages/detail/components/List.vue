@@ -17,15 +17,15 @@
 </template>
 
 <script>
-  export default {
-    // name use for Recursive
-    name: 'DetailList',
-    props: {
-      list: Array
-    }
-  }
+export default {
+	// name use for Recursive
+	name: 'DetailList',
+	props: {
+		list: Array
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  @import "./List.styl";
+@import './List.styl';
 </style>

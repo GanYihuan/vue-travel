@@ -22,42 +22,42 @@
 </template>
 
 <script>
-  export default {
-    name: 'DetailHeader',
-    data () {
-      return {
-        showAbs: true,
-        opacityStyle: {
-          opacity: 0
-        }
-      }
-    },
-    mounted () {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    unmounted () {
-      window.removeEventListener('scroll', this.handleScroll)
-    },
-    methods: {
-      handleScroll () {
-        const top = document.documentElement.scrollTop
-        if (top > 60) {
-          let opacity = top / 140
-          opacity = opacity > 1 ? 1 : opacity
-          // key === value, just write one
-          // this.opacityStyle = {opacity: opacity}
-          this.opacityStyle = {opacity}
-          this.showAbs = false
-        } else {
-          this.showAbs = true
-        }
-      }
-    }
-  }
+export default {
+	name: 'DetailHeader',
+	data() {
+		return {
+			showAbs: true,
+			opacityStyle: {
+				opacity: 0
+			}
+		}
+	},
+	mounted() {
+		window.addEventListener('scroll', this.handleScroll)
+	},
+	unmounted() {
+		window.removeEventListener('scroll', this.handleScroll)
+	},
+	methods: {
+		handleScroll() {
+			const top = document.documentElement.scrollTop
+			if (top > 60) {
+				let opacity = top / 140
+				opacity = opacity > 1 ? 1 : opacity
+				// key === value, just write one
+				// this.opacityStyle = {opacity: opacity}
+				this.opacityStyle = { opacity }
+				this.showAbs = false
+			} else {
+				this.showAbs = true
+			}
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '~styles/varibles.styl'*/
-  @import '../../../assets/styles/varibles.styl';
-  @import "./Header.styl";
+/* @import '~styles/varibles.styl' */
+@import '../../../assets/styles/varibles.styl';
+@import './Header.styl';
 </style>

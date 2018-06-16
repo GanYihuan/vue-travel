@@ -17,20 +17,20 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 
-  export default {
-    name: 'HomeHeader',
-    computed: {
-      ...mapState(['city'])
-    }
-  }
+export default {
+	name: 'HomeHeader',
+	computed: {
+		...mapState(['city'])
+	}
+}
 </script>
 
 // scoped 只用于此组件
 <style lang="stylus" scoped>
-  /* scoped: only use for this component */
-  /* @import '../../../assets/styles/varibles.styl'; */
-  @import '~styles/varibles.styl';
-  @import "./Header.styl";
+/* scoped: only use for this component */
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/varibles.styl';
+@import './Header.styl';
 </style>

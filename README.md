@@ -238,6 +238,11 @@ npm install vue-awesome-swiper --save
 
 - **home/Home.vue**
 - axios 异步传数据
+
+```shell
+npm install axios --save
+```
+
 - 转发访问的路径内容
 - **config/index.js**
 
@@ -253,31 +258,23 @@ proxyTable: {
 ```
 
 ```shell
-npm install axios --save
-```
-
-- **home/Home.vue**
-
-```shell
 axios.get('/api/index.json?city=')
 ```
 
-> will forwarding to
+> 将转发到
 
 ```shell
 axios.get('/static/mock/index.json?city=' + this.city)
 ```
 
-## 7-9: father child component transfer data
+## 7-9 Vue项目首页 - 首页父子组组件间传值 ✨✨✨
 
-_(home/Home.vue)_
-_(home/Header.vue)_
-_(home/Icons.vue)_
-_(home/Recommend.vue)_
-_(home/Swiper.vue)_
-_(home/Weekend.vue)_
-
-- ✨✨✨
+- **home/Home.vue**
+- **home/Header.vue**
+- **home/Icons.vue**
+- **home/Recommend.vue**
+- **home/Swiper.vue**
+- **home/Weekend.vue**
 
 ## 8-1: city Header component
 

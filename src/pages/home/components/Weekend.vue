@@ -20,16 +20,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeWeekend',
-    props: {
-      list: Array
-    }
-  }
+export default {
+	name: 'HomeWeekend',
+	props: {
+		list: Array
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  /* @import '../../../assets/styles/varibles.styl'; */
-  @import '~styles/mixins.styl'
-  @import "./Weekend.styl";
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/mixins.styl';
+@import './Weekend.styl';
 </style>

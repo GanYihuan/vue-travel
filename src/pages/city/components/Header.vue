@@ -8,13 +8,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'CityHeader'
-  }
+export default {
+	name: 'CityHeader'
+}
 </script>
 
 <style lang="stylus" scoped>
-  /*@import '../../../assets/styles/varibles.styl';*/
-  @import '~styles/varibles.styl'
-  @import "./Header.styl";
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/varibles.styl';
+@import './Header.styl';
 </style>

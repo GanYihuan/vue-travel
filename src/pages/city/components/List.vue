@@ -47,49 +47,49 @@
 </template>
 
 <script>
-  import Bscroll from 'better-scroll'
-  import { mapState, mapMutations } from 'vuex'
+import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 
-  export default {
-    name: 'CityList',
-    props: {
-      hot: Array,
-      cities: Object,
-      letter: String
-    },
-    computed: {
-      ...mapState({
-        currentCity: 'city'
-      })
-    },
-    mounted () {
-      this.scroll = new Bscroll(this.$refs.wrapper)
-    },
-    methods: {
-      handleCityClick (city) {
-        // vuex/mutations
-        this.changeCity(city)
-        this.$router.push('/')
-      },
-      ...mapMutations(['changeCity'])
-    },
-    watch: {
-      letter () {
-        // if letter !== null
-        if (this.letter) {
-          const element = this.$refs[this.letter][0]
-          // console.log(this.$refs[this.letter])
-          // this.$refs[this.letter]: isArray
-          // better-scroll: scrollToElement
-          this.scroll.scrollToElement(element)
-        }
-      }
-    }
-  }
+export default {
+	name: 'CityList',
+	props: {
+		hot: Array,
+		cities: Object,
+		letter: String
+	},
+	computed: {
+		...mapState({
+			currentCity: 'city'
+		})
+	},
+	mounted() {
+		this.scroll = new Bscroll(this.$refs.wrapper)
+	},
+	methods: {
+		handleCityClick(city) {
+			// vuex/mutations
+			this.changeCity(city)
+			this.$router.push('/')
+		},
+		...mapMutations(['changeCity'])
+	},
+	watch: {
+		letter() {
+			// if letter !== null
+			if (this.letter) {
+				const element = this.$refs[this.letter][0]
+				// console.log(this.$refs[this.letter])
+				// this.$refs[this.letter]: isArray
+				// better-scroll: scrollToElement
+				this.scroll.scrollToElement(element)
+			}
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  /* @import '../../../assets/styles/varibles.styl'; */
-  @import '~styles/varibles.styl'
-  @import "./List.styl";
+/* @import '../../../assets/styles/varibles.styl'; */
+@import '~styles/varibles.styl';
+@import './List.styl';
 </style>

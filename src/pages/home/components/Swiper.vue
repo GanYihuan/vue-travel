@@ -10,27 +10,27 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeSwiper',
-    props: {
-      list: Array
-    },
-    data () {
-      return {
-        swiperOption: {
-          pagination: '.swiper-pagination',
-          loop: true
-        }
-      }
-    },
-    computed: {
-      showSwiper () {
-        return this.list.length
-      }
-    }
-  }
+export default {
+	name: 'HomeSwiper',
+	props: {
+		list: Array
+	},
+	data() {
+		return {
+			swiperOption: {
+				pagination: '.swiper-pagination',
+				loop: true
+			}
+		}
+	},
+	computed: {
+		showSwiper() {
+			return this.list.length
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  @import "./Swiper.styl";
+@import './Swiper.styl';
 </style>

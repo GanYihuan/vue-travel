@@ -24,36 +24,36 @@
 </template>
 
 <script>
-  import CommonGallary from 'common/gallary/Gallary'
-  import FadeAnimation from 'common/fade/FadeAnimation'
+import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 
-  export default {
-    name: 'DetailBanner',
-    props: {
-      sightName: String,
-      bannerImg: String,
-      bannerImgs: Array
-    },
-    data () {
-      return {
-        showGallary: false
-      }
-    },
-    methods: {
-      handleBannerClick () {
-        this.showGallary = true
-      },
-      handleGallaryClose () {
-        this.showGallary = false
-      }
-    },
-    components: {
-      CommonGallary,
-      FadeAnimation
-    }
-  }
+export default {
+	name: 'DetailBanner',
+	props: {
+		sightName: String,
+		bannerImg: String,
+		bannerImgs: Array
+	},
+	data() {
+		return {
+			showGallary: false
+		}
+	},
+	methods: {
+		handleBannerClick() {
+			this.showGallary = true
+		},
+		handleGallaryClose() {
+			this.showGallary = false
+		}
+	},
+	components: {
+		CommonGallary,
+		FadeAnimation
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  @import "./Banner.styl";
+@import './Banner.styl';
 </style>
