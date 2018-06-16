@@ -212,17 +212,13 @@ npm install stylus-loader --save
 npm install vue-awesome-swiper --save
 ```
 
-## 7-4: Icons area component
+## 7-4 Vue项目首页 - 图标区域页面布局 ✨✨
 
-_(home/Icons.vue)_
+- **home/Icons.vue**
 
-- ✨✨
+## 7-5: Icons area component ✨✨
 
-## 7-5: Icons area component
-
-_(home/Icons.vue)_
-
-- ✨✨
+- **home/Icons.vue**
 
 ## 7-6: recommend component
 
