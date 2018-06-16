@@ -22,6 +22,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 慕课网: Vue2.5 开发去哪儿网 App 从零基础入门到实战项目
 
+## 注意，如果无法请求到static里面数据 时,config/index.js 能配置端口
+
 ## 2-2: hello vue ✨
 
 -**chap2/2-2.html**
@@ -232,22 +234,14 @@ npm install vue-awesome-swiper --save
 - **home/Weekend.vue**
 - Weekend.styl 固定宽高比
 
-## 7-8: dynamic data rendering
+## 7-8 Vue项目首页 - 使用 axios 发送 ajax 请求 ✨✨✨
 
-_(home/Home.vue)_
-_(config/index.js)_
+- **home/Home.vue**
+- axios 异步传数据
+- 转发访问的路径内容
+- **config/index.js**
 
-- ✨✨✨
-
-##### static file can check in chrome
-
-> http://localhost:8080/static/mock/index.json
-
-##### forwarding
-
-_(config/index.js)_
-
-```
+```shell
 proxyTable: {
   '/api': {
       target: 'http://localhost:8080',
@@ -258,15 +252,19 @@ proxyTable: {
 },
 ```
 
-_(home/Home.vue)_
-
+```shell
+npm install axios --save
 ```
+
+- **home/Home.vue**
+
+```shell
 axios.get('/api/index.json?city=')
 ```
 
 > will forwarding to
 
-```
+```shell
 axios.get('/static/mock/index.json?city=' + this.city)
 ```
 
