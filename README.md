@@ -195,11 +195,10 @@ npm install stylus --save
 npm install stylus-loader --save
 ```
 
-## 7-2: Header component
+## 7-2 Vue项目首页 - iconfont 的使用和代码优化 ✨✨
 
-_(home/Header.vue)_
-
-- ✨✨
+- **home/Header.vue**
+- 别名配置 webpack.base.conf.js
 
 ## 7-3: carousel component
 
