@@ -77,9 +77,9 @@ export default {
 		letter() {
 			// if letter !== null
 			if (this.letter) {
+				// this.$refs[this.letter]: isArray
 				const element = this.$refs[this.letter][0]
 				// console.log(this.$refs[this.letter])
-				// this.$refs[this.letter]: isArray
 				// better-scroll: scrollToElement
 				this.scroll.scrollToElement(element)
 			}

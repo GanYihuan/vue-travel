@@ -39,7 +39,7 @@ export default {
 		}
 	},
 	updated() {
-		// startY: 'A' to father top distance
+		// startY: 'A' 距离父元素顶部距离
 		this.startY = this.$refs['A'][0].offsetTop
 	},
 	methods: {
@@ -54,10 +54,11 @@ export default {
 				if (this.timer) {
 					clearTimeout(this.timer)
 				}
-				// Throttling function
+				// 节流功能
 				this.timer = setTimeout(() => {
-					// e.touches[0].clientY: click position to window top distance
-					// 79: 城市选择 header height
+          // touches: 手指信息
+					// e.touches[0].clientY: 点击位置到窗口顶部距离
+					// 79: 城市选择头高度
 					const touchY = e.touches[0].clientY - 79
 					const index = Math.floor((touchY - this.startY) / 20)
 					if (index >= 0 && index < this.letters.length) {

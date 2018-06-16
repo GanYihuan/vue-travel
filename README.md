@@ -302,23 +302,18 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 - Ajax
 
-## 8-6: Brother component linkage, Alphabet scroll
+## 8-6 Vue项目城市选择页 - 兄弟组件数据传递 ✨✨✨✨
 
-_(city/Alphabet.vue)_
-_(city/City.vue)_
-_(city/List.vue)_
+- **city/Alphabet.vue**
+- **city/City.vue**
+- **city/List.vue**
 
-- ✨✨✨✨
+## 8-7 Vue项目城市选择页 - 列表性能优化 ✨✨✨
 
-## 8-7: Alphabet Performance optimization
+- **city/Alphabet.vue**
 
-_(city/Alphabet.vue)_
-
-- ✨✨✨
-
-##### Performance optimization
-
-##### Throttling function
+- Performance optimization
+- Throttling function
 
 ## 8-8: Search function
 
