@@ -9,3 +9,25 @@ export default new Vuex.Store({
   state,
   mutations
 })
+
+// export default new Vuex.Store({
+//   state: {
+//     city: 'beijing'
+//   },
+//   actions: {
+//     changeCity (ctx, city) {
+//       ctx.commit('changeCity', city)
+//     }
+//   },
+//   mutations: {
+//     changeCity(state, city) {
+//       state.city = city
+//     }
+//   }
+// })
+
+// Vuex流程: vuex.png
+// List.vue
+// state -> render -> vue components -> Dispatch
+// store.js
+// Actions -> commit -> Mutations -> Mutate

@@ -67,8 +67,10 @@ export default {
 	},
 	methods: {
 		handleCityClick(city) {
-			// vuex/mutations
-			this.changeCity(city)
+      // vuex/mutations
+      // this.$store.dispatch('changeCity', city)
+      this.changeCity(city)
+      // 页面跳转
 			this.$router.push('/')
 		},
 		...mapMutations(['changeCity'])

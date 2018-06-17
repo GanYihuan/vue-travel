@@ -320,22 +320,19 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/Search.vue**
 - better-scroll
 
-## 8-9, 8-10: Vuex
+## 8-9 Vue项目城市选择页 - Vuex实现数据共享 ✨✨✨✨
 
-_(city/List.vue)_
-_(city/Search.vue)_
-_(home/Header.vue)_
-_(store/state.js)_
-_(store/store.js)_
-_(store/mutations.js)_
+- **city/List.vue**
+- **city/Search.vue**
+- **home/Header.vue**
+- **store/state.js**
+- **store/store.js**
+- **store/mutations.js**
 
-- ✨✨✨✨
+- if cache wrong, close chrome
+- install vuex
 
-##### if cache wrong, close chrome
-
-##### install vuex
-
-```
+```shell
 npm install vuex --save
 ```
 
