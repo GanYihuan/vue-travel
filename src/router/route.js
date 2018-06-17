@@ -19,13 +19,13 @@ export default new Router({
       component: City
     },
     {
-      // transfer parameter
+      // 动态路由: 传递参数
       path: '/detail/:id',
       name: 'Detail',
       component: Detail
     }
   ],
-  // route jump, page always locate at top
+  // 路径跳转，页面始终位于顶部
   scrollBehavior (to, from, savedPosition) {
     return {x: 0, y: 0}
   }

@@ -345,19 +345,15 @@ npm install vuex --save
 
 - keep-alive
 
-## 9-1: Banner component
+## 9-1 Vue项目详情页 - 动态路由和banner布局 ✨✨
 
-_(Banner.vue)_
+- **Banner.vue**
+- 动态路由
 
-- ✨✨
+## 9-2 Vue项目详情页 - 公用图片画廊组件拆分 ✨✨✨
 
-## 9-2: Gallary component, Swiper
-
-_(Gallary.vue)_
-
-- ✨✨✨
-
-##### Swiper official website
+- **Gallary.vue**
+- Swiper official website
 
 ## 9-3: Header component animate
 

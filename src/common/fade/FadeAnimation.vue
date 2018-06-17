@@ -5,11 +5,11 @@
 </template>
 
 <script>
-  export default {
-    name: 'FadeAnimation'
-  }
+export default {
+	name: 'FadeAnimation'
+}
 </script>
 
 <style lang="stylus" scoped>
-  @import "./FadeAnimation.styl";
+@import './FadeAnimation.styl';
 </style>

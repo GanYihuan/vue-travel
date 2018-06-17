@@ -15,38 +15,38 @@
 </template>
 
 <script>
-  export default {
-    name: 'CommonGallary',
-    props: {
-      imgs: {
-        type: Array,
-        default () {
-          return []
-        }
-      }
-    },
-    data () {
-      return {
-        swiperOptions: {
-          // dots
-          pagination: '.swiper-pagination',
-          // dots type
-          paginationType: 'fraction',
-          // when swiper father element change, swiper refresh
-          observeParents: true,
-          // when swiper father element dom change, swiper refresh
-          observer: true
-        }
-      }
-    },
-    methods: {
-      handleGallaryClick () {
-        this.$emit('close')
-      }
-    }
-  }
+export default {
+	name: 'CommonGallary',
+	props: {
+		imgs: {
+			type: Array,
+			default() {
+				return []
+			}
+		}
+	},
+	data() {
+		return {
+			swiperOptions: {
+				// dots
+				pagination: '.swiper-pagination',
+				// dots type
+				paginationType: 'fraction',
+				// 当swiper父元素改变时，swiper刷新
+				observeParents: true,
+				// 当swiper父元素或自身dom改变时，swiper刷新
+				observer: true
+			}
+		}
+	},
+	methods: {
+		handleGallaryClick() {
+			this.$emit('close')
+		}
+	}
+}
 </script>
 
 <style lang="stylus" scoped>
-  @import "./Gallary.styl";
+@import './Gallary.styl';
 </style>
