@@ -383,75 +383,59 @@ name: 'DetailList',
 - **FadeAnimation.vue**
 - **Banner.vue**
 
-## 10-1: Front-end Back-end intermodulation
+## 10-1 Vue项目的联调测试上线 - 项目前后端联调 ✨✨
 
-_(config/index.js)_
+- **config/index.js**
+- localhost: 80端口
 
-- ✨✨
+## 10-2 Vue项目的联调测试上线 - 真机测试 ✨✨✨
 
-## 10-2: mobile test
+- **config/index.js**
+- **package.json**
+- **city/Alphabet.vue**
+- get IP
 
-_(config/index.js)_
-_(package.json)_
-_(city/Alphabet.vue)_
-
-- ✨✨✨
-
-##### get IP
-
-```
+```shell
+<!-- mac -->
 ifconfig
+<!-- window -->
+ipconfig
 ```
 
-> inet: IP
-> _(package.json)_
+> package.json 配置后重启项目
 
-```
+```shell
 "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
 ```
 
-##### chrome:
+- 8081: 根据config/index.js 来查看配置
+- chrome: `IP:8081`
+- 移动在同一局域网访问 `IP:8081`
+- **city/Alphabet.vue**
+- @touchstart.prevent 阻止默认事件
+- babel-polyfill: 防止白屏
 
-```
-IP:8080
-```
+> babel-polyfill: 当你的手机版本太低时，添加一些承诺语法
 
-##### mobile in the same Local area network, access
+## 10-3 Vue项目的联调测试上线 - 打包上线 ✨✨✨
 
-```
-IP:8080
-```
+- **config/index.js**
+- 打包
 
-_(city/Alphabet.vue)_
-
-> fix bug
-
-##### babel-polyfill
-
-> when your mobile too low, add some promise grammar
-
-## 10-3: package
-
-_(config/index.js)_
-
-- ✨✨✨
-
-```
+```shell
 npm run build
 ```
 
-_(config/index.js)_
+- **config/index.js**
 
-> App put into project file, need to config path, Back-end access project file can run App
+> App放入项目文件中，需要配置路径，后端访问项目文件可以运行App
 
-```
+```shell
 build: {
-    assetsPublicPath: '/project',
+  assetsPublicPath: '/project',
 }
 ```
 
-## 10-4: video can't open
+## 10-4 Vue项目的联调测试上线 - 异步组件实现按需加载 ✨
 
-## 10-5: summary
-
-- ✨
+## 10-5 Vue项目的联调测试上线 - 课程总结与后续学习指南 ✨
