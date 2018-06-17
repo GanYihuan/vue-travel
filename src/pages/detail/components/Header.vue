@@ -44,7 +44,7 @@ export default {
 			if (top > 60) {
 				let opacity = top / 140
 				opacity = opacity > 1 ? 1 : opacity
-				// key === value, just write one
+				// key === value, 只写一个
 				// this.opacityStyle = {opacity: opacity}
 				this.opacityStyle = { opacity }
 				this.showAbs = false

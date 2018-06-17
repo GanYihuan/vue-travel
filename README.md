@@ -355,11 +355,9 @@ npm install vuex --save
 - **Gallary.vue**
 - Swiper official website
 
-## 9-3: Header component animate
+## 9-3 Vue项目详情页 - 实现Header渐隐渐显效果 ✨✨✨
 
-_(Header.vue)_
-
-- ✨✨✨
+- **Header.vue**
 
 ## 9-4: fix bug
 
