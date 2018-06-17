@@ -38,8 +38,9 @@ export default {
 		this.lastCity = this.city
 		this.getHomeInfo()
 	},
-	// 当使用keep-alive时，App.vue将附加组件激活
-	// 当页面重新显示的时候将运行
+	// activated: 当使用keep-alive时，App.vue将附加组件激活
+  // 当页面重新显示的时候将运行
+  // deactivated(){}, 与activated相反
 	activated() {
 		if (this.lastCity !== this.city) {
 			// save preCity

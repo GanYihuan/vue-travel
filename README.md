@@ -359,21 +359,15 @@ npm install vuex --save
 
 - **Header.vue**
 
-## 9-4: fix bug
+## 9-4 Vue项目详情页 - 对全局事件的解绑 ✨✨✨
 
-_(Header.vue)_
+- **Header.vue**
 
-- ✨✨✨
+## 9-5 Vue项目详情页 - 使用递归组件实现详情页列表 ✨✨✨
 
-## 9-5: Recursive components
+- **List.vue**
 
-_(List.vue)_
-
-- ✨✨✨
-
-#####
-
-```
+```shell
 // name use for Recursive
 name: 'DetailList',
 ```
