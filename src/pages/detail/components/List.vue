@@ -18,7 +18,7 @@
 
 <script>
 export default {
-	// name use for Recursive
+	// 名称为了使用递归
 	name: 'DetailList',
 	props: {
 		list: Array

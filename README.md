@@ -368,7 +368,7 @@ npm install vuex --save
 - **List.vue**
 
 ```shell
-// name use for Recursive
+// 名称为了使用递归
 name: 'DetailList',
 ```
 
