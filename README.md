@@ -344,7 +344,6 @@ npm install vuex --save
 - **Home.vue**
 
 - keep-alive
-- Ajax
 
 ## 9-1: Banner component
 

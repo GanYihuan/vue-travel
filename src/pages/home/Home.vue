@@ -30,14 +30,16 @@ export default {
 		}
 	},
 	computed: {
+    // 将vuex共用数据city映射到'currentCity'当中
 		...mapState(['city'])
-	},
+  },
+  // 组件被挂载的时候
 	mounted() {
 		this.lastCity = this.city
 		this.getHomeInfo()
 	},
-	// App.vue, when use keep-alive, will add-on activated
-	// when page repeat will run
+	// 当使用keep-alive时，App.vue将附加组件激活
+	// 当页面重新显示的时候将运行
 	activated() {
 		if (this.lastCity !== this.city) {
 			// save preCity
