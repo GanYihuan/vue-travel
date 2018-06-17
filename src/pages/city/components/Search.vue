@@ -2,9 +2,9 @@
   <div>
     <div class="search">
       <!-- 双向绑定: v-model -->
-      <input 
-        v-model="keyword" 
-        class="search-input" 
+      <input
+        v-model="keyword"
+        class="search-input"
         type="text"
         placeholder="输入城市名或拼音"
       />
@@ -60,7 +60,8 @@ export default {
       this.changeCity(city)
       // 页面跳转
 			this.$router.push('/')
-		},
+    },
+    // 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity
 		...mapMutations(['changeCity'])
 	},
 	watch: {

@@ -11,6 +11,7 @@
       <div class="header-right">
         <!-- {{this.$store.state.city}} -->
         {{this.city}}
+        <!-- {{this.doubleCity}} -->
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -18,12 +19,14 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
 	name: 'HomeHeader',
 	computed: {
-		...mapState(['city'])
+    // 将vuex共用数据city映射到'city'当中: city: city
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
 	}
 }
 </script>

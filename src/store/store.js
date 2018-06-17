@@ -7,13 +7,30 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state,
-  mutations
+  mutations,
+  // getters: 根据 state 算出新数据
+  getters: {
+    doubleCity(state) {
+      return state.city + ' ' + state.city
+    }
+  }
 })
 
+// let defaultCity = '上海'
+// try {
+//   if (localStorage.city) {
+//     defaultCity = localStorage.city
+//   }
+// } catch(e) {}
 // export default new Vuex.Store({
 //   state: {
-//     city: 'beijing'
+//     city: defaultCity
 //   },
+//   getters: {
+//     doubleCity (state) {
+//       return state.city + ' ' + state.city
+//     }
+//   }
 //   actions: {
 //     changeCity (ctx, city) {
 //       ctx.commit('changeCity', city)
@@ -22,6 +39,9 @@ export default new Vuex.Store({
 //   mutations: {
 //     changeCity(state, city) {
 //       state.city = city
+//       try {
+//         localStorage.city = city
+//       } catch (e) {}
 //     }
 //   }
 // })

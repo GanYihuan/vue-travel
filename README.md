@@ -329,23 +329,22 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **store/store.js**
 - **store/mutations.js**
 
-- if cache wrong, close chrome
-- install vuex
-
 ```shell
 npm install vuex --save
 ```
 
-## 8-11: performed optimization
+## 8-10 Vue项目城市选择页 - Vuex的高级使用及localStorage ✨✨✨
 
-_(App.vue)_
-_(Home.vue)_
+- mapState 共用数据映射
+- mapMutations 共用mutation数据映射
 
-- ✨✨✨✨
+## 8-11 Vue项目城市选择页 - 使用keep-alive优化网页性能 ✨✨✨✨
 
-##### keep-alive
+- **App.vue**
+- **Home.vue**
 
-##### Ajax
+- keep-alive
+- Ajax
 
 ## 9-1: Banner component
 

@@ -58,6 +58,7 @@ export default {
 		letter: String
 	},
 	computed: {
+    // 将vuex共用数据city映射到'currentCity'当中
 		...mapState({
 			currentCity: 'city'
 		})
@@ -72,7 +73,8 @@ export default {
       this.changeCity(city)
       // 页面跳转
 			this.$router.push('/')
-		},
+    },
+    // 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity
 		...mapMutations(['changeCity'])
 	},
 	watch: {
