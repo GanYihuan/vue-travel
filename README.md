@@ -372,14 +372,11 @@ npm install vuex --save
 name: 'DetailList',
 ```
 
-## 9-6: dynamic data rendering
+## 9-6 Vue项目详情页 - 动态获取详情页面数据 ✨✨✨
 
-_(Detail.vue)_
-_(route.js)_
-
-- ✨✨✨
-
-##### route
+- **Detail.vue**
+- **route.js**
+- route 路径跳转，页面始终位于顶部
 
 ## 9-7: animate
 

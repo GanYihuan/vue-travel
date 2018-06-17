@@ -20,6 +20,7 @@ import DetailList from './components/List'
 import axios from 'axios'
 
 export default {
+  // 缓存, 递归
 	name: 'Detail',
 	components: {
 		DetailBanner,
@@ -33,7 +34,8 @@ export default {
 			gallaryImgs: [],
 			list: []
 		}
-	},
+  },
+  // 发ajax请求, 只会执行一次
 	mounted() {
 		this.getDetailInfo()
 	},
@@ -42,7 +44,7 @@ export default {
 			axios
 				.get('/api/detail.json', {
 					params: {
-						// get router parameter
+						// 获取路由参数
 						id: this.$route.params.id
 					}
 				})
