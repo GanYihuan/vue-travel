@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>组件化使用</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-  <input type="text" v-model="inputValue">
-  <button @click="handleBtnClick">submit</button>
-  <ul>
-    <!--<li v-for="(item, index) in list" :key="index">{{item}}</li>-->
-    <todo-item v-for="(item, index) in list" :key="index" :content="item"></todo-item>
-  </ul>
-</div>
+  <div id="app">
+    <input type="text" v-model="inputValue"/>
+    <button @click="handleBtnClick">submit</button>
+    <ul>
+      <!--<li v-for="(item, index) in list" :key="index">{{item}}</li>-->
+      <todo-item v-for="(item, index) in list" :key="index" :content="item"></todo-item>
+    </ul>
+  </div>
 
-<script>
-  /* global component */
-  //  Vue.component('TodoItem', {
-  //    props: ['content'],
-  //    template: '<li>{{content}}</li>'
-  //  })
+  <script>
+    /* global component */
+    //  Vue.component('TodoItem', {
+    //    props: ['content'],
+    //    template: '<li>{{content}}</li>'
+    //  })
 
-  /* local component */
-  var TodoItem = {
-    props: ['content'],
-    template: '<li>{{content}}</li>'
-  }
-
-  let app = new Vue({
-    el: '#app',
-    data: {
-      inputValue: '',
-      list: []
-    },
-    methods: {
-      handleBtnClick: function () {
-        this.list.push(this.inputValue)
-        this.inputValue = ''
-      }
-    },
-    components: {
-      TodoItem: TodoItem
+    /* local component */
+    var TodoItem = {
+      props: ['content'],
+      template: '<li>{{content}}</li>'
     }
-  })
-</script>
+
+    let app = new Vue({
+      el: '#app',
+      data: {
+        inputValue: '',
+        list: []
+      },
+      methods: {
+        handleBtnClick: function () {
+          this.list.push(this.inputValue)
+          this.inputValue = ''
+        }
+      },
+      components: {
+        TodoItem: TodoItem
+      }
+    })
+
+  </script>
 </body>
+
 </html>

@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>MVVM, MVP</title>
   <script src="../jquery-3.2.1.js"></script>
 </head>
+
 <body>
-<!-- MVP mode -->
-<div>
-  <input id="input" type="text"/>
-  <button id="btn">submit</button>
-  <ul id="list"></ul>
-</div>
+  <!-- MVP mode -->
+  <div>
+    <input id="input" type="text" />
+    <button id="btn">submit</button>
+    <ul id="list"></ul>
+  </div>
 
-<script>
-  function Page () {
+  <script>
+    function Page() {
 
-  }
-
-  $.extend(Page.prototype, {
-    init: function () {
-      this.bindEvents()
-    },
-    bindEvents: function () {
-      let btn = $('#btn')
-      // $.proxy 方法接受一个已有的函数，并返回一个带特定上下文的新的函数。
-      // 该方法通常用于向上下文指向不同对象的元素添加事件。
-      btn.on('click', $.proxy(this.handleBtnClick, this))
-    },
-    handleBtnClick: function () {
-      let inputElem = $('#input')
-      let inputValue = inputElem.val()
-      let ulElem = $('#list')
-      ulElem.append('<li>' +
-        inputValue +
-        '</li>')
-      inputElem.val('')
     }
-  })
 
-  let page = new Page()
-  page.init()
-</script>
+    $.extend(Page.prototype, {
+      init: function () {
+        this.bindEvents()
+      },
+      bindEvents: function () {
+        let btn = $('#btn')
+        // $.proxy 方法接受一个已有的函数，并返回一个带特定上下文的新的函数。
+        // 该方法通常用于向上下文指向不同对象的元素添加事件。
+        btn.on('click', $.proxy(this.handleBtnClick, this))
+      },
+      handleBtnClick: function () {
+        let inputElem = $('#input')
+        let inputValue = inputElem.val()
+        let ulElem = $('#list')
+        ulElem.append('<li>' +
+          inputValue +
+          '</li>')
+        inputElem.val('')
+      }
+    })
+
+    let page = new Page()
+    page.init()
+
+  </script>
 </body>
+
 </html>

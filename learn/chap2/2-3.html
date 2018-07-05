@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>TodoList</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
   <script src="../vue.js"></script>
 </head>
-<body>
-<div id="app">
-  <!-- v-model: double bind -->
-  <input type="text" v-model="inputValue">
-  <button @click="handleBtnClick">submit</button>
-  <ul>
-    <li v-for="(item, index) in list" :key="index">{{item}}</li>
-  </ul>
-</div>
 
-<script>
-  // MVVM mode
-  // M: model
-  // V: view
-  // VM: vue has been package
-  let app = new Vue({
-    el: '#app',
-    data: {
-      inputValue: '',
-      list: []
-    },
-    methods: {
-      handleBtnClick: function () {
-        this.list.push(this.inputValue)
-        this.inputValue = ''
+<body>
+  <div id="app">
+    <!-- v-model: double bind -->
+    <input type="text" v-model="inputValue" />
+    <button @click="handleBtnClick">submit</button>
+    <ul>
+      <li v-for="(item, index) in list" :key="index">{{item}}</li>
+    </ul>
+  </div>
+
+  <script>
+    // MVVM mode
+    // M: model
+    // V: view
+    // VM: vue has been package
+    let app = new Vue({
+      el: '#app',
+      data: {
+        inputValue: '',
+        list: []
+      },
+      methods: {
+        handleBtnClick() {
+          this.list.push(this.inputValue)
+          this.inputValue = ''
+        }
       }
-    }
-  })
-</script>
+    })
+
+  </script>
 </body>
+
 </html>
