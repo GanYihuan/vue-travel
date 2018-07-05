@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue动画 - Vue中CSS动画原理</title>
@@ -7,43 +8,47 @@
     .fade-enter {
       opacity: 0;
     }
+
     .fade-enter-active {
       transition: opacity 2s;
     }
+
     .fade-leave-to {
       opacity: 0;
     }
+
     .fade-leave-active {
       transition: opacity 2s;
     }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
+  <!-- animate time -->
+  <!-- 5-1.png/5-12.png -->
+  <div id="app">
+    <transition name="fade">
+      <div v-if="show">hello world</div>
+    </transition>
+    <button @click="handleClick">click</button>
+  </div>
 
-<!-- animate time -->
-<!-- 5-1.png/5-12.png -->
-
-<div id="app">
-  <transition name="fade">
-    <div v-if="show">hello world</div>
-  </transition>
-  <button @click="handleClick">click</button>
-</div>
-
-<script>
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      show: true
-    },
-    methods: {
-      handleClick () {
-        this.show = !this.show
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        show: true
+      },
+      methods: {
+        handleClick() {
+          this.show = !this.show
+        }
       }
-    }
-  })
-</script>
+    })
 
+  </script>
 </body>
+
 </html>

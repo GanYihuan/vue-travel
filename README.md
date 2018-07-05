@@ -145,8 +145,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - 动态组件
 - v-once
 
-## 5-1: animate ✨✨
+## 5-1: animate
 
+- ✨✨
 - **chap5/5-1.html**
 
 ## 5-2: Animate.css library ✨✨

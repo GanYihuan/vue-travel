@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>在Vue中使用 animate.css 库</title>
@@ -36,53 +37,49 @@
       transform-origin: left center;
       animation: bounce-in 2s reverse;
     }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
+  <div id="app">
+    <transition name="fade">
+      <div v-if="show">hello world</div>
+    </transition>
+    <button @click="handleClick">click</button>
+    <hr/>
 
-<div id="app">
-  <transition name="fade">
-    <div v-if="show">hello world</div>
-  </transition>
-  <button @click="handleClick">click</button>
-  <hr/>
+    <!-- define animate name -->
+    <transition enter-active-class="active" leave-active-class="leave">
+      <div v-if="show">hello world 2</div>
+    </transition>
+    <button @click="handleClick">click2</button>
+    <hr/>
 
-  <!-- define animate name -->
-  <transition
-    enter-active-class="active"
-    leave-active-class="leave"
-  >
-    <div v-if="show">hello world 2</div>
-  </transition>
-  <button @click="handleClick">click2</button>
-  <hr/>
+    <!-- use Animate.css library -->
+    <!-- 启动Animate.css: animated -->
+    <!-- 效果: swing -->
+    <transition enter-active-class="animated swing" leave-active-class="animated shake">
+      <div v-if="show">hello world 3</div>
+    </transition>
+    <button @click="handleClick">click3</button>
+  </div>
 
-  <!-- use Animate.css library -->
-  <!-- 启动Animate.css: animated -->
-  <!-- 效果: swing -->
-  <transition
-    enter-active-class="animated swing"
-    leave-active-class="animated shake"
-  >
-    <div v-if="show">hello world 3</div>
-  </transition>
-  <button @click="handleClick">click3</button>
-</div>
-
-<script>
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      show: true
-    },
-    methods: {
-      handleClick () {
-        this.show = !this.show
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        show: true
+      },
+      methods: {
+        handleClick() {
+          this.show = !this.show
+        }
       }
-    }
-  })
-</script>
+    })
 
+  </script>
 </body>
+
 </html>
