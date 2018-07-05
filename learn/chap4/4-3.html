@@ -14,21 +14,23 @@
 <script>
   Vue.component('child', {
     props: {
-      // props特性: 父组件传递给子组件数据，子组件内部也定义好该数据名称
-      // 传入content, 子组件声明了content
-      // 标签里的content不会显示在dom上
-      // 可以使用this.content或{{}}来调用
-      // 非props特性: 标签里的content会显示在dom上
-      // 不可以使用this.content或{{}}来调用
+      /* 
+      props特性: 父组件传递给子组件数据，子组件内部也定义好该数据名称
+      传入content, 子组件在props声明了content
+      标签里的content不会显示在dom上
+      可以使用this.content或{{}}来调用
+      非props特性: 子组件内部没有定义props, 标签里的content会显示在dom上
+      不可以使用this.content或{{}}来调用
+      */
       content: [String, Number],
       content2: {
-        // must String
+        /* must String */
         type: String,
-        // must pass me data
+        /* must pass me data */
         required: true,
-        // if not pass me data, use default
+        /* if not pass me data, use default */
         default: 'default value',
-        // data valid
+        /* data valid */
         validator(data) {
           return (data.length > 5)
         }

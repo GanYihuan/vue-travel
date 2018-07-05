@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>父子组件间的数据传递</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- count="0" it's string, :count="0" it's number -->
+    <counter :count="1" @change="handleChange"></counter>
+    <counter :count="2" @change="handleChange"></counter>
+    <div>I'am: {{total}}</div>
+  </div>
+
+  <script>
+    let counter = {
+      /* access father data */
+      props: ['count'],
+      /* child component data must function */
+      data() {
+        return {
+          /* 父级数据转化为子组件内部数据 */
+          number: this.count
+        }
+      },
+      /*
+      child component can't change father data
+      template: '<div @click="handleClick">{{count}}</div>',
+      child component use itself data
+      */ 
+      template: '<div @click="handleClick">{{this.number}}</div>',
+      methods: {
+        handleClick() {
+          /*
+          单项数据流, count为props父级传入的数据, 不能在下面直接修改父组件的数据
+          this.count++
+          */
+          /* 这是子组件内部data定义的数据 */ 
+          this.number++
+          /* 子组件向父组件传递数据信息 */
+          this.$emit('change', 1)
+        }
+      }
+    }
+
+    let vm = new Vue({
+      el: '#root',
+      /* 父组件data可以不是function, 不推荐 */
+      data: {
+        total: 3
+      },
+      components: {
+        counter: counter
+      },
+      methods: {
+        handleChange(data) {
+          this.total += data
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

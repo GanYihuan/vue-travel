@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>插槽</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
+  <div id="app">
+    <child>
+      <h1>Dell</h1>
+    </child>
+    <hr/>
+    <!-- content是保留关键字 -->
+    <body-content>
+      <div class="header" slot="footer">footer</div>
+      <div class="header" slot="header">header</div>
+    </body-content>
+  </div>
 
-<div id="app">
-  <child>
-    <h1>Dell</h1>
-  </child>
-  <hr/>
-  <!-- content是保留关键字 -->
-  <body-content>
-    <div class="header" slot="header">header</div>
-    <div class="header" slot="footer">footer</div>
-  </body-content>
-</div>
-
-<script>
-  Vue.component('child', {
-    // slot: <h1>Dell</h1>
-    template: `<div>
+  <script>
+    // <slot></slot>: 被某些内容替换这部分
+    Vue.component('child', {
+      // slot: <h1>Dell</h1>
+      template: `<div>
                 <p>hello</p>
                 <slot>default value</slot>
               </div>`
-  })
+    })
 
-  Vue.component('body-content', {
-    // slot header: div slot=header
-    // slot footer: div slot=footer
-    template: `<div>
+    Vue.component('body-content', {
+      // slot header: div slot=header
+      // slot footer: div slot=footer
+      template: `<div>
                 <slot name="header"></slot>
                 <div class="content">content</div>
                 <slot name="footer"></slot>
               </div>`
-  })
+    })
 
-  let vm = new Vue({
-    el: '#app'
-  })
-</script>
+    let vm = new Vue({
+      el: '#app'
+    })
 
+  </script>
 </body>
+
 </html>
