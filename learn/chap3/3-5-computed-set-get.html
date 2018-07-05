@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>computed getter setter</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-  {{fullName}}
-  {{age}}
-</div>
-<script>
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      firstName: 'Dell',
-      lastName: 'Lee',
-    },
-    computed: {
-      fullName: {
-        // get: function() {}
-        get () {
-          return this.firstName + ' ' + this.lastName
-        },
-        // chrome: call set()
-        // vm.fullName = 'mike wang'
-        set (value) {
-          let arr = value.split(' ')
-          this.firstName = arr[0]
-          this.lastName = arr[1]
+  <div id="app">
+    {{fullName}} {{age}}
+  </div>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        firstName: 'Dell',
+        lastName: 'Lee',
+      },
+      computed: {
+        fullName: {
+          // get: function() {}
+          get() {
+            return this.firstName + ' ' + this.lastName
+          },
+          // chrome: call set()
+          // vm.fullName = 'mike wang'
+          set(value) {
+            let arr = value.split(' ')
+            this.firstName = arr[0]
+            this.lastName = arr[1]
+          }
         }
       }
-    }
-  })
-</script>
+    })
+  </script>
 </body>
+
 </html>

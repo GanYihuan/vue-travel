@@ -61,34 +61,39 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 3-2 Vue实例生命周期
 
-- ✨✨
+- ✨✨✨
 - **chap3/3-2.html**
 
-## 3-3: v-text, v-html ✨✨
+## 3-3 Vue的模版语法
 
+- ✨✨
 - **chap3/3-3.html**
 
-## 3-4: computed, method, watch ✨✨
+## 3-4 计算属性,方法与侦听器
 
+- ✨✨
 - **chap3/3-4.html**
 
-## 3-5: computed getter setter ✨✨
+## 3-5 计算属性的 getter 和 setter
 
+- ✨✨
 - **chap3/3-5.html**
 
-## 3-6: set style ✨✨
+## 3-6 Vue中的样式绑定
 
+- ✨✨
 - **chap3/3-6.html**
 
-## 3-7: condition render ✨✨
+## 3-7 Vue中的条件渲染
 
+- ✨✨
 - **chap3/3-7.html**
-
 - v-if, v-show
 - input define key
 
-## 3-8, 3-9: cycle ✨✨
+## 3-8, 3-9 Vue中的列表渲染 Vue中的set方法
 
+- ✨✨
 - **chap3/3-8.html**
 
 ## chap4: In-depth understanding of Vue components

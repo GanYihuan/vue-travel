@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -13,48 +14,51 @@
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-  <div @click="handleDivClick" :class="{activated: isActivated}">
-    hello world
+  <div id="app">
+    <div @click="handleDivClick" :class="{activated: isActivated}">
+      hello Angular
+    </div>
+    <!-- 数组里面是变量 -->
+    <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">
+      hello Vue
+    </div>
+    <!-- 数组里面是对象 -->
+    <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">
+      hello React
+    </div>
   </div>
-  <!-- 数组里面是变量 -->
-  <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">
-    hello vue
-  </div>
-  <!-- 数组里面是对象 -->
-  <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">
-    hello React
-  </div>
-</div>
-<script>
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      isActivated: false,
-      activatedOne: '',
-      activatedTwo: 'activatedTwo',
-      styleObj: {
-        color: 'black'
-      }
-    },
-    methods: {
-      handleDivClick () {
-        this.isActivated = !this.isActivated
+
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        isActivated: false,
+        activatedOne: '',
+        activatedTwo: 'activatedTwo',
+        styleObj: {
+          color: 'black'
+        }
       },
-      handleDivClickVue () {
-//        if (this.activatedOne === 'activatedOne') {
-//          this.activatedOne = ''
-//        } else {
-//          this.activatedOne = 'activatedOne'
-//        }
-        this.activatedOne = this.activatedOne === 'activatedOne' ? '' : 'activatedOne'
-      },
-      handleDivClickReact () {
-        this.styleObj.color = this.styleObj.color === 'black' ? 'blue' : 'black'
+      methods: {
+        handleDivClick() {
+          this.isActivated = !this.isActivated
+        },
+        handleDivClickVue() {
+          // if (this.activatedOne === 'activatedOne') {
+          //   this.activatedOne = ''
+          // } else {
+          //   this.activatedOne = 'activatedOne'
+          // }
+          this.activatedOne = this.activatedOne === 'activatedOne' ? '' : 'activatedOne'
+        },
+        handleDivClickReact() {
+          this.styleObj.color = this.styleObj.color === 'black' ? 'blue' : 'black'
+        }
       }
-    }
-  })
-</script>
+    })
+  </script>
 </body>
+
 </html>
