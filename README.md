@@ -59,8 +59,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - ✨
 
-## 3-2: life circle ✨✨
+## 3-2 Vue实例生命周期
 
+- ✨✨
 - **chap3/3-2.html**
 
 ## 3-3: v-text, v-html ✨✨

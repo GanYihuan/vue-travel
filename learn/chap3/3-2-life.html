@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>生命周期函数</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
-<div id="app"></div>
-<script>
-  // 生命周期函数是某个时间点执行的函数
-  // vm: vue实例
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      test: 'hello vue'
-    },
-    template: '<div>{{test}}</div>',
-    beforeCreate () {
-      console.log('beforeCreate')
-    },
-    created () {
-      console.log('created')
-    },
-    beforeMount () {
-      console.log('beforeMount')
-      console.log(this.$el)
-    },
-    mounted () {
-      console.log('mount')
-      console.log(this.$el)
-    },
-    // chrome: change data
-    // vm.test = 'change data'
-    beforeUpdate () {
-      console.log('beforeUpdate')
-    },
-    updated () {
-      console.log('updated')
-    },
-    // chrome: call vm.$destroy
-    // vm.$destroy()
-    beforeDestroy () {
-      console.log('beforeDestroy')
-    },
-    destroyed () {
-      console.log('destroyed')
-    }
-  })
-</script>
+  <div id="app"></div>
+  <script>
+    /*
+    生命周期函数是某个时间点执行的函数
+    vm: vue实例
+    new Vue()
+    */
+    let vm = new Vue({
+      data: {
+        test: 'hello vue'
+      },
+      /* init event & lifecycle */
+      beforeCreate() {
+        console.log('beforeCreate')
+      },
+      /* init injections & reactivity */
+      created() {
+        console.log('created')
+      },
+      /* has 'el' option? */
+      el: '#app',
+      /* N: vm.$mount(el) */ 
+      /* Y: has 'template' option? */
+      template: '<div>{{test}}</div>',
+      /* Y: compile template as render function */
+      /* N: compile outHTML as template */
+      /* N: 转化为 template: '<div id="app"></div>' */ 
+      /* beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间 */ 
+      beforeMount() {
+        console.log('beforeMount')
+        /* 没数据 */ 
+        console.log(this.$el)
+      },
+      /* create vm.$el and replace 'el' with it */
+      mounted() {
+        console.log('mount')
+        /* 有数据 */ 
+        console.log(this.$el)
+      },
+      /* when data change */
+      beforeUpdate() {
+        console.log('beforeUpdate')
+      },
+      /* virtual DMO re-render and patch */
+      updated() {
+        console.log('updated')
+      },
+      /*
+      when vm.$destory() is called
+      */
+      beforeDestroy() {
+        console.log('beforeDestroy')
+      },
+      /* teardown watches, child components and events listeners */
+      destroyed() {
+        console.log('destroyed')
+      }
+    })
+  </script>
 </body>
+
 </html>
