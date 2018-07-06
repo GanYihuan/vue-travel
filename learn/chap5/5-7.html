@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue中的动画封装</title>
   <link rel="stylesheet" href="../animate.css">
   <script src="../vue.js"></script>
 </head>
+
 <body>
+  <div id="app">
+    <fade :show="show">
+      <div>hello world</div>
+    </fade>
+    <button @click="handleClick">click3</button>
+  </div>
 
-<div id="app">
-  <fade :show="show">
-    <div>hello world</div>
-  </fade>
-  <button @click="handleClick">click3</button>
-</div>
+  <script>
+    Vue.component('fade', {
+      props: ['show'],
+      template: `<transition 
+                  @before-enter="handleBeforeEnter" 
+                  @enter="handleEnter"
+                >
+                  <slot v-if="show"></slot>
+                </transition>`,
+      methods: {
+        handleBeforeEnter(el) {
+          el.style.color = '#f00'
+        },
+        handleEnter(el, done) {
+          setTimeout(() => {
+            el.style.color = '#0f0'
+            done()
+          }, 2000)
+        }
+      }
+    })
 
-<script>
-  Vue.component('fade', {
-    props: ['show'],
-    template: `<transition 
-                @before-enter="handleBeforeEnter" 
-                @enter="handleEnter"
-              >
-                <slot v-if="show"></slot>
-              </transition>`,
-    methods: {
-      handleBeforeEnter (el) {
-        el.style.color = '#f00'
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        show: true
       },
-      handleEnter (el, done) {
-        setTimeout(() => {
-          el.style.color = '#0f0'
-          done()
-        }, 2000)
+      methods: {
+        handleClick() {
+          this.show = !this.show
+        }
       }
-    }
-  })
+    })
 
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      show: true
-    },
-    methods: {
-      handleClick () {
-        this.show = !this.show
-      }
-    }
-  })
-</script>
-
+  </script>
 </body>
+
 </html>

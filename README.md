@@ -145,38 +145,44 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - 动态组件
 - v-once
 
-## 5-1: animate
+## 5-1 Vue动画 - Vue中CSS动画原理
 
 - ✨✨
 - **chap5/5-1.html**
 
-## 5-2: Animate.css library ✨✨
+## 5-2 在Vue中使用 animate.css 库
 
+- ✨✨
 - **chap5/5-2.html**
-- Animate.css library
+- use Animate.css library
 
-## 5-3: use Animate.css and transition at the same time ✨✨
+## 5-3 在Vue中同时使用过渡和动画
 
+- ✨✨
 - **chap5/5-3.html**
 
-## 5-4: js animate and velocity.js ✨✨
+## 5-4 Vue中的 Js 动画与 Velocity.js 的结合
 
+- ✨✨
 - **chap5/5-4.html**
 - Velocity.js library
 
-## 5-5: many component animate ✨✨✨
+## 5-5 Vue中多个元素或组件的过渡
 
+- ✨✨✨
 - **chap5/5-5.html**
-- key
-- mode
-- 动态组件
+- 加key不让它复用dom, 否则动画不出现
+- mode="in-out": 先显示再隐藏
+- 动态组件 ```<component :is="type"></component>```
 
-## 5-6: list animate, transition-group ✨✨
+## 5-6 Vue中的列表过渡
 
+- ✨✨
 - **chap5/5-6.html**
 
-## 5-7: animate package ✨✨
+## 5-7 Vue中的动画封装
 
+- ✨✨
 - **chap5/5-7.html**
 
 ## 6-1: 环境配置 ✨

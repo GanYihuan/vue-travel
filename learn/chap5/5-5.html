@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue中多个元素或组件的过渡</title>
   <link rel="stylesheet" href="../animate.css">
   <style>
-    .fade-enter, .fade-leave-to {
+    .fade-enter,
+    .fade-leave-to {
       opacity: 0;
     }
 
-    .fade-enter-active, .fade-leave-active {
+    .fade-enter-active,
+    .fade-leave-active {
       transition: opacity 2s;
     }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
+  <div id="app">
+    <!-- mode="in-out": 先显示再隐藏 -->
+    <transition name="fade" mode="in-out">
+      <!-- 加key不让它复用dom, 否则动画不出现 -->
+      <div v-if="show" key="hello">hello world 1</div>
+      <div v-else key="bye">hello world 2</div>
+    </transition>
+    <button @click="handleClick">click3</button>
+    <hr/>
 
-<div id="app">
-  <!-- mode="in-out": 先显示再隐藏 -->
-  <transition name="fade" mode="in-out">
-    <!-- 加key不让它复用dom -->
-    <div v-if="show" key="hello">hello world 1</div>
-    <div v-else key="bye">hello world 2</div>
-  </transition>
-  <button @click="handleClick">click3</button>
-  <hr/>
+    <transition name="fade" mode="out-in">
+      <!-- 动态组件 -->
+      <component :is="type"></component>
+    </transition>
+    <button @click="handleClick">click3</button>
+  </div>
 
-  <transition name="fade" mode="out-in">
-    <!-- 动态组件 -->
-    <component :is="type"></component>
-  </transition>
-  <button @click="handleClick">click3</button>
-</div>
+  <script>
+    Vue.component('child', {
+      template: '<div>child</div>'
+    })
+    Vue.component('child-one', {
+      template: '<div>child-one</div>'
+    })
 
-<script>
-  Vue.component('child', {
-    template: '<div>child</div>'
-  })
-  Vue.component('child-one', {
-    template: '<div>child-one</div>'
-  })
-
-  let vm = new Vue({
-    el: '#app',
-    data: {
-      type: 'child'
-    },
-    methods: {
-      handleClick () {
-        this.type = this.type === 'child' ? 'child-one' : 'child'
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        type: 'child'
+      },
+      methods: {
+        handleClick() {
+          this.type = this.type === 'child' ? 'child-one' : 'child'
+        }
       }
-    }
-  })
-</script>
+    })
 
+  </script>
 </body>
+
 </html>
