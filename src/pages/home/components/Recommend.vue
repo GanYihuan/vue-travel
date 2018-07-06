@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/* @import '../../../assets/styles/varibles.styl'; */
 @import '~styles/mixins.styl';
 @import './Recommend.styl';
 </style>

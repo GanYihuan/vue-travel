@@ -100,7 +100,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - ✨✨✨
 - **chap4/4-1.html**
-- is: 解决 H5 上的小 bug: ```<tr is="row"></tr>```
+- is: 解决 H5 上的小 bug: `<tr is="row"></tr>`
 - data must function
 - ref
 
@@ -128,7 +128,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **chap4/4-5.html**
 - bus
 
-## 4-6 在Vue中使用插槽
+## 4-6 在 Vue 中使用插槽
 
 - ✨✨
 - **chap4/4-6.html**
@@ -145,47 +145,47 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - 动态组件
 - v-once
 
-## 5-1 Vue动画 - Vue中CSS动画原理
+## 5-1 Vue 动画 - Vue 中 CSS 动画原理
 
 - ✨✨
 - **chap5/5-1.html**
 
-## 5-2 在Vue中使用 animate.css 库
+## 5-2 在 Vue 中使用 animate.css 库
 
 - ✨✨
 - **chap5/5-2.html**
 - use Animate.css library
 
-## 5-3 在Vue中同时使用过渡和动画
+## 5-3 在 Vue 中同时使用过渡和动画
 
 - ✨✨
 - **chap5/5-3.html**
 
-## 5-4 Vue中的 Js 动画与 Velocity.js 的结合
+## 5-4 Vue 中的 Js 动画与 Velocity.js 的结合
 
 - ✨✨
 - **chap5/5-4.html**
 - Velocity.js library
 
-## 5-5 Vue中多个元素或组件的过渡
+## 5-5 Vue 中多个元素或组件的过渡
 
 - ✨✨✨
 - **chap5/5-5.html**
-- 加key不让它复用dom, 否则动画不出现
+- 加 key 不让它复用 dom, 否则动画不出现
 - mode="in-out": 先显示再隐藏
-- 动态组件 ```<component :is="type"></component>```
+- 动态组件 `<component :is="type"></component>`
 
-## 5-6 Vue中的列表过渡
+## 5-6 Vue 中的列表过渡
 
 - ✨✨
 - **chap5/5-6.html**
 
-## 5-7 Vue中的动画封装
+## 5-7 Vue 中的动画封装
 
 - ✨✨
 - **chap5/5-7.html**
 
-## 6-1 Vue项目预热 - 环境配置
+## 6-1 Vue 项目预热 - 环境配置
 
 -✨
 
@@ -200,12 +200,12 @@ npm run dev
 
 - ✨
 
-## 6-3 Vue项目预热 - 单文件组件与Vue中的路由
+## 6-3 Vue项目预热 - 单文件组件与 Vue 中的路由
 
 - ✨
 - **router/route.js**
 
-## 6-4 Vue项目预热 - 单页应用VS多页应用
+## 6-4 Vue项目预热 - 单页应用 VS 多页应用
 
 - ✨
 - **static/know1.png**
@@ -224,7 +224,7 @@ npm run dev
 npm i fastclick -S
 ```
 
-## 7-1 Vue项目首页 - header区域开发
+## 7-1 Vue项目首页 - header 区域开发
 
 - ✨✨✨
 - **home/Header.vue**
@@ -235,50 +235,64 @@ npm i stylus -S
 npm i stylus-loader -S
 ```
 
-## 7-2 Vue 项目首页 - iconfont 的使用和代码优化 ✨✨
+## 7-2 Vue 项目首页 - iconfont 的使用和代码优化
 
+- ✨✨
 - **home/Header.vue**
 - 别名配置 webpack.base.conf.js
 
-## 7-3 Vue 项目首页 - 首页轮播图 ✨✨✨
+## 7-3 Vue 项目首页 - 首页轮播图
 
+- ✨✨✨
 - **home/Swiper.vue**
 - prevent shake, inside css .wrapper
 - vue-awesome-swiper
-- 图片宽高比固定比值 Swpier.styl
-- > > > : 样式穿透
+- 图片宽高比固定比值:
 
-```shell
-npm install vue-awesome-swiper --save
+```css
+  overflow: hidden;
+  padding-bottom: 31.25%;
+  height: 0;
 ```
 
-## 7-4 Vue 项目首页 - 图标区域页面布局 ✨✨
+- >>>: 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active就可以添加样式
 
+```shell
+npm i vue-awesome-swiper -S
+```
+
+## 7-4 Vue项目首页 - 图标区域页面布局
+
+- ✨✨
 - **home/Icons.vue**
 
-## 7-5 Vue 项目首页 - 图标区域逻辑实现 ✨✨✨
+## 7-5 Vue项目首页 - 图标区域逻辑实现
 
+- ✨✨✨
 - **home/Icons.vue**
 - swiper 无法分页, 解决
 - swiper 样式设置
 - css 显示...
 
-## 7-6 Vue 项目首页 - 热销推荐组件开发 ✨✨
+## 7-6 Vue项目首页 - 热销推荐组件开发
 
+- ✨✨
 - **home/Recommend.vue**
 
-## 7-7 Vue 项目首页 - 开发周末游组件 ✨✨
+## 7-7 Vue项目首页 - 开发周末游组件
 
+- ✨✨
 - **home/Weekend.vue**
 - Weekend.styl 固定宽高比
 
-## 7-8 Vue 项目首页 - 使用 axios 发送 ajax 请求 ✨✨✨
+## 7-8 Vue 项目首页 - 使用 axios 发送 ajax 请求 
 
+- ✨✨✨
 - **home/Home.vue**
 - axios 异步传数据
 
 ```shell
-npm install axios --save
+npm i axios -S
 ```
 
 - 转发访问的路径内容
@@ -287,11 +301,11 @@ npm install axios --save
 ```shell
 proxyTable: {
   '/api': {
-      target: 'http://localhost:8080',
-      pathRewrite: {
-        '^/api': '/static/mock'
-      }
+    target: 'http://localhost:8080',
+    pathRewrite: {
+      '^/api': '/static/mock'
     }
+  }
 },
 ```
 
@@ -305,8 +319,9 @@ axios.get('/api/index.json?city=')
 axios.get('/static/mock/index.json?city=' + this.city)
 ```
 
-## 7-9 Vue 项目首页 - 首页父子组组件间传值 ✨✨✨
+## 7-9 Vue 项目首页 - 首页父子组组件间传值
 
+- ✨✨✨
 - **home/Home.vue**
 - **home/Header.vue**
 - **home/Icons.vue**

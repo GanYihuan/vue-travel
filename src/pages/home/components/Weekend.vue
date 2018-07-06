@@ -29,7 +29,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/* @import '../../../assets/styles/varibles.styl'; */
 @import '~styles/mixins.styl';
 @import './Weekend.styl';
 </style>
