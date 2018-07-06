@@ -31,7 +31,7 @@ export default {
 		}
 	},
 	computed: {
-		// swiper 无法分页解决
+		/* swiper 无法分页解决 */
 		pages() {
 			const pages = []
 			this.list.forEach((item, index) => {
@@ -48,8 +48,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/* @import '~styles/mixins.styl' */
-/* @import '../../../assets/styles/varibles.styl'; */
 @import '~styles/varibles.styl';
 @import './Icons.styl';
 </style>

@@ -19,14 +19,17 @@ export default new Router({
       component: City
     },
     {
-      // 动态路由: 传递参数
+      /* 动态路由: 传递参数 */
       path: '/detail/:id',
       name: 'Detail',
       component: Detail
     }
   ],
-  // 路径跳转，页面始终位于顶部
-  scrollBehavior (to, from, savedPosition) {
-    return {x: 0, y: 0}
+  /* 路径跳转，页面始终位于顶部 */
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
   }
 })

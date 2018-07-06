@@ -14,12 +14,19 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
-// Ajax
+/* Ajax */
 import axios from 'axios'
 import { mapState } from 'vuex'
 
 export default {
 	name: 'Home',
+	components: {
+		HomeHeader,
+		HomeSwiper,
+		HomeIcons,
+		HomeRecommend,
+		HomeWeekend
+	},
 	data() {
 		return {
 			lastCity: '',
@@ -30,20 +37,23 @@ export default {
 		}
 	},
 	computed: {
-    // 将vuex共用数据city映射到'currentCity'当中
+		/* 将vuex共用数据city映射到'currentCity'当中 */
 		...mapState(['city'])
-  },
-  // 组件被挂载的时候
+	},
+	/* 组件被挂载的时候 */
 	mounted() {
+    /* 保存上一个数据city值 */ 
 		this.lastCity = this.city
 		this.getHomeInfo()
 	},
-	// activated: 当使用keep-alive时，App.vue将附加组件激活
-  // 当页面重新显示的时候将运行
-  // deactivated(){}, 与activated相反
+	/*
+  activated: 当使用keep-alive时，App.vue将附加组件激活
+	当页面重新显示的时候将运行
+	deactivated(){}, 与activated相反
+  */
 	activated() {
 		if (this.lastCity !== this.city) {
-			// save preCity
+			/* save preCity */
 			this.lastCity = this.city
 			this.getHomeInfo()
 		}
@@ -64,13 +74,6 @@ export default {
 				this.weekendList = data.weekendList
 			}
 		}
-	},
-	components: {
-		HomeHeader,
-		HomeSwiper,
-		HomeIcons,
-		HomeRecommend,
-		HomeWeekend
 	}
 }
 </script>

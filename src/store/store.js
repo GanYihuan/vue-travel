@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state,
   mutations,
-  // getters: 根据 state 算出新数据
+  /* getters: 根据 state 算出新数据, 类似computed */
   getters: {
     doubleCity(state) {
       return state.city + ' ' + state.city

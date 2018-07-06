@@ -185,7 +185,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - ✨✨
 - **chap5/5-7.html**
 
-## 6-1: 环境配置 ✨
+## 6-1 Vue项目预热 - 环境配置
+
+-✨
 
 ```shell
 node -v
@@ -194,19 +196,24 @@ vue init webpack imooc-travel
 npm run dev
 ```
 
-## 6-2: 项目代码介绍 ✨
+## 6-2 Vue项目预热 - 项目代码介绍
 
-## 6-3: 单文件组件与 Vue 中的路由 ✨
+- ✨
 
+## 6-3 Vue项目预热 - 单文件组件与Vue中的路由
+
+- ✨
 - **router/route.js**
 
-## 6-4: 单页应用 VS 多页应用 ✨
+## 6-4 Vue项目预热 - 单页应用VS多页应用
 
+- ✨
 - **static/know1.png**
 - **static/know2.png**
 
-## 6-5: 项目代码初始化 ✨✨
+## 6-5 Vue项目预热 - 项目代码初始化
 
+- ✨✨
 - index.html/meta
 - iconfont
 - reset.css
@@ -214,17 +221,18 @@ npm run dev
 - fastclick 移动端延迟 300ms 解决
 
 ```shell
-npm install fastclick
+npm i fastclick -S
 ```
 
-## 7-1 Vue 项目首页 - header 区域开发 ✨✨✨
+## 7-1 Vue项目首页 - header区域开发
 
+- ✨✨✨
 - **home/Header.vue**
-- 1rem = html font-size=50px
+- 1rem = html font-size = 50px
 
 ```shell
-npm install stylus --save
-npm install stylus-loader --save
+npm i stylus -S
+npm i stylus-loader -S
 ```
 
 ## 7-2 Vue 项目首页 - iconfont 的使用和代码优化 ✨✨

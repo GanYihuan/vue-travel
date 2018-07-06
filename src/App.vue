@@ -6,7 +6,7 @@
     -->
     <!-- name = Detail component 不进行缓存处理 -->
     <keep-alive exclude="Detail">
-      <!-- 显示当前路由地址对应的内容 -->
+      <!-- router-view: 显示当前路由地址对应的内容 -->
       <router-view/>
     </keep-alive>
   </div>
