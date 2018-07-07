@@ -62,7 +62,7 @@ export default {
 		handleCityClick(city) {
       /* vuex/mutations */
       // this.$store.dispatch('changeCity', city)
-      /* vuex/mutations 可以直接调用mutations, 不需要通过Actions */ 
+      /* vuex/mutations 可以直接调用mutations, 不需要通过actions */ 
       // this.$store.commit('changeCity', city)
       this.changeCity(city)
       /* 页面跳转 */

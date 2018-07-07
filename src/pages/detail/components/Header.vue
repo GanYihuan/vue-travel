@@ -43,9 +43,11 @@ export default {
 			const top = document.documentElement.scrollTop
 			if (top > 60) {
 				let opacity = top / 140
-				opacity = opacity > 1 ? 1 : opacity
-				// key === value, 只写一个
-				// this.opacityStyle = {opacity: opacity}
+        opacity = opacity > 1 ? 1 : opacity
+        /*
+        key === value, 只写一个
+				this.opacityStyle = {opacity: opacity}
+        */
 				this.opacityStyle = { opacity }
 				this.showAbs = false
 			} else {
@@ -57,7 +59,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/* @import '~styles/varibles.styl' */
-@import '../../../assets/styles/varibles.styl';
+@import '~styles/varibles.styl'
 @import './Header.styl';
 </style>
