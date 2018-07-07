@@ -455,8 +455,9 @@ name: 'DetailList',
 - **route.js**
 - route 路径跳转，页面始终位于顶部
 
-## 9-7 Vue 项目详情页 - 在项目中加入基础动画 ✨✨
+## 9-7 Vue项目详情页 - 在项目中加入基础动画
 
+- ✨✨
 - **FadeAnimation.vue**
 - **Banner.vue**
 
