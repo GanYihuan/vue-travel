@@ -28,7 +28,11 @@ import CommonGallary from 'common/gallary/Gallary'
 import FadeAnimation from 'common/fade/FadeAnimation'
 
 export default {
-	name: 'DetailBanner',
+  name: 'DetailBanner',
+  components: {
+		CommonGallary,
+		FadeAnimation
+	},
 	props: {
 		sightName: String,
 		bannerImg: String,
@@ -46,10 +50,6 @@ export default {
 		handleGallaryClose() {
 			this.showGallary = false
 		}
-	},
-	components: {
-		CommonGallary,
-		FadeAnimation
 	}
 }
 </script>

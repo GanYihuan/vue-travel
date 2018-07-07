@@ -407,8 +407,9 @@ npm i vuex -S
 - keep-alive, activated生命周期, 当页面重新显示的时候将运行
 - 发送ajax请求带参数
 
-## 9-1 Vue 项目详情页 - 动态路由和 banner 布局 ✨✨
+## 9-1 Vue项目详情页 - 动态路由和banner布局
 
+- ✨✨
 - **Banner.vue**
 - 动态路由
 

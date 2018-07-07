@@ -2,6 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
+      <!-- router-link默认换成a标签 -->
       <router-link
         class="item border-bottom"
         tag="li"
