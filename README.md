@@ -413,10 +413,20 @@ npm i vuex -S
 - **Banner.vue**
 - 动态路由
 
-## 9-2 Vue 项目详情页 - 公用图片画廊组件拆分 ✨✨✨
+## 9-2 Vue 项目详情页 - 公用图片画廊组件拆分
 
+- ✨✨✨
 - **Gallary.vue**
 - Swiper official website
+
+```css
+/* 正方形 */
+overflow: hidden;
+padding-bottom: 100%;
+width: 100%;
+height: 0;
+/* 正方形 */
+```
 
 ## 9-3 Vue 项目详情页 - 实现 Header 渐隐渐显效果 ✨✨✨
 

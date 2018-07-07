@@ -2,10 +2,7 @@
   <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOptions">
-        <swiper-slide
-          v-for="(item, index) in imgs"
-          :key="index"
-        >
+        <swiper-slide v-for="(item, index) in imgs" :key="index">
           <img class="gallary-img" :src="item"/>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -28,13 +25,13 @@ export default {
 	data() {
 		return {
 			swiperOptions: {
-				// dots
+				/* dots */
 				pagination: '.swiper-pagination',
-				// dots type
+				/* dots type */
 				paginationType: 'fraction',
-				// 当swiper父元素改变时，swiper刷新
+				/* 当swiper父元素改变时，swiper刷新 */
 				observeParents: true,
-				// 当swiper父元素或自身dom改变时，swiper刷新
+				/* 当swiper父元素或自身dom改变时，swiper刷新 */
 				observer: true
 			}
 		}
