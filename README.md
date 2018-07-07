@@ -467,8 +467,9 @@ name: 'DetailList',
 - **config/index.js**
 - localhost: 80 端口
 
-## 10-2 Vue 项目的联调测试上线 - 真机测试 ✨✨✨
+## 10-2 Vue项目的联调测试上线 - 真机测试
 
+- ✨✨✨
 - **config/index.js**
 - **package.json**
 - **city/Alphabet.vue**
@@ -496,9 +497,9 @@ ipconfig
 
 > babel-polyfill: 当你的手机版本太低时，添加一些承诺语法
 
-## 10-3 Vue 项目的联调测试上线 - 打包上线 ✨✨✨
+## 10-3 Vue 项目的联调测试上线 - 打包上线
 
-- **config/index.js**
+- ✨✨✨
 - 打包
 
 ```shell
@@ -506,7 +507,6 @@ npm run build
 ```
 
 - **config/index.js**
-
 > App 放入项目文件中，需要配置路径，后端访问项目文件可以运行 App
 
 ```shell
@@ -515,6 +515,10 @@ build: {
 }
 ```
 
-## 10-4 Vue 项目的联调测试上线 - 异步组件实现按需加载 ✨
+## 10-4 Vue 项目的联调测试上线 - 异步组件实现按需加载
 
-## 10-5 Vue 项目的联调测试上线 - 课程总结与后续学习指南 ✨
+- ✨
+
+## 10-5 Vue 项目的联调测试上线 - 课程总结与后续学习指南
+
+- ✨
