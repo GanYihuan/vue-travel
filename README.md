@@ -448,8 +448,9 @@ height: 0;
 name: 'DetailList',
 ```
 
-## 9-6 Vue 项目详情页 - 动态获取详情页面数据 ✨✨✨
+## 9-6 Vue项目详情页 - 动态获取详情页面数据
 
+- ✨✨✨
 - **Detail.vue**
 - **route.js**
 - route 路径跳转，页面始终位于顶部
