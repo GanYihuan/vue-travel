@@ -461,8 +461,9 @@ name: 'DetailList',
 - **FadeAnimation.vue**
 - **Banner.vue**
 
-## 10-1 Vue 项目的联调测试上线 - 项目前后端联调 ✨✨
+## 10-1 Vue项目的联调测试上线 - 项目前后端联调
 
+- ✨✨
 - **config/index.js**
 - localhost: 80 端口
 
