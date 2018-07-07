@@ -3,9 +3,9 @@
     <div class="search">
       <!-- 双向绑定: v-model -->
       <input
-        v-model="keyword"
         class="search-input"
         type="text"
+        v-model="keyword"
         placeholder="输入城市名或拼音"
       />
     </div>
@@ -23,7 +23,10 @@
         >
           {{item.name}}
         </li>
-        <li class="search-item border-bottom" v-show="hasNoData">
+        <li
+          class="search-item border-bottom"
+          v-show="hasNoData"
+        >
           没有找到匹配数据
         </li>
       </ul>
@@ -58,10 +61,10 @@ export default {
 	methods: {
 		handleCityClick(city) {
       this.changeCity(city)
-      // 页面跳转
+      /* 页面跳转 */
 			this.$router.push('/')
     },
-    // 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity
+    /* 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity */ 
 		...mapMutations(['changeCity'])
 	},
 	watch: {
@@ -73,12 +76,12 @@ export default {
 				this.list = []
 				return
 			}
-			// 节流函数
+			/* 节流函数 */
 			this.timer = setTimeout(() => {
 				const result = []
 				for (let i in this.cities) {
 					this.cities[i].forEach(value => {
-						// can through spell and name search keyword
+						/* can through spell and name search keyword */
 						if (
 							value.spell.indexOf(this.keyword) > -1 ||
 							value.name.indexOf(this.keyword) > -1
@@ -95,7 +98,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/* @import '../../../assets/styles/varibles.styl'; */
 @import '~styles/varibles.styl';
 @import './Search.styl';
 </style>

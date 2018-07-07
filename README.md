@@ -373,8 +373,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/Alphabet.vue**
 - 节流功能
 
-## 8-8 Vue 项目城市选择页 - 搜索逻辑实现 ✨✨✨✨
+##8-8 Vue项目城市选择页 - 搜索逻辑实现
 
+- ✨✨✨✨
 - **city/Search.vue**
 - better-scroll
 
