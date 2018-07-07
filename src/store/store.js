@@ -5,7 +5,7 @@ import mutations from './mutations'
 
 Vue.use(Vuex)
 
-// vuex 仓库
+/* vuex 仓库 */
 export default new Vuex.Store({
   state,
   mutations,
@@ -47,8 +47,10 @@ export default new Vuex.Store({
 //   }
 // })
 
-// Vuex流程: vuex.png
-// List.vue
-// state -> render -> vue components -> Dispatch
-// store.js
-// Actions -> commit -> Mutations -> Mutate
+/*
+Vuex流程: vuex.png
+List.vue
+state -> render -> vue components -> Dispatch
+store.js
+Actions -> commit -> Mutations -> Mutate
+*/

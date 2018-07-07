@@ -393,8 +393,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 npm i vuex -S
 ```
 
-## 8-10 Vue 项目城市选择页 - Vuex 的高级使用及 localStorage ✨✨✨
+## 8-10 Vue项目城市选择页 - Vuex的高级使用及localStorage
 
+- ✨✨✨
 - mapState 共用数据映射
 - mapMutations 共用 mutation 数据映射
 
@@ -402,7 +403,6 @@ npm i vuex -S
 
 - **App.vue**
 - **Home.vue**
-
 - keep-alive
 
 ## 9-1 Vue 项目详情页 - 动态路由和 banner 布局 ✨✨
