@@ -334,8 +334,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - ✨
 - **city/Header.vue**
 
-## 8-2 Vue 项目城市选择页 - 搜索框布局 ✨
+## 8-2 Vue项目城市选择页 - 搜索框布局
 
+- ✨
 - **city/Search.vue**
 
 ## 8-3 Vue 项目城市选择页 - 列表布局 ✨✨
