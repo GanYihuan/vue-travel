@@ -329,8 +329,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **home/Swiper.vue**
 - **home/Weekend.vue**
 
-## 8-1 Vue 项目城市选择页 - 路由配置 ✨
+## 8-1 Vue项目城市选择页 - 路由配置
 
+- ✨
 - **city/Header.vue**
 
 ## 8-2 Vue 项目城市选择页 - 搜索框布局 ✨
