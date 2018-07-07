@@ -69,10 +69,10 @@ export default {
 	},
 	methods: {
 		handleCityClick(city) {
-      // vuex/mutations
+      /* vuex/mutations */
       // this.$store.dispatch('changeCity', city)
       this.changeCity(city)
-      // 页面跳转
+      /* 页面跳转 */
 			this.$router.push('/')
     },
     // 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity
@@ -80,12 +80,12 @@ export default {
 	},
 	watch: {
 		letter() {
-			// if letter !== null
+			/* if letter !== null */
 			if (this.letter) {
-				// this.$refs[this.letter]: isArray
+				/* this.$refs[this.letter]: isArray */
+				console.log(this.$refs[this.letter])
 				const element = this.$refs[this.letter][0]
-				// console.log(this.$refs[this.letter])
-				// better-scroll: scrollToElement
+				/* better-scroll: scrollToElement */
 				this.scroll.scrollToElement(element)
 			}
 		}

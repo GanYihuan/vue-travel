@@ -360,8 +360,9 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/List.vue**
 - Ajax
 
-## 8-6 Vue 项目城市选择页 - 兄弟组件数据传递 ✨✨✨✨
+## 8-6 Vue项目城市选择页 - 兄弟组件数据传递
 
+- ✨✨✨✨
 - **city/Alphabet.vue**
 - **city/City.vue**
 - **city/List.vue**

@@ -27,7 +27,7 @@ export default {
 			for (let i in this.cities) {
 				letters.push(i)
 			}
-			// [A,B,C...]
+			// [A, B, C ...]
 			return letters
 		}
 	},
@@ -39,7 +39,7 @@ export default {
 		}
 	},
 	updated() {
-		// startY: 'A' 距离父元素顶部距离
+		/* startY: 'A' 距离父元素顶部距离 */
 		this.startY = this.$refs['A'][0].offsetTop
 	},
 	methods: {
@@ -54,11 +54,13 @@ export default {
 				if (this.timer) {
 					clearTimeout(this.timer)
 				}
-				// 节流功能
+				/* 节流功能 */
 				this.timer = setTimeout(() => {
-					// touches: 手指信息
-					// e.touches[0].clientY: 点击位置到窗口顶部距离
-					// 79: 城市选择头高度
+          /*
+          touches: 手指信息
+					e.touches[0].clientY: 点击位置到窗口顶部距离
+					79: 城市选择头高度
+          */
 					const touchY = e.touches[0].clientY - 79
 					const index = Math.floor((touchY - this.startY) / 20)
 					if (index >= 0 && index < this.letters.length) {
