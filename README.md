@@ -395,15 +395,17 @@ npm i vuex -S
 
 ## 8-10 Vue项目城市选择页 - Vuex的高级使用及localStorage
 
-- ✨✨✨
+- ✨✨✨✨
 - mapState 共用数据映射
 - mapMutations 共用 mutation 数据映射
 
-## 8-11 Vue 项目城市选择页 - 使用 keep-alive 优化网页性能 ✨✨✨✨
+## 8-11 Vue项目城市选择页 - 使用keep-alive优化网页性能
 
+- ✨✨✨✨
 - **App.vue**
 - **Home.vue**
-- keep-alive
+- keep-alive, activated生命周期, 当页面重新显示的时候将运行
+- 发送ajax请求带参数
 
 ## 9-1 Vue 项目详情页 - 动态路由和 banner 布局 ✨✨
 
