@@ -345,12 +345,13 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/List.vue**
 - 内部设置了float:left,为了触发float BLC```overflow: hidden```
 
-## 8-4 Vue 项目城市选择页 - BetterScroll 的使用和字母表布局 ✨✨
+## 8-4 Vue 项目城市选择页 - BetterScroll 的使用和字母表布局
 
+- ✨✨
 - **city/Search.vue**
 - **city/Alphabet.vue**
-
-- better-scroll
+- ``npm i better-scroll -S``
+- better-scroll 包裹两层
 
 ## 8-5 Vue 项目城市选择页 - 页面的动态数据渲染 ✨✨✨
 

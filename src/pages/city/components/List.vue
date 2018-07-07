@@ -1,6 +1,7 @@
 <template>
   <div class="list" ref="wrapper">
     <div>
+      <!-- better-scroll 包裹两层 -->
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
@@ -58,7 +59,7 @@ export default {
 		letter: String
 	},
 	computed: {
-    // 将vuex共用数据city映射到'currentCity'当中
+    /* 将vuex共用数据city映射到'currentCity'当中 */
 		...mapState({
 			currentCity: 'city'
 		})
