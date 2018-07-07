@@ -60,6 +60,10 @@ export default {
 	},
 	methods: {
 		handleCityClick(city) {
+      /* vuex/mutations */
+      // this.$store.dispatch('changeCity', city)
+      /* vuex/mutations 可以直接调用mutations, 不需要通过Actions */ 
+      // this.$store.commit('changeCity', city)
       this.changeCity(city)
       /* 页面跳转 */
 			this.$router.push('/')
@@ -82,10 +86,7 @@ export default {
 				for (let i in this.cities) {
 					this.cities[i].forEach(value => {
 						/* can through spell and name search keyword */
-						if (
-							value.spell.indexOf(this.keyword) > -1 ||
-							value.name.indexOf(this.keyword) > -1
-						) {
+						if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
 							result.push(value)
 						}
 					})

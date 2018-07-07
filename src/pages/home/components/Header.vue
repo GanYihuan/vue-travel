@@ -9,6 +9,7 @@
     </div>
     <router-link to='/city'>
       <div class="header-right">
+        <!-- Vuex -->
         <!-- {{this.$store.state.city}} -->
         {{this.city}}
         <!-- {{this.doubleCity}} -->

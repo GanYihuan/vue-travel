@@ -6,6 +6,8 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
+            <!-- Vuex -->
+            <!-- <div class="button">{{this.$store.state.city}}</div> -->
             <div class="button">{{this.currentCity}}</div>
           </div>
         </div>
@@ -71,11 +73,13 @@ export default {
 		handleCityClick(city) {
       /* vuex/mutations */
       // this.$store.dispatch('changeCity', city)
+      /* vuex/mutations 可以直接调用mutations, 不需要通过Actions */ 
+      // this.$store.commit('changeCity', city)
       this.changeCity(city)
       /* 页面跳转 */
 			this.$router.push('/')
     },
-    // 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity
+    /* 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity */
 		...mapMutations(['changeCity'])
 	},
 	watch: {

@@ -373,14 +373,15 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/Alphabet.vue**
 - 节流功能
 
-##8-8 Vue项目城市选择页 - 搜索逻辑实现
+## 8-8 Vue项目城市选择页 - 搜索逻辑实现
 
 - ✨✨✨✨
 - **city/Search.vue**
 - better-scroll
 
-## 8-9 Vue 项目城市选择页 - Vuex 实现数据共享 ✨✨✨✨
+## 8-9 Vue项目城市选择页 - Vuex实现数据共享
 
+- ✨✨✨✨
 - **city/List.vue**
 - **city/Search.vue**
 - **home/Header.vue**
@@ -389,7 +390,7 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **store/mutations.js**
 
 ```shell
-npm install vuex --save
+npm i vuex -S
 ```
 
 ## 8-10 Vue 项目城市选择页 - Vuex 的高级使用及 localStorage ✨✨✨
