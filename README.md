@@ -353,11 +353,11 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - ``npm i better-scroll -S``
 - better-scroll 包裹两层
 
-## 8-5 Vue 项目城市选择页 - 页面的动态数据渲染 ✨✨✨
+## 8-5 Vue项目城市选择页 - 页面的动态数据渲染
 
+- ✨✨✨
 - **city/City.vue**
 - **city/List.vue**
-
 - Ajax
 
 ## 8-6 Vue 项目城市选择页 - 兄弟组件数据传递 ✨✨✨✨
