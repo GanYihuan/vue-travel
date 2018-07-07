@@ -367,12 +367,11 @@ axios.get('/static/mock/index.json?city=' + this.city)
 - **city/City.vue**
 - **city/List.vue**
 
-## 8-7 Vue 项目城市选择页 - 列表性能优化 ✨✨✨
+## 8-7 Vue项目城市选择页 - 列表性能优化
 
+- ✨✨✨
 - **city/Alphabet.vue**
-
-- Performance optimization
-- Throttling function
+- 节流功能
 
 ## 8-8 Vue 项目城市选择页 - 搜索逻辑实现 ✨✨✨✨
 
