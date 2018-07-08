@@ -22,10 +22,20 @@
         test: 'hello vue'
       },
       /* init event & lifecycle */
+      /*
+      初始化, dom没完成
+      服务端渲染调用
+      不要修改数据
+      */
       beforeCreate() {
         console.log('beforeCreate')
       },
       /* init injections & reactivity */
+      /*
+      初始化, dom没完成
+      能放数据, 数据不会被监控
+      服务端渲染调用
+      */            
       created() {
         console.log('created')
       },
@@ -43,17 +53,46 @@
         /* 没数据 */ 
         console.log(this.$el)
       },
+      /*
+      h: createElement()
+      耗时，效率低
+      */
+      render(h) {
+        throw new TypeError('render error')
+        // console.log('render function invoked')
+        // return h('div', {}, this.text)
+      },
+      /*
+      h: createElement()
+      开发时才被调用, 不关心子组件
+      */
+      renderError(h, err) {
+        return h('div', {}, err.stack)
+      },
+      /*
+      会向上冒泡, 并在正式的环境中使用, 收集错误
+      */
+      errorCaptured() {},
+      /* create vm.$el and replace 'el' with it */
+      /*
+      dom相关
+      服务端渲染不调用, 服务端渲染没有dom
+      mounted之后, 要外界触发才执行生命周期
+      节点为: <div>0</div>, 经过render改变了节点
+      */
       /* create vm.$el and replace 'el' with it */
       mounted() {
         console.log('mount')
         /* 有数据 */ 
         console.log(this.$el)
       },
-      /* when data change */
+      /*
+      数据更新才执行
+      */
       beforeUpdate() {
         console.log('beforeUpdate')
       },
-      /* virtual DMO re-render and patch */
+      /* virtual DMO re-render and patch 数据更新才执行 */
       updated() {
         console.log('updated')
       },
