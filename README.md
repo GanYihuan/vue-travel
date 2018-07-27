@@ -193,7 +193,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 node -v
 npm -v
 vue init webpack imooc-travel
-npm run dev
+npm run start
 ```
 
 ## 6-2 Vue项目预热 - 项目代码介绍
@@ -231,8 +231,7 @@ npm i fastclick -S
 - 1rem = html font-size = 50px
 
 ```shell
-npm i stylus -S
-npm i stylus-loader -S
+npm i stylus stylus-loader -S
 ```
 
 ## 7-2 Vue 项目首页 - iconfont 的使用和代码优化
@@ -285,20 +284,20 @@ npm i vue-awesome-swiper -S
 - **home/Weekend.vue**
 - Weekend.styl 固定宽高比
 
-## 7-8 Vue 项目首页 - 使用 axios 发送 ajax 请求 
+## 7-8 Vue 项目首页 - 使用 axios 发送 ajax 请求
 
 - ✨✨✨
 - **home/Home.vue**
 - axios 异步传数据
 
-```shell
+```node
 npm i axios -S
 ```
 
 - 转发访问的路径内容
 - **config/index.js**
 
-```shell
+```js
 proxyTable: {
   '/api': {
     target: 'http://localhost:8080',
@@ -309,13 +308,13 @@ proxyTable: {
 },
 ```
 
-```shell
+```js
 axios.get('/api/index.json?city=')
 ```
 
 > 将转发到
 
-```shell
+```js
 axios.get('/static/mock/index.json?city=' + this.city)
 ```
 

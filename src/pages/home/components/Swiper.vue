@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <!-- v-if="showSwiper": 能循环轮播 -->
     <swiper :options="swiperOption" v-if="showSwiper">
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl"/>
