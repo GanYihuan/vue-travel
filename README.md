@@ -74,50 +74,48 @@ $.proxy(this.handleBtnClick, this)
 
 ## 4-1 使用组件的细节点
 
-- ✨✨✨
-- **chap4/4-1.html**
-- is: 解决 H5 上的小 bug: `<tr is="row"></tr>`
-- data must function
-- ref
+- is: 解决 H5 上的小 bug
+
+```html
+<tbody>
+  <!-- tbody inside must need <tr>, when use Vue component, 'is' can solve it -->
+  <tr is="row"></tr>
+  <tr is="row"></tr>
+  <tr is="row"></tr>
+</tbody>
+```
 
 ## 4-2 父子组件间的数据传递
 
-- ✨✨
-- **chap4/4-2.html**
 - 单项数据流
-- $emit
-- child component data must function
+- 父级数据转化为子组件内部数据
+
+```js
+/* access father data */
+props: ['count'],
+/* child component data must function */
+data() {
+  return {
+    /* 父级数据转化为子组件内部数据 */
+    number: this.count
+  }
+},
+```
 
 ## 4-3 组件参数校验与非 props 特性
 
-- ✨✨
-- **chap4/4-3.html**
-
 ## 4-4 给组件绑定原生事件
-
-- ✨✨
-- **chap4/4-4.html**
 
 ## 4-5 非父子组件间的传值
 
-- ✨✨✨✨
-- **chap4/4-5.html**
 - bus
 
 ## 4-6 在 Vue 中使用插槽
 
-- ✨✨
-- **chap4/4-6.html**
-
 ## 4-7 作用域插槽
-
-- ✨✨✨✨
-- **chap4/4-7.html**
 
 ## 4-8 动态组件与 v-once 指令
 
-- ✨✨✨✨
-- **chap4/4-8.html**
 - 动态组件
 - v-once
 

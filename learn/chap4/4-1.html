@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>使用组件的细节点</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="root">
     <table>
@@ -22,7 +20,6 @@
     <counter ref="two" @change="handleChange"></counter>
     <div>I'am total: {{total}}</div>
   </div>
-
   <script>
     Vue.component('row', {
       // child component data must function, because father call child, each need Independent scope
@@ -68,5 +65,4 @@
     })
   </script>
 </body>
-
 </html>
