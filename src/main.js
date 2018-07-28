@@ -19,7 +19,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 
-/* Turn off the annoying Vue production tip */
+/* 关闭 Vue production tip */
 Vue.config.productionTip = false
 /* 移动端延迟300ms解决 */
 fastClick.attach(document.body)

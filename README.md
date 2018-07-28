@@ -212,7 +212,7 @@ Vue.component('child-one', {
 
 ## 6-1 Vue 项目预热 - 环境配置
 
-```shell
+```node
 node -v
 npm -v
 vue init webpack imooc-travel
@@ -221,29 +221,37 @@ npm run start
 
 ## 6-2 Vue项目预热 - 项目代码介绍
 
-- ✨
-
 ## 6-3 Vue项目预热 - 单文件组件与 Vue 中的路由
 
-- ✨
-- **router/route.js**
+```js
+/* 路径跳转，页面始终位于顶部 */
+scrollBehavior(to, from, savedPosition) {
+  return {
+    x: 0,
+    y: 0
+  }
+}
+```
 
 ## 6-4 Vue项目预热 - 单页应用 VS 多页应用
 
-- ✨
-- **static/know1.png**
-- **static/know2.png**
+- 单页应用
+> 页面切换快
+> 首屏慢, SEO 差
+
+- 多页应用
+> 首屏时间快, SEO 效果好
+> 页面切换慢
 
 ## 6-5 Vue项目预热 - 项目代码初始化
 
-- ✨✨
 - index.html/meta
-- iconfont
+- iconfont 使用
 - reset.css
 - border.css
 - fastclick 移动端延迟 300ms 解决
 
-```shell
+```node
 npm i fastclick -S
 ```
 
