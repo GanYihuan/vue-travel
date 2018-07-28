@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -8,13 +7,13 @@
     .activated {
       color: #f00
     }
+
     .activatedOne {
       color: #0f0
     }
   </style>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <div @click="handleDivClick" :class="{activated: isActivated}">
@@ -29,7 +28,6 @@
       hello React
     </div>
   </div>
-
   <script>
     let vm = new Vue({
       el: '#app',
@@ -60,5 +58,4 @@
     })
   </script>
 </body>
-
 </html>

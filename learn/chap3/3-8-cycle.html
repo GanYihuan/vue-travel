@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <!-- operate array: push,pop,shift,unshift,splice,sort,reverse -->
@@ -17,7 +15,6 @@
       {{item.text}} --- {{index}}
     </div>
     <hr/>
-
     <!-- when cycle, template not render in page -->
     <template v-for="(item, index) of list" :key="index.id">
       <div>
@@ -28,25 +25,22 @@
       </span>
     </template>
     <hr/>
-
     <!-- operate obj: chrome: Vue.set(vm.userInfo, 'address', 'guangzhou') -->
     <!-- operate obj: chrome: Vue.$set(vm.userInfo, 'address', 'guangzhou') -->
     <div v-for="(item, key, index) of userInfo">
       {{item}} --- {{key}} --- {{index}}
     </div>
     <hr/>
-
     <!-- operate obj: chrome: Vue.set(vm.userInfoArray, 1, 5) -->
     <!-- operate obj: chrome: Vue.$set(vm.userInfoArray, 2, 6) -->
     <div v-for="(item, key, index) of userInfoArray">
       {{item}} --- {{key}} --- {{index}}
     </div>
   </div>
-
   <script>
     /*
-    push, pop, shift, unshift, splice, ssort, reverse
-    */ 
+    push, pop, shift, unshift, splice, sort, reverse
+    */
     let vm = new Vue({
       el: '#app',
       data: {
@@ -74,5 +68,4 @@
     })
   </script>
 </body>
-
 </html>
