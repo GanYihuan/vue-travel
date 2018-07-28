@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Vue中的 Js 动画与 Velocity.js 的结合</title>
@@ -15,28 +14,25 @@
     .fade-leave-active {
       transition: opacity 1s;
     }
-
   </style>
   <script src="../vue.js"></script>
   <script src="../velocity.min.js"></script>
 </head>
-
 <body>
   <div id="app">
-    <transition 
-      name="fade" 
-      @before-enter="handleBeforeEnter" 
-      @enter="handleEnter" 
-      @after-enter="handleAfterEnter" 
+    <transition
+      name="fade"
+      @before-enter="handleBeforeEnter"
+      @enter="handleEnter"
+      @after-enter="handleAfterEnter"
       @before-leave="handleBeforeLeave"
-      @leave="handleLeave" 
+      @leave="handleLeave"
       @after-leave="handleAfterLeave"
     >
       <div v-show="show">hello world 3</div>
     </transition>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     let vm = new Vue({
       el: '#app',
@@ -58,9 +54,11 @@
             // animate finished
             done()
           }, 4000)
-          Velocity(el, {
+          Velocity(el,
+          {
             fontSize: 30
-          }, {
+          },
+          {
             duration: 2000,
             complete: done
           })
@@ -71,8 +69,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>在Vue中同时使用过渡和动画</title>
@@ -15,19 +14,17 @@
     .fade-leave-active {
       transition: opacity 2s;
     }
-
   </style>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <!-- Use Animate.css library -->
     <!-- appear: 刚刚加载就出现动画 -->
-    <!-- type="transition": 动画效果以自己定义的transition为最优先 -->
-    <!-- :duration="5000": total animate time 5s, 5s after, animate class will clear -->
-    <!-- :duration="{enter: 5000, leave: 10000}": 5s after, enter animateClass will clear, 10s after, leave animateClass will clear -->
-    <transition 
+    <!-- type="transition": 动画效果以自己定义的 transition 为最优先 -->
+    <!-- :duration="5000": 总时间 5s, 5s 后 animate class 将会清除 -->
+    <!-- :duration="{enter: 5000, leave: 10000}": 5s 后, enter animateClass 将会清除, 10s 后, leave animateClass 将会清除 -->
+    <transition
       name="fade"
       :duration="{enter: 5000, leave: 10000}"
       type="transition"
@@ -40,7 +37,6 @@
     </transition>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     let vm = new Vue({
       el: '#app',
@@ -53,8 +49,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

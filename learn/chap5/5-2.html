@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>在Vue中使用 animate.css 库</title>
@@ -37,11 +36,9 @@
       transform-origin: left center;
       animation: bounce-in 2s reverse;
     }
-
   </style>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <transition name="fade">
@@ -58,14 +55,13 @@
     <hr/>
 
     <!-- use Animate.css library -->
-    <!-- 启动Animate.css: animated -->
-    <!-- 效果: swing -->
+    <!-- animated: 启动 Animate.css -->
+    <!-- swing: 效果 -->
     <transition enter-active-class="animated swing" leave-active-class="animated shake">
       <div v-if="show">hello world 3</div>
     </transition>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     let vm = new Vue({
       el: '#app',
@@ -78,8 +74,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

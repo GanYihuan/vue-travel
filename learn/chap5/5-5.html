@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Vue中多个元素或组件的过渡</title>
@@ -15,11 +14,9 @@
     .fade-leave-active {
       transition: opacity 2s;
     }
-
   </style>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <!-- mode="in-out": 先显示再隐藏 -->
@@ -30,14 +27,13 @@
     </transition>
     <button @click="handleClick">click3</button>
     <hr/>
-
+    
     <transition name="fade" mode="out-in">
       <!-- 动态组件 -->
       <component :is="type"></component>
     </transition>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     Vue.component('child', {
       template: '<div>child</div>'
@@ -57,8 +53,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

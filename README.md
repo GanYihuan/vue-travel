@@ -124,47 +124,93 @@ data() {
 
 ## 5-1 Vue 动画 - Vue 中 CSS 动画原理
 
-- ✨✨
-- **chap5/5-1.html**
+- 5-1.png 5-1-2.png
 
 ## 5-2 在 Vue 中使用 animate.css 库
 
-- ✨✨
-- **chap5/5-2.html**
-- use Animate.css library
+- animate.css
+
+```html
+<!-- use Animate.css library -->
+<!-- animated: 启动 Animate.css -->
+<!-- swing: 效果 -->
+<transition
+  enter-active-class="animated swing" leave-active-class="animated shake"
+>
+  <div v-if="show">hello world 3</div>
+</transition>
+```
 
 ## 5-3 在 Vue 中同时使用过渡和动画
 
-- ✨✨
-- **chap5/5-3.html**
+```html
+<!-- Use Animate.css library -->
+<!-- appear: 刚刚加载就出现动画 -->
+<!-- type="transition": 动画效果以自己定义的 transition 为最优先 -->
+<!-- :duration="5000": 总时间 5s, 5s 后 animate class 将会清除 -->
+<!-- :duration="{enter: 5000, leave: 10000}": 5s 后, enter animateClass 将会清除, 10s 后, leave animateClass 将会清除 -->
+<transition
+  name="fade"
+  :duration="{enter: 5000, leave: 10000}"
+  type="transition"
+  appear
+  appear-active-class="animated swing"
+  enter-active-class="animated swing fade-enter-active"
+  leave-active-class="animated shake fade-leave-active"
+>
+  <div v-if="show">hello world 3</div>
+</transition>
+```
 
 ## 5-4 Vue 中的 Js 动画与 Velocity.js 的结合
 
-- ✨✨
-- **chap5/5-4.html**
-- Velocity.js library
+```js
+Velocity(el,
+{
+  fontSize: 30
+},
+{
+  duration: 2000,
+  complete: done
+})
+```
 
 ## 5-5 Vue 中多个元素或组件的过渡
 
-- ✨✨✨
-- **chap5/5-5.html**
 - 加 key 不让它复用 dom, 否则动画不出现
 - mode="in-out": 先显示再隐藏
-- 动态组件 `<component :is="type"></component>`
+
+```html
+<transition name="fade" mode="out-in">
+  <!-- 动态组件 -->
+  <component :is="type"></component>
+</transition>
+
+handleClick() {
+  this.type = this.type === 'child' ? 'child-one' : 'child'
+}
+
+Vue.component('child', {
+  template: '<div>child</div>'
+})
+Vue.component('child-one', {
+  template: '<div>child-one</div>'
+})
+```
 
 ## 5-6 Vue 中的列表过渡
 
-- ✨✨
-- **chap5/5-6.html**
+```html
+<transition-group name="fade">
+  <div v-for="(item, index) of list" :key="item.id">
+    {{item.title}}
+  </div>
+</transition-group>
+```
 
 ## 5-7 Vue 中的动画封装
 
-- ✨✨
-- **chap5/5-7.html**
-
 ## 6-1 Vue 项目预热 - 环境配置
-
--✨
 
 ```shell
 node -v
