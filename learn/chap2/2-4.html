@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>MVVM, MVP</title>
   <script src="../jquery-3.2.1.js"></script>
 </head>
-
 <body>
   <!-- MVP mode -->
   <div>
@@ -14,12 +12,12 @@
     <button id="btn">submit</button>
     <ul id="list"></ul>
   </div>
-
   <script>
     function Page() {
 
     }
 
+    /* 为 Page 增加内容 */
     $.extend(Page.prototype, {
       init: function () {
         this.bindEvents()
@@ -43,8 +41,6 @@
 
     let page = new Page()
     page.init()
-
   </script>
 </body>
-
 </html>

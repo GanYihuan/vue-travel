@@ -22,42 +22,32 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 慕课网: Vue2.5 开发去哪儿网 App 从零基础入门到实战项目
 
-## 注意，如果无法请求到 static 里面数据 时,config/index.js 能配置端口
+> 注意，如果无法请求到 static 里面数据 时,config/index.js 能配置端口
 
 ## 2-2 hello world
 
-- ✨
-- **chap2/2-2.html**
-
 ## 2-3 开发 TodoList
-
-- ✨
-- **chap2/2-3.html**
 
 ## 2-4 MVVM 模式
 
-- ✨✨✨✨
-- **chap2/2-4.html**
+```js
+function Page() {}
+/* 为 Page 增加内容 */
+$.extend(Page.prototype, {})
+// $.proxy 方法接受一个已有的函数，并返回一个带特定上下文的新的函数。
+// 该方法通常用于向上下文指向不同对象的元素添加事件。
+$.proxy(this.handleBtnClick, this)
+```
 
 ## 2-5 前端组件化
 
-- ✨
-
 ## 2-6 使用组件改造 TodoList
-
-- ✨✨
 
 ## 2-7 简单的组件间传值
 
-- ✨✨✨
-
 ## 2-8 章节小结
 
-- ✨
-
 ## 3-1 Vue 实例
-
-- ✨
 
 ## 3-2 Vue 实例生命周期
 

@@ -6,53 +6,53 @@
   <script src="../vue.js"></script>
 </head>
 <body>
-<div id="app">
-  <input type="text" v-model="inputValue">
-  <button @click="handleBtnClick">submit</button>
-  <ul>
-    <!--<li v-for="(item, index) in list" :key="index">{{item}}</li>-->
-    <todo-item v-for="(item, index) in list" :key="index" :content="item" @delete="handleItemDelete"></todo-item>
-  </ul>
-</div>
+  <div id="app">
+    <input type="text" v-model="inputValue">
+    <button @click="handleBtnClick">submit</button>
+    <ul>
+      <!--<li v-for="(item, index) in list" :key="index">{{item}}</li>-->
+      <todo-item v-for="(item, index) in list" :key="index" :content="item" @delete="handleItemDelete"></todo-item>
+    </ul>
+  </div>
 
-<script>
-  /* global component */
-  //  Vue.component('TodoItem', {
-  //    props: ['content'],
-  //    template: '<li>{{content}}</li>'
-  //  })
+  <script>
+    /* global component */
+    //  Vue.component('TodoItem', {
+    //    props: ['content'],
+    //    template: '<li>{{content}}</li>'
+    //  })
 
-  /* local component */
-  var TodoItem = {
-    props: ['content', 'index'],
-    template: '<li @click="handleBtnClick">{{content}}</li>',
-    methods: {
-      handleBtnClick () {
-        // 向外触发事件
-        this.$emit('delete', this.index)
+    /* local component */
+    var TodoItem = {
+      props: ['content', 'index'],
+      template: '<li @click="handleBtnClick">{{content}}</li>',
+      methods: {
+        handleBtnClick() {
+          // 向外触发事件
+          this.$emit('delete', this.index)
+        }
       }
     }
-  }
 
-  let app = new Vue({
-    el: '#app',
-    data: {
-      inputValue: '',
-      list: []
-    },
-    methods: {
-      handleBtnClick () {
-        this.list.push(this.inputValue)
-        this.inputValue = ''
+    let app = new Vue({
+      el: '#app',
+      data: {
+        inputValue: '',
+        list: []
       },
-      handleItemDelete (index) {
-        this.list.splice(index, 1)
+      methods: {
+        handleBtnClick() {
+          this.list.push(this.inputValue)
+          this.inputValue = ''
+        },
+        handleItemDelete(index) {
+          this.list.splice(index, 1)
+        }
+      },
+      components: {
+        TodoItem: TodoItem
       }
-    },
-    components: {
-      TodoItem: TodoItem
-    }
-  })
-</script>
+    })
+  </script>
 </body>
 </html>
