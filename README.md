@@ -30,6 +30,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 2-4 MVVM 模式
 
+> MVVM 是什么, MVP 是什么
+
+- jquery 方法 $.extend $.proxy
+
 ```js
 function Page() {}
 /* 为 Page 增加内容 */
@@ -51,40 +55,22 @@ $.proxy(this.handleBtnClick, this)
 
 ## 3-2 Vue 实例生命周期
 
-- ✨✨✨
-- **chap3/3-2.html**
+- 生命周期图
 
 ## 3-3 Vue 的模版语法
 
-- ✨✨
-- **chap3/3-3.html**
-
 ## 3-4 计算属性,方法与侦听器
-
-- ✨✨
-- **chap3/3-4.html**
 
 ## 3-5 计算属性的 getter 和 setter
 
-- ✨✨
-- **chap3/3-5.html**
-
 ## 3-6 Vue 中的样式绑定
-
-- ✨✨
-- **chap3/3-6.html**
 
 ## 3-7 Vue 中的条件渲染
 
-- ✨✨
-- **chap3/3-7.html**
 - v-if, v-show
 - input define key
 
 ## 3-8, 3-9 Vue 中的列表渲染 Vue 中的 set 方法
-
-- ✨✨
-- **chap3/3-8.html**
 
 ## 4-1 使用组件的细节点
 

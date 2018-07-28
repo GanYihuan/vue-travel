@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,12 @@
   <title>Document</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app"></div>
   <script>
     /*
     生命周期函数是某个时间点执行的函数
-    vm: vue实例
-    new Vue()
+    vm: vue 实例
     */
     let vm = new Vue({
       data: {
@@ -23,7 +20,7 @@
       },
       /* init event & lifecycle */
       /*
-      初始化, dom没完成
+      初始化, dom 没完成
       服务端渲染调用
       不要修改数据
       */
@@ -32,25 +29,25 @@
       },
       /* init injections & reactivity */
       /*
-      初始化, dom没完成
+      初始化, dom 没完成
       能放数据, 数据不会被监控
       服务端渲染调用
-      */            
+      */
       created() {
         console.log('created')
       },
       /* has 'el' option? */
       el: '#app',
-      /* N: vm.$mount(el) */ 
+      /* N: when vm.$mount(el) is called */
       /* Y: has 'template' option? */
       template: '<div>{{test}}</div>',
       /* Y: compile template as render function */
-      /* N: compile outHTML as template */
-      /* N: 转化为 template: '<div id="app"></div>' */ 
-      /* beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间 */ 
+      /* N: compile outHTML(el) as template */
+      /* beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间 */
       beforeMount() {
         console.log('beforeMount')
-        /* 没数据 */ 
+        /* 没数据 */
+        /* <div id="app"></div> */ 
         console.log(this.$el)
       },
       /*
@@ -69,36 +66,30 @@
       renderError(h, err) {
         return h('div', {}, err.stack)
       },
-      /*
-      会向上冒泡, 并在正式的环境中使用, 收集错误
-      */
-      errorCaptured() {},
+      /* 会向上冒泡, 并在正式的环境中使用, 收集错误 */
+      errorCaptured() { },
       /* create vm.$el and replace 'el' with it */
       /*
-      dom相关
-      服务端渲染不调用, 服务端渲染没有dom
-      mounted之后, 要外界触发才执行生命周期
-      节点为: <div>0</div>, 经过render改变了节点
+      dom 相关
+      服务端渲染不调用, 服务端渲染没有 dom
+      mounted 之后, 要外界触发才执行生命周期
+      经过 render 节点变为: <div>hello world</div>
       */
-      /* create vm.$el and replace 'el' with it */
       mounted() {
-        console.log('mount')
-        /* 有数据 */ 
+        console.log('mounted')
+        /* 有数据 */
+        /* <div>hello world</div> */
         console.log(this.$el)
       },
-      /*
-      数据更新才执行
-      */
+      /* when data changes */
       beforeUpdate() {
         console.log('beforeUpdate')
       },
-      /* virtual DMO re-render and patch 数据更新才执行 */
+      /* virtual DMO re-render and patch */
       updated() {
         console.log('updated')
       },
-      /*
-      when vm.$destory() is called
-      */
+      /* when vm.$destory() is called */
       beforeDestroy() {
         console.log('beforeDestroy')
       },
@@ -109,5 +100,4 @@
     })
   </script>
 </body>
-
 </html>
