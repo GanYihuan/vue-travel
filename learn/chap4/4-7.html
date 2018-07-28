@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>作用域slot</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child>
@@ -20,7 +18,6 @@
       </template>
     </child>
   </div>
-
   <script>
     Vue.component('child', {
       data() {
@@ -39,8 +36,6 @@
     let vm = new Vue({
       el: '#app'
     })
-
   </script>
 </body>
-
 </html>

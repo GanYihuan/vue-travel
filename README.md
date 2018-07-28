@@ -114,10 +114,13 @@ data() {
 
 ## 4-7 作用域插槽
 
-## 4-8 动态组件与 v-once 指令
+```html
+<template slot-scope="props">
+  <h1>{{props.item}} --- hello</h1>
+</template>
+```
 
-- 动态组件
-- v-once
+## 4-8 动态组件与 v-once 指令
 
 ## 5-1 Vue 动画 - Vue 中 CSS 动画原理
 

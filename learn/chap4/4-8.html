@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>动态组件与v-once指令</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child-one v-if="type === 'child-one'">child-one</child-one>
@@ -18,7 +16,6 @@
     <component :is="type"></component>
     <button @click="handleClick">动态组件</button>
   </div>
-
   <script>
     Vue.component('child-one', {
       /* v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能 */
@@ -26,7 +23,7 @@
     })
 
     Vue.component('child-two', {
-       /* v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能 */
+      /* v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能 */
       template: `<div v-once>child-two</div>`
     })
 
@@ -41,8 +38,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

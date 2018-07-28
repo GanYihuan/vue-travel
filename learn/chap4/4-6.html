@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>插槽</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child>
       <h1>Dell</h1>
     </child>
     <hr/>
-    <!-- content是保留关键字 -->
+    <!-- content 是保留关键字 -->
     <body-content>
       <div class="header" slot="footer">footer</div>
       <div class="header" slot="header">header</div>
     </body-content>
   </div>
-
   <script>
     // <slot></slot>: 被某些内容替换这部分
     Vue.component('child', {
@@ -43,8 +40,6 @@
     let vm = new Vue({
       el: '#app'
     })
-
   </script>
 </body>
-
 </html>
