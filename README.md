@@ -165,14 +165,16 @@ data() {
 ## 5-4 Vue 中的 Js 动画与 Velocity.js 的结合
 
 ```js
-Velocity(el,
-{
-  fontSize: 30
-},
-{
-  duration: 2000,
-  complete: done
-})
+Velocity(
+  el,
+  {
+    fontSize: 30
+  },
+  {
+    duration: 2000,
+    complete: done
+  }
+)
 ```
 
 ## 5-5 Vue 中多个元素或组件的过渡
@@ -219,9 +221,9 @@ vue init webpack imooc-travel
 npm run start
 ```
 
-## 6-2 Vue项目预热 - 项目代码介绍
+## 6-2 Vue 项目预热 - 项目代码介绍
 
-## 6-3 Vue项目预热 - 单文件组件与 Vue 中的路由
+## 6-3 Vue 项目预热 - 单文件组件与 Vue 中的路由
 
 ```js
 /* 路径跳转，页面始终位于顶部 */
@@ -233,17 +235,18 @@ scrollBehavior(to, from, savedPosition) {
 }
 ```
 
-## 6-4 Vue项目预热 - 单页应用 VS 多页应用
+## 6-4 Vue 项目预热 - 单页应用 VS 多页应用
 
 - 单页应用
-> 页面切换快
-> 首屏慢, SEO 差
+
+  > 页面切换快
+  > 首屏慢, SEO 差
 
 - 多页应用
-> 首屏时间快, SEO 效果好
-> 页面切换慢
+  > 首屏时间快, SEO 效果好
+  > 页面切换慢
 
-## 6-5 Vue项目预热 - 项目代码初始化
+## 6-5 Vue 项目预热 - 项目代码初始化
 
 - index.html/meta
 - iconfont 使用
@@ -255,70 +258,68 @@ scrollBehavior(to, from, savedPosition) {
 npm i fastclick -S
 ```
 
-## 7-1 Vue项目首页 - header 区域开发
+## 7-1 Vue 项目首页 - header 区域开发
 
-- ✨✨✨
-- **home/Header.vue**
 - 1rem = html font-size = 50px
 
-```shell
+```node
 npm i stylus stylus-loader -S
 ```
 
 ## 7-2 Vue 项目首页 - iconfont 的使用和代码优化
 
-- ✨✨
-- **home/Header.vue**
 - 别名配置 webpack.base.conf.js
 
 ## 7-3 Vue 项目首页 - 首页轮播图
 
-- ✨✨✨
-- **home/Swiper.vue**
 - prevent shake, inside css .wrapper
 - vue-awesome-swiper
 - 图片宽高比固定比值:
 
 ```css
-  overflow: hidden;
-  padding-bottom: 31.25%;
-  height: 0;
+overflow: hidden;
+padding-bottom: 31.25%;
+width: 100%;
+height: 0;
 ```
 
-- >>>: 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active就可以添加样式
+- > > > : 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active 就可以添加样式
 
-```shell
+```node
 npm i vue-awesome-swiper -S
 ```
 
-## 7-4 Vue项目首页 - 图标区域页面布局
+## 7-4 Vue 项目首页 - 图标区域页面布局
 
-- ✨✨
-- **home/Icons.vue**
+## 7-5 Vue 项目首页 - 图标区域逻辑实现
 
-## 7-5 Vue项目首页 - 图标区域逻辑实现
+- swiper 无法分页, 解决 **Icons.vue**
+- css 显示 ...
 
-- ✨✨✨
-- **home/Icons.vue**
-- swiper 无法分页, 解决
-- swiper 样式设置
-- css 显示...
+```css
+ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+```
 
-## 7-6 Vue项目首页 - 热销推荐组件开发
+```css
+position: absolute;
+// 相当于 width: 100%;
+left: 0;
+right: 0;
+// 相当于 width: 100%;
+```
 
-- ✨✨
-- **home/Recommend.vue**
+## 7-6 Vue 项目首页 - 热销推荐组件开发
 
-## 7-7 Vue项目首页 - 开发周末游组件
+## 7-7 Vue 项目首页 - 开发周末游组件
 
-- ✨✨
-- **home/Weekend.vue**
 - Weekend.styl 固定宽高比
 
 ## 7-8 Vue 项目首页 - 使用 axios 发送 ajax 请求
 
-- ✨✨✨
-- **home/Home.vue**
 - axios 异步传数据
 
 ```node
@@ -351,102 +352,55 @@ axios.get('/static/mock/index.json?city=' + this.city)
 
 ## 7-9 Vue 项目首页 - 首页父子组组件间传值
 
-- ✨✨✨
-- **home/Home.vue**
-- **home/Header.vue**
-- **home/Icons.vue**
-- **home/Recommend.vue**
-- **home/Swiper.vue**
-- **home/Weekend.vue**
+## 8-1 Vue 项目城市选择页 - 路由配置
 
-## 8-1 Vue项目城市选择页 - 路由配置
+## 8-2 Vue 项目城市选择页 - 搜索框布局
 
-- ✨
-- **city/Header.vue**
+## 8-3 Vue 项目城市选择页 - 列表布局
 
-## 8-2 Vue项目城市选择页 - 搜索框布局
-
-- ✨
-- **city/Search.vue**
-
-## 8-3 Vue项目城市选择页 - 列表布局
-
-- ✨✨✨
-- **city/List.vue**
-- 内部设置了float:left,为了触发float BLC```overflow: hidden```
+- 内部设置了 float:left,为了触发 float BLC`overflow: hidden`
 
 ## 8-4 Vue 项目城市选择页 - BetterScroll 的使用和字母表布局
 
-- ✨✨
-- **city/Search.vue**
-- **city/Alphabet.vue**
-- ``npm i better-scroll -S``
+- `npm i better-scroll -S`
 - better-scroll 包裹两层
 
-## 8-5 Vue项目城市选择页 - 页面的动态数据渲染
+## 8-5 Vue 项目城市选择页 - 页面的动态数据渲染
 
-- ✨✨✨
-- **city/City.vue**
-- **city/List.vue**
 - Ajax
 
-## 8-6 Vue项目城市选择页 - 兄弟组件数据传递
+## 8-6 Vue 项目城市选择页 - 兄弟组件数据传递
 
-- ✨✨✨✨
-- **city/Alphabet.vue**
-- **city/City.vue**
-- **city/List.vue**
+## 8-7 Vue 项目城市选择页 - 列表性能优化
 
-## 8-7 Vue项目城市选择页 - 列表性能优化
-
-- ✨✨✨
-- **city/Alphabet.vue**
 - 节流功能
 
-## 8-8 Vue项目城市选择页 - 搜索逻辑实现
+## 8-8 Vue 项目城市选择页 - 搜索逻辑实现
 
-- ✨✨✨✨
-- **city/Search.vue**
 - better-scroll
 
-## 8-9 Vue项目城市选择页 - Vuex实现数据共享
-
-- ✨✨✨✨
-- **city/List.vue**
-- **city/Search.vue**
-- **home/Header.vue**
-- **store/state.js**
-- **store/store.js**
-- **store/mutations.js**
+## 8-9 Vue 项目城市选择页 - Vuex 实现数据共享
 
 ```shell
 npm i vuex -S
 ```
 
-## 8-10 Vue项目城市选择页 - Vuex的高级使用及localStorage
+## 8-10 Vue 项目城市选择页 - Vuex 的高级使用及 localStorage
 
-- ✨✨✨✨
 - mapState 共用数据映射
 - mapMutations 共用 mutation 数据映射
 
-## 8-11 Vue项目城市选择页 - 使用keep-alive优化网页性能
+## 8-11 Vue 项目城市选择页 - 使用 keep-alive 优化网页性能
 
-- ✨✨✨✨
-- **App.vue**
-- **Home.vue**
-- keep-alive, activated生命周期, 当页面重新显示的时候将运行
-- 发送ajax请求带参数
+- keep-alive, activated 生命周期, 当页面重新显示的时候将运行
+- 发送 ajax 请求带参数
 
-## 9-1 Vue项目详情页 - 动态路由和banner布局
+## 9-1 Vue 项目详情页 - 动态路由和 banner 布局
 
-- ✨✨
-- **Banner.vue**
 - 动态路由
 
 ## 9-2 Vue 项目详情页 - 公用图片画廊组件拆分
 
-- ✨✨✨
-- **Gallary.vue**
 - Swiper official website
 
 ```css
@@ -458,51 +412,29 @@ height: 0;
 /* 正方形 */
 ```
 
-## 9-3 Vue项目详情页 - 实现Header渐隐渐显效果
+## 9-3 Vue 项目详情页 - 实现 Header 渐隐渐显效果
 
-- ✨✨✨
-- **Header.vue**
+## 9-4 Vue 项目详情页 - 对全局事件的解绑
 
-## 9-4 Vue项目详情页 - 对全局事件的解绑
-
-- ✨✨✨
-- **Header.vue**
-
-## 9-5 Vue项目详情页 - 使用递归组件实现详情页列表
-
-- ✨✨✨
-- **List.vue**
+## 9-5 Vue 项目详情页 - 使用递归组件实现详情页列表
 
 ```shell
 // 名称为了使用递归
 name: 'DetailList',
 ```
 
-## 9-6 Vue项目详情页 - 动态获取详情页面数据
+## 9-6 Vue 项目详情页 - 动态获取详情页面数据
 
-- ✨✨✨
-- **Detail.vue**
-- **route.js**
 - route 路径跳转，页面始终位于顶部
 
-## 9-7 Vue项目详情页 - 在项目中加入基础动画
+## 9-7 Vue 项目详情页 - 在项目中加入基础动画
 
-- ✨✨
-- **FadeAnimation.vue**
-- **Banner.vue**
+## 10-1 Vue 项目的联调测试上线 - 项目前后端联调
 
-## 10-1 Vue项目的联调测试上线 - 项目前后端联调
-
-- ✨✨
-- **config/index.js**
 - localhost: 80 端口
 
-## 10-2 Vue项目的联调测试上线 - 真机测试
+## 10-2 Vue 项目的联调测试上线 - 真机测试
 
-- ✨✨✨
-- **config/index.js**
-- **package.json**
-- **city/Alphabet.vue**
 - get IP
 
 ```shell
@@ -529,14 +461,12 @@ ipconfig
 
 ## 10-3 Vue 项目的联调测试上线 - 打包上线
 
-- ✨✨✨
 - 打包
 
 ```shell
 npm run build
 ```
 
-- **config/index.js**
 > App 放入项目文件中，需要配置路径，后端访问项目文件可以运行 App
 
 ```shell
@@ -547,8 +477,4 @@ build: {
 
 ## 10-4 Vue 项目的联调测试上线 - 异步组件实现按需加载
 
-- ✨
-
 ## 10-5 Vue 项目的联调测试上线 - 课程总结与后续学习指南
-
-- ✨
