@@ -56,7 +56,7 @@ export default {
 				}
 				/* 节流功能 */
 				this.timer = setTimeout(() => {
-          /*
+					/*
           touches: 手指信息
 					e.touches[0].clientY: 点击位置到窗口顶部距离
 					79: 城市选择头高度

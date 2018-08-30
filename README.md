@@ -217,6 +217,10 @@ Vue.component('child-one', {
 ```node
 node -v
 npm -v
+npm i nvm
+nvm ls
+nvm install 8.9.1
+nvm use 8.9.1
 vue init webpack imooc-travel
 npm run start
 ```
@@ -283,7 +287,7 @@ width: 100%;
 height: 0;
 ```
 
-- > > > : 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active 就可以添加样式
+- >>> 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active 就可以添加样式
 
 ```node
 npm i vue-awesome-swiper -S
