@@ -53,7 +53,8 @@ export default {
   */
 	activated() {
 		if (this.lastCity !== this.city) {
-			/* save preCity */
+      /* save preCity */
+      // 城市变化时, 重新调用 getHomeInfo() 发请求
 			this.lastCity = this.city
 			this.getHomeInfo()
 		}

@@ -20,7 +20,7 @@ import DetailList from './components/List'
 import axios from 'axios'
 
 export default {
-  /* 缓存, 递归 */
+	/* 缓存, 递归 */
 	name: 'Detail',
 	components: {
 		DetailBanner,
@@ -34,9 +34,9 @@ export default {
 			gallaryImgs: [],
 			list: []
 		}
-  },
+	},
 	mounted() {
-    /* 发ajax请求, 只会执行一次 */
+		/* 发ajax请求, 只会执行一次 */
 		this.getDetailInfo()
 	},
 	methods: {

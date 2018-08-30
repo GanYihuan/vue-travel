@@ -43,8 +43,8 @@ export default {
 			const top = document.documentElement.scrollTop
 			if (top > 60) {
 				let opacity = top / 140
-        opacity = opacity > 1 ? 1 : opacity
-        /*
+				opacity = opacity > 1 ? 1 : opacity
+				/*
         key === value, 只写一个
 				this.opacityStyle = {opacity: opacity}
         */
@@ -53,12 +53,18 @@ export default {
 			} else {
 				this.showAbs = true
 			}
+		},
+		activated() {
+			window.addEventListener('scroll', this.handleScroll)
+		},
+		deativated() {
+			window.removeEventListener('scroll', this.handleScroll)
 		}
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl'
+@import '~styles/varibles.styl';
 @import './Header.styl';
 </style>
