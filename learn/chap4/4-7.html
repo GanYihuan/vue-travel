@@ -9,9 +9,9 @@
   <div id="app">
     <child>
       <!--
-        slot-scope="props": 用slot里面的item数据, 
+        slot-scope="props": 能调用slot里面的item数据,
         父组件调用子组件, 给子组件传递了<template slot-scope="props">,
-        子组件的内容都放在slot-scope里面, 父组件给子组件模板h1
+        子组件的内容都放在slot-scope里面
       -->
       <template slot-scope="props">
         <h1>{{props.item}} --- hello</h1>

@@ -15,8 +15,10 @@
     vm: vue 实例
     */
     let vm = new Vue({
-      data: {
-        test: 'hello vue'
+      data() {
+        return {
+          test: 'hello vue'
+        }
       },
       /* init event & lifecycle */
       /*
@@ -30,8 +32,8 @@
       /* init injections & reactivity */
       /*
       初始化, dom 没完成
-      能放数据, 数据不会被监控
       服务端渲染调用
+      能放数据, 数据不会被监控
       */
       created() {
         console.log('created')
