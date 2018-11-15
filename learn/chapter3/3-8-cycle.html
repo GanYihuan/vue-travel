@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <!-- operate array: push,pop,shift,unshift,splice,sort,reverse -->
@@ -43,29 +45,32 @@
     */
     let vm = new Vue({
       el: '#app',
-      data: {
-        list: [
-          {
-            id: '01',
-            text: 'Vue'
+      data() {
+        return {
+          list: [{
+              id: '01',
+              text: 'Vue'
+            },
+            {
+              id: '02',
+              text: 'React'
+            },
+            {
+              id: '03',
+              text: 'Angular'
+            }
+          ],
+          userInfo: {
+            name: 'mike',
+            age: 28,
+            gender: 'male'
           },
-          {
-            id: '02',
-            text: 'React'
-          },
-          {
-            id: '03',
-            text: 'Angular'
-          }
-        ],
-        userInfo: {
-          name: 'mike',
-          age: 28,
-          gender: 'male'
-        },
-        userInfoArray: [1, 2, 3]
+          userInfoArray: [1, 2, 3]
+        }
       }
     })
+
   </script>
 </body>
+
 </html>

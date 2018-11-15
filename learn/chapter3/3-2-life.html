@@ -74,7 +74,7 @@
         return h('div', {}, err.stack)
       },
       /* 会向上冒泡, 并在正式的环境中使用, 收集错误 */
-      errorCaptured() { },
+      errorCaptured() {},
       /* create vm.$el and replace 'el' with it */
       /*
       dom 相关
@@ -115,6 +115,7 @@
         console.log('destroyed')
       }
     })
+
   </script>
 </body>
 

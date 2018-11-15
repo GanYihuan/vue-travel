@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>computed getter setter</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     {{fullName}} {{age}}
@@ -12,9 +14,11 @@
   <script>
     let vm = new Vue({
       el: '#app',
-      data: {
-        firstName: 'Dell',
-        lastName: 'Lee',
+      data() {
+        return {
+          firstName: 'Dell',
+          lastName: 'Lee',
+        }
       },
       computed: {
         fullName: {
@@ -32,6 +36,8 @@
         }
       }
     })
+
   </script>
 </body>
+
 </html>

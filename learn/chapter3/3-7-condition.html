@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue中的条件渲染</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <!-- if false, dom element delete -->
@@ -31,11 +33,15 @@
   <script>
     let vm = new Vue({
       el: '#app',
-      data: {
-        show: 'a',
-        message: 'hello vue'
+      data() {
+        return {
+          show: 'a',
+          message: 'hello vue'
+        }
       }
     })
+
   </script>
 </body>
+
 </html>

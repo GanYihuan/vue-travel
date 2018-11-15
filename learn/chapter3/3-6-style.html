@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -11,9 +12,11 @@
     .activatedOne {
       color: #0f0
     }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <div @click="handleDivClick" :class="{activated: isActivated}">
@@ -31,12 +34,14 @@
   <script>
     let vm = new Vue({
       el: '#app',
-      data: {
-        isActivated: false,
-        activatedOne: '',
-        activatedTwo: 'activatedTwo',
-        styleObj: {
-          color: 'black'
+      data() {
+        return {
+          isActivated: false,
+          activatedOne: '',
+          activatedTwo: 'activatedTwo',
+          styleObj: {
+            color: 'black'
+          }
         }
       },
       methods: {
@@ -56,6 +61,8 @@
         }
       }
     })
+
   </script>
 </body>
+
 </html>
