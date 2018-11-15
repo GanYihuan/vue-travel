@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>非父子组件传值(发布订阅模式/观察者模式/总线/Bus)</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <child content="Dell"></child>
     <child content="Lee"></child>
   </div>
   <script>
-    /* 当new Vue时, 每个组件都有bus属性 */
+    /* 当 new Vue 时, 每个组件都有 bus 属性 */
     Vue.prototype.bus = new Vue()
 
     Vue.component('child', {
@@ -24,22 +26,24 @@
         }
       },
       template: '<div @click="handleClick">{{selfContent}}</div>',
-      methods: {
-        handleClick() {
-          this.bus.$emit('change', this.selfContent)
-        }
-      },
       mounted() {
         let that = this
         this.bus.$on('change', (msg) => {
           that.selfContent = msg
         })
+      },
+      methods: {
+        handleClick() {
+          this.bus.$emit('change', this.selfContent)
+        }
       }
     })
 
     let vm = new Vue({
       el: '#app',
     })
+
   </script>
 </body>
+
 </html>
