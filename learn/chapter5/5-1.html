@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vue动画 - Vue中CSS动画原理</title>
@@ -10,18 +11,22 @@
 
     .fade-enter-active {
       transition: opacity 2s;
-    }
-
-    .fade-leave-active {
-      transition: opacity 2s;
+      color: #00f;
     }
 
     .fade-leave-to {
       opacity: 0;
     }
+
+    .fade-leave-active {
+      transition: opacity 2s;
+      color: #f00;
+    }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <!-- animate time -->
   <!-- 5-1.png/5-12.png -->
@@ -34,8 +39,10 @@
   <script>
     let vm = new Vue({
       el: '#app',
-      data: {
-        show: true
+      data() {
+        return {
+          show: true
+        }
       },
       methods: {
         handleClick() {
@@ -43,6 +50,8 @@
         }
       }
     })
+
   </script>
 </body>
+
 </html>

@@ -36,8 +36,10 @@
   <script>
     let vm = new Vue({
       el: '#app',
-      data: {
-        show: true
+      data() {
+        return {
+          show: true
+        }
       },
       methods: {
         handleClick() {
@@ -54,6 +56,7 @@
             // animate finished
             done()
           }, 4000)
+          // done: 动画结束
           Velocity(el,
           {
             fontSize: 30

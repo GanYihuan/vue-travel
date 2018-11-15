@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Vue中多个元素或组件的过渡</title>
+  <title>Vue 中多个元素或组件的过渡</title>
   <link rel="stylesheet" href="../animate.css">
   <style>
     .fade-enter,
@@ -14,9 +15,11 @@
     .fade-leave-active {
       transition: opacity 2s;
     }
+
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <!-- mode="in-out": 先显示再隐藏 -->
@@ -26,6 +29,7 @@
       <div v-else key="bye">hello world 2</div>
     </transition>
     <button @click="handleClick">click3</button>
+
     <hr />
 
     <transition name="fade" mode="out-in">
@@ -38,14 +42,17 @@
     Vue.component('child', {
       template: '<div>child</div>'
     })
+
     Vue.component('child-one', {
       template: '<div>child-one</div>'
     })
 
     let vm = new Vue({
       el: '#app',
-      data: {
-        type: 'child'
+      data() {
+        return {
+          type: 'child'
+        }
       },
       methods: {
         handleClick() {
@@ -53,6 +60,8 @@
         }
       }
     })
+
   </script>
 </body>
+
 </html>
