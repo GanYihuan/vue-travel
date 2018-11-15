@@ -20,11 +20,10 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-
 export default {
 	name: 'HomeHeader',
 	computed: {
-		/* 将vuex共用数据city映射到'city'当中: city: city */
+		/* 将 vuex 共用数据 city 映射到 'city' 当中: city: city */
 		...mapState(['city']),
 		...mapGetters(['doubleCity'])
 	}

@@ -36,7 +36,7 @@ export default {
 		}
 	},
 	computed: {
-		/* 将vuex共用数据city映射到'currentCity'当中 */
+		/* 将 vuex 共用数据 city 映射到 'currentCity' 当中 */
 		...mapState(['city'])
 	},
 	/* 组件被挂载的时候 */

@@ -421,15 +421,6 @@ npm i babel-preset-stage-1 -D
 
 - Swiper official website
 
-```css
-/* 正方形 */
-overflow: hidden;
-padding-bottom: 100%;
-width: 100%;
-height: 0;
-/* 正方形 */
-```
-
 ## 9-3 Vue 项目详情页 - 实现 Header 渐隐渐显效果
 
 ## 9-4 Vue 项目详情页 - 对全局事件的解绑
