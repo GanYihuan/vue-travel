@@ -25,7 +25,7 @@
         </div>
       </div>
       <!-- cities it's object, so use (item, key) -->
-      <!-- (item,key)-> key: a,b,c..., :ref='a,b,c...' -->
+      <!-- (item, key)-> key: a,b,c... :ref='a,b,c...' -->
       <div
         class="area"
         v-for="(item, key) of cities"
@@ -65,6 +65,7 @@ export default {
 		})
 	},
 	mounted() {
+    /* better-scroll:  */
 		this.scroll = new Bscroll(this.$refs.wrapper)
 	},
 	methods: {
@@ -85,7 +86,7 @@ export default {
 			/* if letter !== null */
 			if (this.letter) {
 				/* this.$refs[this.letter]: isArray */
-				console.log(this.$refs[this.letter])
+				// console.log(this.$refs[this.letter])
 				const element = this.$refs[this.letter][0]
 				/* better-scroll: scrollToElement */
 				this.scroll.scrollToElement(element)
