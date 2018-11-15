@@ -7,12 +7,12 @@
   &:before
     border-color: #ccc
 .list
+  overflow: hidden
   position: absolute
   top: 1.58rem
   left: 0
   right: 0
   bottom: 0
-  overflow: hidden
   .title
     padding-left: .2rem
     line-height: .54rem
@@ -20,7 +20,7 @@
     color: #666
     background: #eee
   .button-list
-    // 触发float BLC, float: left
+    // 触发 float BLC, 不与 float 重叠
     overflow: hidden
     padding: .1rem .6rem .1rem .1rem
     .button-wrapper
