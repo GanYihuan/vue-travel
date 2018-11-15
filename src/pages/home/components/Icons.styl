@@ -1,9 +1,7 @@
 .icons >>> .swiper-container
-  // overflow: hidden
-  // swiper高度只有一半导致下部分不能拖动
+  overflow: hidden
   padding-bottom: 50%
   height: 0
-  // background: green
 .icons
   margin-top: .1rem
   .icon
@@ -11,10 +9,9 @@
     position: relative
     // 固定宽高比
     overflow: hidden
-    padding-bottom: 25%
-    height: 0
     width: 25%
-    // 固定宽高比
+    height: 0
+    padding-bottom: 25%
     .icon-img
       position: absolute
       top: 0
@@ -30,13 +27,17 @@
         height: 100%
     .icon-desc
       position: absolute
-      // 相当于 width: 100%
+      // 相当于 width: 100% >
       left: 0
       right: 0
-      // 相当于 width: 100%
+      // 相当于 width: 100% />
       bottom: 0
+      // 垂直居中 >
       height: .44rem
       line-height: .44rem
+      // 垂直居中 />
+      // 水平居中 >
       text-align: center
+      // 水平居中 />
       color: $darkTextColor
       ellipsis()

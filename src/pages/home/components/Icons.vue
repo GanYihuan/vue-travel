@@ -31,10 +31,17 @@ export default {
 		}
 	},
 	computed: {
-		/* swiper 无法分页解决 */
+    /**
+     * @name: swiper 分页解决
+     * @msg:
+     * @param {type}
+     * @return:
+     */
 		pages() {
-			const pages = []
+      const pages = []
+      // 分页
 			this.list.forEach((item, index) => {
+        // 每一样拥有的图标个数
 				const page = Math.floor(index / 8)
 				if (!pages[page]) {
 					pages[page] = []

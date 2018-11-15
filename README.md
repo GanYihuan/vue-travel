@@ -264,7 +264,7 @@ npm i fastclick -S
 
 ## 7-1 Vue 项目首页 - header 区域开发
 
-- 1rem = html font-size = 50px
+- iphone6: 1rem = html: font-size
 
 ```node
 npm i stylus stylus-loader -S
@@ -281,10 +281,12 @@ npm i stylus stylus-loader -S
 - 图片宽高比固定比值:
 
 ```css
-overflow: hidden;
-padding-bottom: 31.25%;
-width: 100%;
-height: 0;
+div {
+  overflow: hidden;
+  padding-bottom: 31.25%;
+  width: 100%;
+  height: 0;
+}
 ```
 
 - >>> 样式穿透, 不受 scoped 影响, .wrapper 里面出现 .swiper-pagination-bullet-active 就可以添加样式

@@ -17,7 +17,6 @@ import HomeWeekend from './components/Weekend'
 /* Ajax */
 import axios from 'axios'
 import { mapState } from 'vuex'
-
 export default {
 	name: 'Home',
 	components: {
@@ -42,14 +41,14 @@ export default {
 	},
 	/* 组件被挂载的时候 */
 	mounted() {
-    /* 保存上一个数据city值 */ 
+    /* 保存上一个数据 city 值 */
 		this.lastCity = this.city
 		this.getHomeInfo()
 	},
 	/*
-  activated: 当使用keep-alive时，App.vue将附加组件激活
+  activated: 当使用 keep-alive 时，App.vue 将附加组件激活
 	当页面重新显示的时候将运行
-	deactivated(){}, 与activated相反
+	deactivated(){}, 与 activated 相反
   */
 	activated() {
 		if (this.lastCity !== this.city) {
@@ -66,6 +65,7 @@ export default {
         .then(this.getHomeInfoSucc)
 		},
 		getHomeInfoSucc(res) {
+      // console.log(res)
 			res = res.data
 			if (res.ret && res.data) {
 				const data = res.data
