@@ -389,6 +389,18 @@ axios.get('/static/mock/index.json?city=' + this.city)
 npm i vuex -S
 ```
 
+> 支持新语法, ...mapState(), **.babelrc** 配置
+
+```console
+npm i babel-preset-stage-1 -D
+```
+
+```json
+"presets": [
+  "stage-1"
+],
+```
+
 ## 8-10 Vue 项目城市选择页 - Vuex 的高级使用及 localStorage
 
 - mapState 共用数据映射

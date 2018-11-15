@@ -20,13 +20,17 @@
     //    props: ['content'],
     //    template: '<li>{{content}}</li>'
     //  })
+
     /* local component */
-    var TodoItem = {
+    let TodoItem = {
       props: ['content'],
       template: '<li>{{content}}</li>'
     }
 
     let app = new Vue({
+      components: {
+        TodoItem: TodoItem
+      },
       el: '#app',
       data: {
         inputValue: '',
@@ -37,9 +41,6 @@
           this.list.push(this.inputValue)
           this.inputValue = ''
         }
-      },
-      components: {
-        TodoItem: TodoItem
       }
     })
   </script>
