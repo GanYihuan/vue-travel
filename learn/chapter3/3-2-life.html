@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Document</title>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app"></div>
   <script>
@@ -27,7 +29,7 @@
       不要修改数据
       */
       beforeCreate() {
-        console.log('beforeCreate')
+        console.log(this.$el, 'beforeCreate') // undefined
       },
       /* init injections & reactivity */
       /*
@@ -36,21 +38,24 @@
       能放数据, 数据不会被监控
       */
       created() {
-        console.log('created')
+        console.log(this.$el, 'created') // undefined
       },
       /* has 'el' option? */
       el: '#app',
       /* N: when vm.$mount(el) is called */
       /* Y: has 'template' option? */
       template: '<div>{{test}}</div>',
-      /* Y: compile template as render function */
       /* N: compile outHTML(el) as template */
-      /* beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间 */
+      /* Y: compile template as render function */
+      /*
+      beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
+      dom 相关
+      服务端渲染不调用(服务端渲染没有 dom)
+      */
       beforeMount() {
-        console.log('beforeMount')
         /* 没数据 */
         /* <div id="app"></div> */
-        console.log(this.$el)
+        console.log(this.$el, 'beforeMount')
       },
       /*
       h: createElement()
@@ -79,6 +84,7 @@
       */
       mounted() {
         console.log('mounted')
+        /* The component is called when it is mounted to the dom */
         /* 有数据 */
         /* <div>hello world</div> */
         console.log(this.$el)
@@ -91,15 +97,25 @@
       updated() {
         console.log('updated')
       },
+      /* keep-alive */
+      activated() {
+        console.log(this, 'activated')
+      },
+      /* keep-alive */
+      deactivated() {
+        console.log(this, 'deactivated')
+      },
       /* when vm.$destory() is called */
       beforeDestroy() {
         console.log('beforeDestroy')
       },
       /* teardown watches, child components and events listeners */
       destroyed() {
+        /* Called when a component is destroyed */
         console.log('destroyed')
       }
     })
   </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>在Vue中使用 animate.css 库</title>
@@ -9,9 +10,11 @@
       0% {
         transform: scale(0);
       }
+
       50% {
         transform: scale(1.5);
       }
+
       100% {
         transform: scale(1);
       }
@@ -39,20 +42,20 @@
   </style>
   <script src="../vue.js"></script>
 </head>
+
 <body>
   <div id="app">
     <transition name="fade">
       <div v-if="show">hello world</div>
     </transition>
     <button @click="handleClick">click</button>
-    <hr/>
-
+    <hr />
     <!-- define animate name -->
     <transition enter-active-class="active" leave-active-class="leave">
       <div v-if="show">hello world 2</div>
     </transition>
     <button @click="handleClick">click2</button>
-    <hr/>
+    <hr />
 
     <!-- use Animate.css library -->
     <!-- animated: 启动 Animate.css -->
@@ -76,4 +79,5 @@
     })
   </script>
 </body>
+
 </html>

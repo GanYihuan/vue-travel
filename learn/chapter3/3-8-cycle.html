@@ -14,7 +14,7 @@
     <div v-for="(item, index) of list" :key="index.id">
       {{item.text}} --- {{index}}
     </div>
-    <hr/>
+    <hr />
     <!-- when cycle, template not render in page -->
     <template v-for="(item, index) of list" :key="index.id">
       <div>
@@ -24,13 +24,13 @@
         {{item.text}}
       </span>
     </template>
-    <hr/>
+    <hr />
     <!-- operate obj: chrome: Vue.set(vm.userInfo, 'address', 'guangzhou') -->
     <!-- operate obj: chrome: Vue.$set(vm.userInfo, 'address', 'guangzhou') -->
     <div v-for="(item, key, index) of userInfo">
       {{item}} --- {{key}} --- {{index}}
     </div>
-    <hr/>
+    <hr />
     <!-- operate obj: chrome: Vue.set(vm.userInfoArray, 1, 5) -->
     <!-- operate obj: chrome: Vue.$set(vm.userInfoArray, 2, 6) -->
     <div v-for="(item, key, index) of userInfoArray">
