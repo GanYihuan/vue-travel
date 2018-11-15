@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>父子组件传值</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
-    <input type="text" v-model="inputValue">
+    <input type="text" v-model="inputValue" />
     <button @click="handleBtnClick">submit</button>
     <ul>
-      <todo-item v-for="(item, index) in list" :key="index" :content="item" @delete="handleItemDelete"></todo-item>
+      <todo-item
+        v-for="(item, index) in list"
+        :key="index"
+        :content="item"
+        @delete="handleItemDelete"
+      ></todo-item>
     </ul>
   </div>
   <script>
@@ -48,8 +51,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

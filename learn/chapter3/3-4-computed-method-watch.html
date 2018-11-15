@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>computed getter setter</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
-    {{fullName}}
+    {{ fullName }}
     <!-- {{fullName()}} -->
-    {{age}}
+    {{ age }}
   </div>
   <script>
     let vm = new Vue({
@@ -30,7 +28,7 @@
           console.log('caculate once')
           return this.firstName + ' ' + this.lastName
         }
-      },
+      }
       // methods: {
       //   fullName() {
       //     console.log('caculate once')
@@ -49,8 +47,6 @@
       //   }
       // }
     })
-
   </script>
 </body>
-
 </html>

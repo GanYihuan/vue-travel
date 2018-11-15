@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app"></div>
   <script>
@@ -33,10 +31,10 @@
       },
       /* init injections & reactivity */
       /*
-      初始化, dom 没完成
-      服务端渲染调用
-      能放数据, 数据不会被监控
-      */
+    初始化, dom 没完成
+    服务端渲染调用
+    能放数据, 数据不会被监控
+    */
       created() {
         console.log(this.$el, 'created') // undefined
       },
@@ -48,19 +46,19 @@
       /* N: compile outHTML(el) as template */
       /* Y: compile template as render function */
       /*
-      beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
-      dom 相关
-      服务端渲染不调用(服务端渲染没有 dom)
-      */
+    beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
+    dom 相关
+    服务端渲染不调用(服务端渲染没有 dom)
+    */
       beforeMount() {
         /* 没数据 */
         /* <div id="app"></div> */
         console.log(this.$el, 'beforeMount')
       },
       /*
-      h: createElement()
-      耗时，效率低
-      */
+    h: createElement()
+    耗时，效率低
+    */
       render(h) {
         throw new TypeError('render error')
         // console.log('render function invoked')
@@ -74,7 +72,7 @@
         return h('div', {}, err.stack)
       },
       /* 会向上冒泡, 并在正式的环境中使用, 收集错误 */
-      errorCaptured() {},
+      errorCaptured() { },
       /* create vm.$el and replace 'el' with it */
       /*
       dom 相关
@@ -115,8 +113,6 @@
         console.log('destroyed')
       }
     })
-
   </script>
 </body>
-
 </html>

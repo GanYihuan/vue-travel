@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>MVVM, MVP</title>
   <script src="../jquery-3.2.1.js"></script>
 </head>
-
 <body>
   <!-- MVP mode -->
   <div>
-    <input id="input" type="text" />
-    <button id="btn">submit</button>
+    <input id="input" type="text" /> <button id="btn">submit</button>
     <ul id="list"></ul>
   </div>
   <script>
-    function Page() {}
+    function Page() { }
     /* 为 Page 增加内容 */
     $.extend(Page.prototype, {
       init: function () {
@@ -31,17 +28,13 @@
         let inputElem = $('#input')
         let inputValue = inputElem.val()
         let ulElem = $('#list')
-        ulElem.append('<li>' +
-          inputValue +
-          '</li>')
+        ulElem.append('<li>' + inputValue + '</li>')
         inputElem.val('')
       }
     })
 
     let page = new Page()
     page.init()
-
   </script>
 </body>
-
 </html>

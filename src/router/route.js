@@ -7,8 +7,7 @@ import Detail from '@/pages/detail/Detail'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Home',
       component: Home

@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Title</title>
   <style>
     .activated {
-      color: #f00
+      color: #f00;
     }
 
     .activatedOne {
-      color: #0f0
+      color: #0f0;
     }
-
   </style>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
-    <div @click="handleDivClick" :class="{activated: isActivated}">
-      hello Angular
-    </div>
+    <div @click="handleDivClick" :class="{activated: isActivated}">hello Angular</div>
     <!-- 数组里面是变量 -->
-    <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">
-      hello Vue
-    </div>
+    <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">hello Vue</div>
     <!-- 数组里面是对象 -->
-    <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">
-      hello React
-    </div>
+    <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">hello React</div>
   </div>
   <script>
     let vm = new Vue({
@@ -61,8 +52,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

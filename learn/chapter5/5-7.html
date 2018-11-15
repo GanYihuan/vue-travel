@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Vue 中的动画封装</title>
   <link rel="stylesheet" href="../animate.css">
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <fade :show="show">
@@ -15,7 +13,6 @@
     </fade>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     Vue.component('fade', {
       props: ['show'],
@@ -52,8 +49,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

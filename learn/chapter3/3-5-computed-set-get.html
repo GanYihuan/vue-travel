@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>computed getter setter</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
-  <div id="app">
-    {{fullName}} {{age}}
-  </div>
+  <div id="app">{{ fullName }} {{ age }}</div>
   <script>
     let vm = new Vue({
       el: '#app',
       data() {
         return {
           firstName: 'Dell',
-          lastName: 'Lee',
+          lastName: 'Lee'
         }
       },
       computed: {
@@ -36,8 +32,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

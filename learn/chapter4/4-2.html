@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>父子组件间的数据传递</title>
   <script src="../vue.js"></script>
 </head>
@@ -12,7 +11,7 @@
     <!-- count="0" it's string, :count="0" it's number -->
     <counter :count="1" @change="handleChange"></counter>
     <counter :count="2" @change="handleChange"></counter>
-    <div>I'am: {{total}}</div>
+    <div>I'am: {{ total }}</div>
   </div>
   <script>
     let counter = {
@@ -38,9 +37,9 @@
       methods: {
         handleClick() {
           /*
-          单项数据流, count 为 props父级传入的数据, 不能在下面直接修改父组件的数据
-          this.count++
-          */
+        单项数据流, count 为 props父级传入的数据, 不能在下面直接修改父组件的数据
+        this.count++
+        */
           /* 这是子组件内部 data 定义的数据 */
           this.number++
           /* 子组件向父组件传递数据信息 */
@@ -66,8 +65,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

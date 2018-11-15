@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>组件参数校验与非 props 特性</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child content="hello world"></child>
@@ -32,7 +30,7 @@
           default: 'default value',
           /* data valid */
           validator(data) {
-            return (data.length > 5)
+            return data.length > 5
           }
         }
       },
@@ -42,8 +40,6 @@
     let vm = new Vue({
       el: '#app'
     })
-
   </script>
 </body>
-
 </html>

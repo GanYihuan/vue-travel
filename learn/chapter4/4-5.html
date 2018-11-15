@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>非父子组件传值(发布订阅模式/观察者模式/总线/Bus)</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child content="Dell"></child>
@@ -28,7 +26,7 @@
       template: '<div @click="handleClick">{{selfContent}}</div>',
       mounted() {
         let that = this
-        this.bus.$on('change', (msg) => {
+        this.bus.$on('change', msg => {
           that.selfContent = msg
         })
       },
@@ -40,10 +38,8 @@
     })
 
     let vm = new Vue({
-      el: '#app',
+      el: '#app'
     })
-
   </script>
 </body>
-
 </html>

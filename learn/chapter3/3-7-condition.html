@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Vue中的条件渲染</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <!-- if false, dom element delete -->
-    <div v-if="show === 'a'">{{message}}</div>
+    <div v-if="show === 'a'">{{ message }}</div>
     <!-- v-if, v-else must stick together -->
     <!-- chrome: vm.show = 'b' -->
     <div v-else-if="show === 'b'">This is B</div>
@@ -18,17 +16,11 @@
     <div v-else>Bye</div>
     <!-- compare v-if, v-show high performance -->
     <!-- if false, setStyle: {display: none} -->
-    <div v-show="show">{{message}}</div>
+    <div v-show="show">{{ message }}</div>
     <!-- chrome: vm.show = true -->
     <!-- when show change, define key, input will clear before content -->
-    <div v-if="show">
-      userName:
-      <input key="username" />
-    </div>
-    <div v-else>
-      password:
-      <input key="password" />
-    </div>
+    <div v-if="show">userName: <input key="username" /></div>
+    <div v-else>password: <input key="password" /></div>
   </div>
   <script>
     let vm = new Vue({
@@ -40,8 +32,6 @@
         }
       }
     })
-
   </script>
 </body>
-
 </html>

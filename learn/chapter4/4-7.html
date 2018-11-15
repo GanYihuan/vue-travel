@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>作用域slot</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="app">
     <child>
       <!--
-        slot-scope="props": 能调用 slot 里面的 item 数据,
-        父组件调用子组件, 给子组件传递了 <template slot-scope="props">,
-        子组件的内容都放在 slot-scope 里面
-      -->
+          slot-scope="props": 能调用 slot 里面的 item 数据,
+          父组件调用子组件, 给子组件传递了 <template slot-scope="props">,
+          子组件的内容都放在 slot-scope 里面
+        -->
       <template slot-scope="props">
-        <h1>{{props.item}} --- hello</h1>
+        <h1>{{ props.item }} --- hello</h1>
       </template>
     </child>
   </div>
@@ -29,17 +27,15 @@
       },
       // slot: <template></template>
       template: `<div>
-                <ul>
-                  <slot v-for='item of list' :item=item></slot>
-                </ul>
-              </div>`
+                    <ul>
+                      <slot v-for='item of list' :item=item></slot>
+                    </ul>
+                  </div>`
     })
 
     let vm = new Vue({
       el: '#app'
     })
-
   </script>
 </body>
-
 </html>
