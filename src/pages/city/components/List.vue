@@ -70,15 +70,15 @@ export default {
 	},
 	methods: {
 		handleCityClick(city) {
-      /* vuex/mutations */
+      /* 派发 actions: changeCity */
       // this.$store.dispatch('changeCity', city)
-      /* vuex/mutations 可以直接调用mutations, 不需要通过actions */
+      /* 直接调用 mutations, 不需要通过 actions */
       // this.$store.commit('changeCity', city)
       this.changeCity(city)
       /* 页面跳转 */
 			this.$router.push('/')
     },
-    /* 将vuex共用mutation函数changeCity映射到'changeCity'当中: changeCity: changeCity */
+    /* 将 vuex 共用 mutation 函数 changeCity 映射到 'changeCity' 当中: changeCity: changeCity */
 		...mapMutations(['changeCity'])
 	},
 	watch: {

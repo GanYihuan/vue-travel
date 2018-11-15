@@ -3,6 +3,6 @@ export default {
     state.city = city
     try {
       localStorage.city = city
-    } catch (e) {}
+    } catch (e) { }
   }
 }

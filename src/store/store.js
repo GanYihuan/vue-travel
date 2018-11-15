@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import state from './state'
 import mutations from './mutations'
+import getters from './getters'
 
 Vue.use(Vuex)
 
@@ -9,12 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state,
   mutations,
-  /* getters: 根据 state 算出新数据, 类似computed */
-  getters: {
-    doubleCity(state) {
-      return state.city + ' ' + state.city
-    }
-  }
+  getters
 })
 
 // let defaultCity = '上海'
@@ -37,20 +33,20 @@ export default new Vuex.Store({
 //       ctx.commit('changeCity', city)
 //     }
 //   },
-//   mutations: {
-//     changeCity(state, city) {
-//       state.city = city
-//       try {
-//         localStorage.city = city
-//       } catch (e) {}
-//     }
-//   }
+  // mutations: {
+  //   changeCity(state, city) {
+  //     state.city = city
+  //     try {
+  //       localStorage.city = city
+  //     } catch (e) {}
+  //   }
+  // }
 // })
 
 /*
-Vuex流程: vuex.png
+Vuex 流程: vuex.png
 List.vue
-state -> render -> vue components -> Dispatch
+State -> render -> vue components -> dispatch() ->
 store.js
-Actions -> commit -> Mutations -> Mutate
+Actions -> commit() -> Mutations -> Mutate -> State
 */
