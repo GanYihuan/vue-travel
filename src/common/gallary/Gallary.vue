@@ -29,9 +29,9 @@ export default {
 				pagination: '.swiper-pagination',
 				/* dots type */
 				paginationType: 'fraction',
-				/* 当swiper父元素改变时，swiper刷新 */
+				/* 当 swiper 父元素改变时，swiper 刷新 */
 				observeParents: true,
-				/* 当swiper父元素或自身dom改变时，swiper刷新 */
+				/* 当 swiper 父元素或自身 dom 改变时，swiper 刷新 */
 				observer: true
 			}
 		}

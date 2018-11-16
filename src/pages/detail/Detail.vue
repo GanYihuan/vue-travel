@@ -18,7 +18,6 @@ import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import axios from 'axios'
-
 export default {
 	/* 缓存, 递归 */
 	name: 'Detail',
@@ -36,7 +35,7 @@ export default {
 		}
 	},
 	mounted() {
-		/* 发ajax请求, 只会执行一次 */
+		/* 发 ajax 请求, 只会执行一次 */
 		this.getDetailInfo()
 	},
 	methods: {
