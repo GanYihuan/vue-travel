@@ -446,16 +446,16 @@ name: 'DetailList',
 
 - get IP
 
-```shell
+```console
 <!-- mac -->
 ifconfig
 <!-- window -->
 ipconfig
 ```
 
-> package.json 配置后重启项目
+> package.json 配置后重启项目, 能通过 ip 地址被访问 --host 0.0.0.0
 
-```shell
+```json
 "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
 ```
 
@@ -472,13 +472,14 @@ ipconfig
 
 - 打包
 
-```shell
+```console
 npm run build
 ```
 
-> App 放入项目文件中，需要配置路径，后端访问项目文件可以运行 App
+- dist 内文件放入(/Applications/XAMPP/htdocs)文件中, 浏览器访问 localhost
+- 将 dist 改名为 project 放入, 要配置名称 **config/index.js**
 
-```shell
+```js
 build: {
   assetsPublicPath: '/project',
 }
