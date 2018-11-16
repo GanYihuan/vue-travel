@@ -46,19 +46,19 @@
       /* N: compile outHTML(el) as template */
       /* Y: compile template as render function */
       /*
-    beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
-    dom 相关
-    服务端渲染不调用(服务端渲染没有 dom)
-    */
+      beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
+      dom 相关
+      服务端渲染不调用(服务端渲染没有 dom)
+      */
       beforeMount() {
         /* 没数据 */
         /* <div id="app"></div> */
         console.log(this.$el, 'beforeMount')
       },
       /*
-    h: createElement()
-    耗时，效率低
-    */
+      h: createElement()
+      耗时，效率低
+      */
       render(h) {
         throw new TypeError('render error')
         // console.log('render function invoked')
@@ -95,11 +95,15 @@
       updated() {
         console.log('updated')
       },
-      /* keep-alive */
+      /*
+      当使用 keep-alive 时，App.vue 将附加组件激活
+      当页面重新显示的时候将运行
+      deactivated(){}, 与 activated 相反
+      */
       activated() {
         console.log(this, 'activated')
       },
-      /* keep-alive */
+      /* deactivated(){}, 与 activated 相反 */
       deactivated() {
         console.log(this, 'deactivated')
       },
