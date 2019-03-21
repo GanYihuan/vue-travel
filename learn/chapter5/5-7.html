@@ -29,13 +29,11 @@
         handleEnter(el, done) {
           setTimeout(() => {
             el.style.color = '#0f0'
-            // done: 动画结束
-            done()
+            done() // done: 动画结束
           }, 2000)
         }
       }
     })
-
     let vm = new Vue({
       el: '#app',
       data() {

@@ -9,7 +9,6 @@
     .fade-leave-to {
       opacity: 0;
     }
-
     .fade-enter-active,
     .fade-leave-active {
       transition: opacity 2s;
@@ -26,9 +25,7 @@
       <div v-else key="bye">hello world 2</div>
     </transition>
     <button @click="handleClick">click3</button>
-
     <hr />
-
     <transition name="fade" mode="out-in">
       <!-- 动态组件 -->
       <component :is="type"></component>
@@ -39,11 +36,9 @@
     Vue.component('child', {
       template: '<div>child</div>'
     })
-
     Vue.component('child-one', {
       template: '<div>child-one</div>'
     })
-
     let vm = new Vue({
       el: '#app',
       data() {

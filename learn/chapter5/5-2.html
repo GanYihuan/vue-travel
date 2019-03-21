@@ -60,13 +60,12 @@
 
     <!-- use Animate.css library -->
     <!-- animated: 启动 Animate.css -->
-    <!-- swing: Animate.css 的效果 -->
+    <!-- swing: Animate.css 的其中之一效果 -->
     <transition enter-active-class="animated swing" leave-active-class="animated shake">
       <div v-if="show">hello world 3</div>
     </transition>
     <button @click="handleClick">click3</button>
   </div>
-
   <script>
     let vm = new Vue({
       el: '#app',
@@ -81,7 +80,6 @@
         }
       }
     })
-
   </script>
 </body>
 </html>
