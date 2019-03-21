@@ -10,110 +10,60 @@
 <body>
   <div id="app"></div>
   <script>
-    /*
-    生命周期函数是某个时间点执行的函数
-    vm: vue 实例
-    */
-    let vm = new Vue({
+    // 生命周期函数是某个时间点执行的函数
+    let vm = new Vue({ // vm: vue 实例
       data() {
         return {
           test: 'hello vue'
         }
       },
-      /* init event & lifecycle */
-      /*
-      初始化, dom 没完成
-      服务端渲染调用
-      不要修改数据
-      */
-      beforeCreate() {
+      // init event & lifecycle
+      beforeCreate() { // 初始化, dom 没完成 服务端渲染调用 不要修改数据
         console.log(this.$el, 'beforeCreate') // undefined
       },
-      /* init injections & reactivity */
-      /*
-    初始化, dom 没完成
-    服务端渲染调用
-    能放数据, 数据不会被监控
-    */
-      created() {
+      // init injections & reactivity
+      created() { // 初始化, dom 没完成 服务端渲染调用 能放数据, 数据不会被监控
         console.log(this.$el, 'created') // undefined
       },
-      /* has 'el' option? */
       el: '#app',
-      /* N: when vm.$mount(el) is called */
-      /* Y: has 'template' option? */
       template: '<div>{{test}}</div>',
-      /* N: compile outHTML(el) as template */
-      /* Y: compile template as render function */
-      /*
-      beforeMount: 数据和模板即将结合挂载到页面中之前一瞬间
-      dom 相关
-      服务端渲染不调用(服务端渲染没有 dom)
-      */
-      beforeMount() {
-        /* 没数据 */
-        /* <div id="app"></div> */
-        console.log(this.$el, 'beforeMount')
+      // has 'el' option? N: when vm.$mount(el) is called
+      // Y: has 'template' option? N: compile outHTML(el) as template
+      // Y: compile template as render function
+      beforeMount() { // 数据和模板即将结合挂载到页面中之前一瞬间 dom 相关 服务端渲染不调用(服务端渲染没有 dom)
+        console.log(this.$el, 'beforeMount') // 没数据 <div id="app"></div>
       },
-      /*
-      h: createElement()
-      耗时，效率低
-      */
-      render(h) {
+      render(h) { // : createElement() 耗时，效率低
         throw new TypeError('render error')
         // console.log('render function invoked')
         // return h('div', {}, this.text)
       },
-      /*
-      h: createElement()
-      开发时才被调用, 不关心子组件
-      */
-      renderError(h, err) {
+      renderError(h, err) { // h: createElement() 开发时才被调用, 不关心子组件
         return h('div', {}, err.stack)
       },
-      /* 会向上冒泡, 并在正式的环境中使用, 收集错误 */
-      errorCaptured() { },
-      /* create vm.$el and replace 'el' with it */
-      /*
-      dom 相关
-      服务端渲染不调用, 服务端渲染没有 dom
-      mounted 之后, 要外界触发才执行生命周期
-      经过 render 节点变为: <div>hello world</div>
-      */
-      mounted() {
+      errorCaptured() { }, // 会向上冒泡, 并在正式的环境中使用, 收集错误
+      // create vm.$el and replace 'el' with it
+      mounted() { // dom 相关 服务端渲染不调用, 服务端渲染没有 dom mounted 之后, 要外界触发才执行生命周期 经过 render 节点变为: <div>hello world</div>
         console.log('mounted')
-        /* The component is called when it is mounted to the dom */
-        /* 有数据 */
-        /* <div>hello world</div> */
+        // The component is called when it is mounted to the dom 有数据 <div>hello world</div>
         console.log(this.$el)
       },
-      /* when data changes */
-      beforeUpdate() {
+      beforeUpdate() { // when data changes
         console.log('beforeUpdate')
       },
-      /* virtual DMO re-render and patch */
-      updated() {
+      updated() { // virtual DMO re-render and patch
         console.log('updated')
       },
-      /*
-      当使用 keep-alive 时，App.vue 将附加组件激活
-      当页面重新显示的时候将运行
-      deactivated(){}, 与 activated 相反
-      */
-      activated() {
+      activated() { // 当使用 keep-alive 时，App.vue 将附加组件激活 当页面重新显示的时候将运行
         console.log(this, 'activated')
       },
-      /* deactivated(){}, 与 activated 相反 */
-      deactivated() {
+      deactivated() { // deactivated(){}, 与 activated 相反
         console.log(this, 'deactivated')
       },
-      /* when vm.$destory() is called */
-      beforeDestroy() {
+      beforeDestroy() { // when vm.$destory() is called
         console.log('beforeDestroy')
       },
-      /* teardown watches, child components and events listeners */
-      destroyed() {
-        /* Called when a component is destroyed */
+      destroyed() { // teardown watches, child components and events listeners
         console.log('destroyed')
       }
     })

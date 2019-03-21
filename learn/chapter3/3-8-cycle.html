@@ -10,7 +10,7 @@
     <!-- operate array: push,pop,shift,unshift,splice,sort,reverse -->
     <!-- operate array: chrome: vm.list = {[...]} -->
     <!-- :key="index.id": A unique identifier -->
-    <!-- (item, index) in list: 推荐写of -->
+    <!-- (item, index) in list: 推荐写 of -->
     <div v-for="(item, index) of list" :key="index.id">{{ item.text }} --- {{ index }}</div>
     <hr />
     <!-- when cycle, template not render in page -->
@@ -28,9 +28,7 @@
     <div v-for="(item, key, index) of userInfoArray">{{ item }} --- {{ key }} --- {{ index }}</div>
   </div>
   <script>
-    /*
-  push, pop, shift, unshift, splice, sort, reverse
-  */
+    // push, pop, shift, unshift, splice, sort, reverse
     let vm = new Vue({
       el: '#app',
       data() {

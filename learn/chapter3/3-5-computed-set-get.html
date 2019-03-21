@@ -18,12 +18,9 @@
       },
       computed: {
         fullName: {
-          // get: function() {}
           get() {
             return this.firstName + ' ' + this.lastName
           },
-          // chrome: call set()
-          // vm.fullName = 'mike wang'
           set(value) {
             let arr = value.split(' ')
             this.firstName = arr[0]

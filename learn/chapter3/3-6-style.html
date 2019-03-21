@@ -17,9 +17,7 @@
 <body>
   <div id="app">
     <div @click="handleDivClick" :class="{activated: isActivated}">hello Angular</div>
-    <!-- 数组里面是变量 -->
     <div @click="handleDivClickVue" :class="[activatedOne, activatedTwo]">hello Vue</div>
-    <!-- 数组里面是对象 -->
     <div @click="handleDivClickReact" :style="[styleObj, {fontSize: '20px'}]">hello React</div>
   </div>
   <script>
@@ -40,11 +38,6 @@
           this.isActivated = !this.isActivated
         },
         handleDivClickVue() {
-          // if (this.activatedOne === 'activatedOne') {
-          //   this.activatedOne = ''
-          // } else {
-          //   this.activatedOne = 'activatedOne'
-          // }
           this.activatedOne = this.activatedOne === 'activatedOne' ? '' : 'activatedOne'
         },
         handleDivClickReact() {
