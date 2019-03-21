@@ -15,8 +15,7 @@
     Vue.component('child', {
       template: '<div @click="handleChildClick">child</div>',
       methods: {
-        // native event
-        handleChildClick() {
+        handleChildClick() { // native event
           alert('child click')
           // this.$emit('click')
         }
@@ -26,8 +25,7 @@
     let em = new Vue({
       el: '#app',
       methods: {
-        // custom event
-        handleClick() {
+        handleClick() { // custom event
           alert('custom event click')
         }
       }

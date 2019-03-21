@@ -11,21 +11,18 @@
     <child-two v-if="type === 'child-two'">child-two</child-two>
     <button @click="handleClick">change</button>
     <hr />
-    <!-- 动态组件: 根据 :is 的变化自动加载 -->
+    <!-- 动态组件: 根据 :is 的变化自动加载不同组件 -->
     <!-- 销毁组件，重新创建组件 -->
     <component :is="type"></component>
     <button @click="handleClick">动态组件</button>
   </div>
   <script>
     Vue.component('child-one', {
-      /* v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能 */
-      template: `<div v-once>child-one</div>`
+      template: `<div v-once>child-one</div>` // v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能
     })
-
     Vue.component('child-two', {
       template: `<div v-once>child-two</div>`
     })
-
     let vm = new Vue({
       el: '#app',
       data() {

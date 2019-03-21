@@ -9,10 +9,10 @@
   <div id="app">
     <child>
       <!--
-          slot-scope="props": 能调用 slot 里面的 item 数据,
-          父组件调用子组件, 给子组件传递了 <template slot-scope="props">,
-          子组件的内容都放在 slot-scope 里面
-        -->
+      slot-scope="props": 能调用 slot 里面的 item 数据,
+      父组件调用子组件, 给子组件传递了 <template slot-scope="props">,
+      子组件的内容都放在 slot-scope 里面
+      -->
       <template slot-scope="props">
         <h1>{{ props.item }} --- hello</h1>
       </template>

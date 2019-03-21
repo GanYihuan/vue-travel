@@ -22,14 +22,10 @@
         */
         content: [String, Number],
         content2: {
-          /* must String */
-          type: String,
-          /* must pass me data */
-          required: true,
-          /* if not pass me data, use default */
-          default: 'default value',
-          /* data valid */
-          validator(data) {
+          type: String, // must String
+          required: true, // must pass me data
+          default: 'default value', // if not pass me data, use default
+          validator(data) { // data valid
             return data.length > 5
           }
         }

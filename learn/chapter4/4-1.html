@@ -5,7 +5,6 @@
   <title>使用组件的细节点</title>
   <script src="../vue.js"></script>
 </head>
-
 <body>
   <div id="root">
     <table>
@@ -23,7 +22,6 @@
   </div>
   <script>
     Vue.component('row', {
-      // child component data must function, because father call child, each need Independent scope
       data() {
         return {
           content: 'this is content'
@@ -42,8 +40,7 @@
       methods: {
         handleClick() {
           this.number++
-          // trigger change event
-          this.$emit('change')
+          this.$emit('change') // trigger change event
         }
       }
     })
@@ -57,12 +54,10 @@
       },
       methods: {
         handleClick() {
-          // 获取到的是dom元素
-          alert(this.$refs.hello.innerHeight)
+          alert(this.$refs.hello.innerHeight) // 获取到的是dom元素
         },
         handleChange() {
-          // 在组件上,获取到的是子组件的引用
-          this.total = this.$refs.one.number + this.$refs.two.number
+          this.total = this.$refs.one.number + this.$refs.two.number // 在组件上,获取到的是子组件的引用
         }
       }
     })
