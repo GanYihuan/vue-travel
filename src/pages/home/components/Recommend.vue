@@ -4,16 +4,18 @@
     <ul>
       <!-- router-link 默认换成 a 标签 -->
       <router-link
-        class="item border-bottom"
-        tag="li"
         v-for="item of list"
         :key="item.id"
         :to="'/detail/' + item.id"
+        class="item border-bottom"
+        tag="li"
       >
-        <img class="item-img" :src="item.imgUrl"/>
+        <img
+          :src="item.imgUrl"
+          class="item-img">
         <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
           <button class="item-button">查看详情</button>
         </div>
       </router-link>
@@ -23,10 +25,15 @@
 
 <script>
 export default {
-	name: 'HomeRecommend',
-	props: {
-		list: Array
-	}
+  name: 'HomeRecommend',
+  props: {
+    list: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
+  }
 }
 </script>
 

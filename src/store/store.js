@@ -33,14 +33,14 @@ export default new Vuex.Store({
 //       ctx.commit('changeCity', city)
 //     }
 //   },
-  // mutations: {
-  //   changeCity(state, city) {
-  //     state.city = city
-  //     try {
-  //       localStorage.city = city
-  //     } catch (e) {}
-  //   }
-  // }
+// mutations: {
+//   changeCity(state, city) {
+//     state.city = city
+//     try {
+//       localStorage.city = city
+//     } catch (e) {}
+//   }
+// }
 // })
 
 /*

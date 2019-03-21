@@ -1,14 +1,13 @@
 <template>
   <div>
     <detail-banner
-      :sightName="sightName"
-      :bannerImg="bannerImg"
-      :bannerImgs="gallaryImgs"
-    >
-    </detail-banner>
-    <detail-header></detail-header>
+      :sight-name="sightName"
+      :banner-img="bannerImg"
+      :banner-imgs="gallaryImgs"
+    />
+    <detail-header/>
     <div class="content">
-      <detail-list :list="list"></detail-list>
+      <detail-list :list="list"/>
     </div>
   </div>
 </template>
@@ -19,47 +18,47 @@ import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import axios from 'axios'
 export default {
-	/* 缓存, 递归 */
-	name: 'Detail',
-	components: {
-		DetailBanner,
-		DetailHeader,
-		DetailList
-	},
-	data() {
-		return {
-			sightName: '',
-			bannerImg: '',
-			gallaryImgs: [],
-			list: []
-		}
-	},
-	mounted() {
-		/* 发 ajax 请求, 只会执行一次 */
-		this.getDetailInfo()
-	},
-	methods: {
-		getDetailInfo() {
-			axios
-				.get('/api/detail.json', {
-					params: {
-						/* 获取路由参数 */
-						id: this.$route.params.id
-					}
-				})
-				.then(this.handleGetDataSucc)
-		},
-		handleGetDataSucc(res) {
-			res = res.data
-			if (res.ret && res.data) {
-				const data = res.data
-				this.sightName = data.sightName
-				this.bannerImg = data.bannerImg
-				this.gallaryImgs = data.gallaryImgs
-				this.list = data.categoryList
-			}
-		}
-	}
+  /* 缓存, 递归 */
+  name: 'Detail',
+  components: {
+    DetailBanner,
+    DetailHeader,
+    DetailList
+  },
+  data() {
+    return {
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      list: []
+    }
+  },
+  mounted() {
+    /* 发 ajax 请求, 只会执行一次 */
+    this.getDetailInfo()
+  },
+  methods: {
+    getDetailInfo() {
+      axios
+        .get('/api/detail.json', {
+          params: {
+            /* 获取路由参数 */
+            id: this.$route.params.id
+          }
+        })
+        .then(this.handleGetDataSucc)
+    },
+    handleGetDataSucc(res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  }
 }
 </script>
 

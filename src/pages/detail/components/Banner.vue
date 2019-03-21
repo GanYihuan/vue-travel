@@ -1,14 +1,18 @@
 <template>
   <div>
-    <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" :src="bannerImg"/>
+    <div
+      class="banner"
+      @click="handleBannerClick">
+      <img
+        :src="bannerImg"
+        class="banner-img">
       <div class="banner-info">
         <div class="banner-tittle">
-          {{this.sightName}}
+          {{ sightNameData }}
         </div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe692;</span>
-          {{this.bannerImgs.length}}
+          {{ bannerImgsData.length }}
         </div>
       </div>
     </div>
@@ -17,40 +21,56 @@
         v-show="showGallary"
         :imgs="bannerImgs"
         @close="handleGallaryClose"
-      >
-      </common-gallary>
+      />
     </fade-animation>
   </div>
 </template>
 
 <script>
-import CommonGallary from "common/gallary/Gallary";
-import FadeAnimation from "common/fade/FadeAnimation";
+import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
-  name: "DetailBanner",
+  name: 'DetailBanner',
   components: {
     CommonGallary,
     FadeAnimation
   },
   props: {
-    sightName: String,
-    bannerImg: String,
-    bannerImgs: Array
+    sightName: {
+      type: String,
+      default() {
+        return ''
+      }
+    },
+    bannerImg: {
+      type: String,
+      default() {
+        return ''
+      }
+    },
+    bannerImgs: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
   },
   data() {
     return {
-      showGallary: false
-    };
+      showGallary: false,
+      bannerImgsData: this.bannerImgs,
+      sightNameData: this.sightName
+    }
   },
   methods: {
     handleBannerClick() {
-      this.showGallary = true;
+      this.showGallary = true
     },
     handleGallaryClose() {
-      this.showGallary = false;
+      this.showGallary = false
     }
   }
-};
+}
 </script>
 
 <style lang="stylus" scoped>

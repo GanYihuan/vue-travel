@@ -3,16 +3,18 @@
     <div class="title">周末去哪儿</div>
     <ul>
       <li
-        class="item border-bottom"
         v-for="item of list"
         :key="item.id"
+        class="item border-bottom"
       >
         <div class="item-img-wrapper">
-          <img class="item-img" :src="item.imgUrl"/>
+          <img
+            :src="item.imgUrl"
+            class="item-img">
         </div>
         <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
         </div>
       </li>
     </ul>
@@ -21,10 +23,15 @@
 
 <script>
 export default {
-	name: 'HomeWeekend',
-	props: {
-		list: Array
-	}
+  name: 'HomeWeekend',
+  props: {
+    list: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
+  }
 }
 </script>
 
