@@ -5,8 +5,7 @@ The Vue build version to load with the `import` command
 import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
-/* 移动端延迟 300ms 解决 */
-import fastClick from 'fastclick'
+import fastClick from 'fastclick' // 移动端延迟 300ms 解决
 import router from './router/route'
 // import VueLazyload from 'vue-lazyload'
 /* vuex */
