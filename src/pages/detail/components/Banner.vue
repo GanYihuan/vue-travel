@@ -29,6 +29,7 @@
 <script>
 import CommonGallary from 'common/gallary/Gallary'
 import FadeAnimation from 'common/fade/FadeAnimation'
+
 export default {
   name: 'DetailBanner',
   components: {

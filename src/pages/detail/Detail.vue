@@ -17,9 +17,9 @@ import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import axios from 'axios'
+
 export default {
-  /* 缓存, 递归 */
-  name: 'Detail',
+  name: 'Detail', // 缓存, 递归
   components: {
     DetailBanner,
     DetailHeader,
@@ -34,16 +34,14 @@ export default {
     }
   },
   mounted() {
-    /* 发 ajax 请求, 只会执行一次 */
-    this.getDetailInfo()
+    this.getDetailInfo() // 发 ajax 请求, 只会执行一次
   },
   methods: {
     getDetailInfo() {
       axios
         .get('/api/detail.json', {
           params: {
-            /* 获取路由参数 */
-            id: this.$route.params.id
+            id: this.$route.params.id // 获取路由参数
           }
         })
         .then(this.handleGetDataSucc)

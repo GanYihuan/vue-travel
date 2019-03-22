@@ -33,14 +33,10 @@ export default {
   data() {
     return {
       swiperOptions: {
-        /* dots */
-        pagination: '.swiper-pagination',
-        /* dots type */
-        paginationType: 'fraction',
-        /* 当 swiper 父元素改变时，swiper 刷新 */
-        observeParents: true,
-        /* 当 swiper 父元素或自身 dom 改变时，swiper 刷新 */
-        observer: true
+        pagination: '.swiper-pagination', // dots
+        paginationType: 'fraction', // dots type
+        observeParents: true, // 当 swiper 父元素改变时，swiper 刷新
+        observer: true // 当 swiper 父元素或自身 dom 改变时，swiper 刷新
       }
     }
   },
