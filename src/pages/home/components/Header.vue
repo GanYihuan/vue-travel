@@ -23,8 +23,7 @@ import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
   computed: {
-    /* 将 vuex 共用数据 city 映射到 'city' 当中: city: city */
-    ...mapState(['city']),
+    ...mapState(['city']), // 将 vuex 共用数据 city 映射到 'city' 当中: city: city
     ...mapGetters(['doubleCity'])
   }
 }

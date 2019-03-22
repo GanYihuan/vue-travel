@@ -14,9 +14,9 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
-/* Ajax */
-import axios from 'axios'
+import axios from 'axios' // Ajax
 import { mapState } from 'vuex'
+
 export default {
   name: 'Home',
   components: {
@@ -36,25 +36,15 @@ export default {
     }
   },
   computed: {
-    /* 将 vuex 共用数据 city 映射到 'currentCity' 当中 */
-    ...mapState(['city'])
+    ...mapState(['city']) // 将 vuex 共用数据 city 映射到 'currentCity' 当中
   },
-  /* 组件被挂载的时候 */
-  mounted() {
-    /* 保存上一个数据 city 值 */
-    this.lastCity = this.city
+  mounted() { // 组件被挂载的时候
+    this.lastCity = this.city // 保存上一个数据 city 值
     this.getHomeInfo()
   },
-  /*
-  activated: 当使用 keep-alive 时，App.vue 将附加组件激活
-	当页面重新显示的时候将运行
-	deactivated(){}, 与 activated 相反
-  */
-  activated() {
+  activated() { // activated: 当使用 keep-alive 时，App.vue 将附加组件激活 当页面重新显示的时候将运行
     if (this.lastCity !== this.city) {
-      /* save preCity */
-      // 城市变化时, 重新调用 getHomeInfo() 发请求
-      this.lastCity = this.city
+      this.lastCity = this.city // save preCity 城市变化时, 重新调用 getHomeInfo() 发请求
       this.getHomeInfo()
     }
   },
@@ -65,7 +55,6 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {
-      // console.log(res)
       res = res.data
       if (res.ret && res.data) {
         const data = res.data

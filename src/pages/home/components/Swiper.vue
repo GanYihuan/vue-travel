@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <!-- v-if="showSwiper": 能循环轮播 -->
     <swiper
       v-if="showSwiper"
       :options="swiperOption">

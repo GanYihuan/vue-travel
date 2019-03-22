@@ -40,18 +40,10 @@ export default {
     }
   },
   computed: {
-    /**
-     * @name: swiper 分页解决
-     * @msg:
-     * @param {type}
-     * @return:
-     */
     pages() {
       const pages = []
-      // 分页
-      this.list.forEach((item, index) => {
-        // 每一样拥有的图标个数
-        const page = Math.floor(index / 8)
+      this.list.forEach((item, index) => { // 分页
+        const page = Math.floor(index / 8) // 每一页拥有的图标个数
         if (!pages[page]) {
           pages[page] = []
         }
