@@ -37,6 +37,7 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapMutations } from 'vuex'
+
 export default {
   name: 'CitySearch',
   props: {
@@ -61,19 +62,17 @@ export default {
   },
   watch: {
     keyword() {
-      if (this.timer) {
-        clearTimeout(this.timer)
-      }
       if (!this.keyword) {
         this.list = []
         return
       }
-      /* 节流函数 */
-      this.timer = setTimeout(() => {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => { // 节流函数
         const result = []
         for (const i in this.cities) {
           this.cities[i].forEach(value => {
-            /* can through spell and name search keyword */
             if (
               value.spell.indexOf(this.keyword) > -1 ||
 							value.name.indexOf(this.keyword) > -1

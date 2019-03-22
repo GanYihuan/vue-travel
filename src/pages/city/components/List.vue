@@ -53,6 +53,7 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
+
 export default {
   name: 'CityList',
   props: {
@@ -76,38 +77,28 @@ export default {
     }
   },
   computed: {
-    /* 将 vuex 共用数据 city 映射到 'currentCity' 当中 */
     ...mapState({
       currentCity: 'city'
     })
   },
   watch: {
     letter() {
-      /* if letter !== null */
       if (this.letter) {
-        /* this.$refs[this.letter]: isArray */
-        // console.log(this.$refs[this.letter])
         const element = this.$refs[this.letter][0]
-        /* better-scroll: scrollToElement */
         this.scroll.scrollToElement(element)
       }
     }
   },
   mounted() {
-    /* better-scroll:  */
     this.scroll = new Bscroll(this.$refs.wrapper)
   },
   methods: {
     handleCityClick(city) {
-      /* 派发 actions: changeCity */
-      // this.$store.dispatch('changeCity', city)
-      /* 直接调用 mutations, 不需要通过 actions */
-      // this.$store.commit('changeCity', city)
+      // this.$store.dispatch('changeCity', city)  // 派发 actions: changeCity
+      // this.$store.commit('changeCity', city) // 直接调用 mutations, 不需要通过 actions
       this.changeCity(city)
-      /* 页面跳转 */
       this.$router.push('/')
     },
-    /* 将 vuex 共用 mutation 函数 changeCity 映射到 'changeCity' 当中: changeCity: changeCity */
     ...mapMutations(['changeCity'])
   }
 }

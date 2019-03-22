@@ -42,11 +42,3 @@ export default new Vuex.Store({
 //   }
 // }
 // })
-
-/*
-Vuex 流程: vuex.png
-List.vue
-State -> render -> vue components -> dispatch() ->
-store.js
-Actions -> commit() -> Mutations -> Mutate -> State
-*/

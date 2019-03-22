@@ -39,14 +39,11 @@ export default {
       for (const i in this.cities) {
         letters.push(i)
       }
-      // [A, B, C ...]
-      return letters
+      return letters // [A, B, C ...]
     }
   },
-  /* virtual DMO re-render and patch */
-  updated() {
-    /* startY: 'A' 距离父元素顶部距离 */
-    this.startY = this.$refs['A'][0].offsetTop
+  updated() { // virtual DMO re-render and patch
+    this.startY = this.$refs['A'][0].offsetTop // startY: 'A' 距离父元素顶部距离
   },
   methods: {
     handleLetterClick(e) {
@@ -60,17 +57,16 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        /* 节流函数 */
-        this.timer = setTimeout(() => {
+        this.timer = setTimeout(() => { // 节流函数
           /*
           touches: 手指信息
 					e.touches[0].clientY: 点击位置到窗口顶部距离
 					79: 城市选择头高度(蓝色部分), 20: 每个字母高度
           */
           const touchY = e.touches[0].clientY - 79
-          const index = Math.floor((touchY - this.startY) / 20)
+          const index = Math.floor((touchY - this.startY) / 20) // 第几个字母
           if (index >= 0 && index < this.letters.length) {
-            this.$emit('change', this.letters[index])
+            this.$emit('change', this.letters[index]) // 点中的字母
           }
         }, 16)
       }
