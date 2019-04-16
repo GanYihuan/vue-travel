@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="search">
-      <!-- 双向绑定: v-model -->
+      <!-- Two-way binding: v-model -->
       <input
         v-model="keyword"
         class="search-input"
@@ -69,7 +69,7 @@ export default {
       if (this.timer) {
         clearTimeout(this.timer)
       }
-      this.timer = setTimeout(() => { // 节流函数
+      this.timer = setTimeout(() => { // Throttling function
         const result = []
         for (const i in this.cities) {
           this.cities[i].forEach(value => {
