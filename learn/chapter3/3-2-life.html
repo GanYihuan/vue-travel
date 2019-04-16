@@ -10,61 +10,59 @@
 <body>
   <div id="app"></div>
   <script>
-    // 生命周期函数是某个时间点执行的函数
-    let vm = new Vue({ // vm: vue 实例
+    // The lifecycle function is a function that is executed at a certain point in time
+    let vm = new Vue({ // vm: vue instance
       data() {
         return {
           test: 'hello vue'
         }
       },
       // init event & lifecycle
-      beforeCreate() { // 初始化, dom 没完成 服务端渲染调用 不要修改数据
+      beforeCreate() { // initialization dom not complete, Do not modify the data, Server rendering call
         console.log(this.$el, 'beforeCreate') // undefined
       },
       // init injections & reactivity
-      created() { // 初始化, dom 没完成 服务端渲染调用 能放数据, 数据不会被监控
+      created() { // initialization dom not complete, Can change data, Data is not monitored, Server rendering call
         console.log(this.$el, 'created') // undefined
       },
-      el: '#app',
-      template: '<div>{{test}}</div>',
+      el: '#root',
       // has 'el' option? N: when vm.$mount(el) is called
       // Y: has 'template' option? N: compile outHTML(el) as template
       // Y: compile template as render function
-      beforeMount() { // 数据和模板即将结合挂载到页面中之前一瞬间 dom 相关 服务端渲染不调用(服务端渲染没有 dom)
-        console.log(this.$el, 'beforeMount') // 没数据 <div id="app"></div>
+      template: '<div>{{test}}</div>',
+      beforeMount() { // Data and templates are about to be combined with the moment before being mounted on the page, dom Related, No data, Server rendering is not called(Server rendering does not dom)
+        // <div></div>
+        console.log(this.$el, 'beforeMount')
       },
-      render(h) { // : createElement() 耗时，效率低
+      render(h) { // h: createElement() -> time consuming, low efficiency
         throw new TypeError('render error')
-        // console.log('render function invoked')
-        // return h('div', {}, this.text)
       },
-      renderError(h, err) { // h: createElement() 开发时才被调用, 不关心子组件
+      renderError(h, err) { // h: createElement() Used in development environment, Don't care about subcomponents
         return h('div', {}, err.stack)
       },
-      errorCaptured() { }, // 会向上冒泡, 并在正式的环境中使用, 收集错误
+      errorCaptured() {}, // Will bubble up, Used in a production environment, Collecting errors
       // create vm.$el and replace 'el' with it
-      mounted() { // dom 相关 服务端渲染不调用, 服务端渲染没有 dom mounted 之后, 要外界触发才执行生命周期 经过 render 节点变为: <div>hello world</div>
-        console.log('mounted')
-        // The component is called when it is mounted to the dom 有数据 <div>hello world</div>
-        console.log(this.$el)
+      mounted() { // dom Related, Have data, Server rendering is not called, Server rendering does not dom, mounted after, Execution of the life cycle is required for external triggering
+        // <div>hello world</div>
+        console.log(this.$el, 'mounted')
       },
       beforeUpdate() { // when data changes
-        console.log('beforeUpdate')
+        console.log(this, 'beforeUpdate')
       },
-      updated() { // virtual DMO re-render and patch
-        console.log('updated')
+      updated() { // virtual DMO re-render and patch Data updates are invoked
+        console.log(this, 'updated')
       },
-      activated() { // 当使用 keep-alive 时，App.vue 将附加组件激活 当页面重新显示的时候将运行
+      activated() { // When used <keep-alive></keep-alive>, App.vue Activate add-on, Will run when the page is redisplayed
         console.log(this, 'activated')
       },
-      deactivated() { // deactivated(){}, 与 activated 相反
+      deactivated() { // deactivated(){}, contrast activated opposite
         console.log(this, 'deactivated')
       },
       beforeDestroy() { // when vm.$destory() is called
-        console.log('beforeDestroy')
+        console.log(this, 'beforeDestroy')
       },
       destroyed() { // teardown watches, child components and events listeners
-        console.log('destroyed')
+        console.log(this, 'destroyed')
       }
     })
   </script>
