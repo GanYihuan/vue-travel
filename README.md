@@ -4,7 +4,7 @@
 
 ## 课程大纲
 
-![课程大纲](https://i.loli.net/2019/04/17/5cb652e8365bb.jpeg)
+![课程大纲](https://i.loli.net/2019/04/17/5cb66b7fc419c.jpeg)
 
 ## 运行图
 
