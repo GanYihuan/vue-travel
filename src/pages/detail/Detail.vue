@@ -19,7 +19,7 @@ import DetailList from './components/List'
 import axios from 'axios'
 
 export default {
-  name: 'Detail', // 缓存, 递归
+  name: 'Detail', // cache, Recursive
   components: {
     DetailBanner,
     DetailHeader,
@@ -34,14 +34,14 @@ export default {
     }
   },
   mounted() {
-    this.getDetailInfo() // 发 ajax 请求, 只会执行一次
+    this.getDetailInfo()
   },
   methods: {
     getDetailInfo() {
       axios
         .get('/api/detail.json', {
           params: {
-            id: this.$route.params.id // 获取路由参数
+            id: this.$route.params.id // Get routing parameters
           }
         })
         .then(this.handleGetDataSucc)
