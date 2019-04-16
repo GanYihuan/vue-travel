@@ -6,6 +6,14 @@
 
 ![课程大纲](https://i.loli.net/2019/04/17/5cb652e8365bb.jpeg)
 
+## 运行图
+
+![首页](https://i.loli.net/2019/04/17/5cb653ce28837.png)
+![首页2](https://i.loli.net/2019/04/17/5cb653ee6bbbb.png)
+![城市页](https://i.loli.net/2019/04/17/5cb65401ca77f.png)
+![详情页](https://i.loli.net/2019/04/17/5cb65413ce9f3.png)
+![详情页2](https://i.loli.net/2019/04/17/5cb6542d4c696.png)
+
 ## 慕课网: Vue2.5 开发去哪儿网 App 从零基础入门到实战项目
 
 ## 2-2 hello world
