@@ -21,7 +21,7 @@
       },
       data() { // child component data must function
         return {
-          number: this.count // 父级数据转化为子组件内部数据
+          number: this.count // Parent data is converted to subcomponent internal data
         }
       },
       /*
@@ -33,11 +33,11 @@
       methods: {
         handleClick() {
           /*
-          单项数据流, count 为 props父级传入的数据, 不能在下面直接修改父组件的数据
+          Single data stream, count is props Parent incoming data, You cannot directly modify the data of the parent component below
           this.count++
           */
-          this.number++ // 这是子组件内部 data 定义的数据
-          this.$emit('change', 1) // 子组件向父组件传递数据信息
+          this.number++ // This is the inside of the subcomponent data defind data
+          this.$emit('change', 1) // Child component passes data information to parent component
         }
       }
     }
@@ -46,7 +46,7 @@
         counter: counter
       },
       el: '#root',
-      data() { // 父组件 data 可以不是 function, 不推荐
+      data() {
         return {
           total: 3
         }
