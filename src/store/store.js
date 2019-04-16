@@ -6,7 +6,6 @@ import getters from './getters'
 
 Vue.use(Vuex)
 
-/* vuex 仓库 */
 export default new Vuex.Store({
   state,
   mutations,

@@ -43,7 +43,7 @@ export default {
     }
   },
   updated() { // virtual DMO re-render and patch
-    this.startY = this.$refs['A'][0].offsetTop // startY: 'A' 距离父元素顶部距离
+    this.startY = this.$refs['A'][0].offsetTop // startY: 'A' Distance from the top of the parent element
   },
   methods: {
     handleLetterClick(e) {
@@ -57,16 +57,16 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        this.timer = setTimeout(() => { // 节流函数
+        this.timer = setTimeout(() => { // Throttling function
           /*
-          touches: 手指信息
-					e.touches[0].clientY: 点击位置到窗口顶部距离
-					79: 城市选择头高度(蓝色部分), 20: 每个字母高度
+          touches: Finger information
+					e.touches[0].clientY: Click location to the top of the window
+					79: City selection head height(Blue part), 20: Height of each letter
           */
           const touchY = e.touches[0].clientY - 79
-          const index = Math.floor((touchY - this.startY) / 20) // 第几个字母
+          const index = Math.floor((touchY - this.startY) / 20) // current touch letter index
           if (index >= 0 && index < this.letters.length) {
-            this.$emit('change', this.letters[index]) // 点中的字母
+            this.$emit('change', this.letters[index]) // whitch letter been touch
           }
         }, 16)
       }
