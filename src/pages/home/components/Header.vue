@@ -23,14 +23,14 @@ import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
   computed: {
-    ...mapState(['city']), // 将 vuex 共用数据 city 映射到 'city' 当中: city: city
+    ...mapState(['city']),
     ...mapGetters(['doubleCity'])
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-/* scoped 只用于此组件 */
+/* scoped Only for this component */
 @import '~styles/varibles.styl';
 @import './Header.styl';
 </style>

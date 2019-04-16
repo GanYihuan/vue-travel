@@ -5,11 +5,10 @@ The Vue build version to load with the `import` command
 import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
-import fastClick from 'fastclick' // 移动端延迟 300ms 解决
+import fastClick from 'fastclick' // Mobile delay 300ms
 import router from './router/route'
 // import VueLazyload from 'vue-lazyload'
-/* vuex */
-import store from './store/store'
+import store from './store/store' // vuex
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import 'swiper/dist/css/swiper.css'
@@ -17,8 +16,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 
-/* 关闭 Vue production tip */
-Vue.config.productionTip = false
+Vue.config.productionTip = false // close Vue production tip
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 // Vue.use(VueLazyload, {

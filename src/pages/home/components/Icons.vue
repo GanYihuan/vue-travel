@@ -42,8 +42,8 @@ export default {
   computed: {
     pages() {
       const pages = []
-      this.list.forEach((item, index) => { // 分页
-        const page = Math.floor(index / 8) // 每一页拥有的图标个数
+      this.list.forEach((item, index) => { // Pagination
+        const page = Math.floor(index / 8) // Number of icons per page
         if (!pages[page]) {
           pages[page] = []
         }

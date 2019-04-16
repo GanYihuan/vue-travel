@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <!-- router-link 默认换成 a 标签 -->
+      <!-- router-link default change <a></a> -->
       <router-link
         v-for="item of list"
         :key="item.id"

@@ -36,15 +36,15 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city']) // 将 vuex 共用数据 city 映射到 'currentCity' 当中
+    ...mapState(['city'])
   },
-  mounted() { // 组件被挂载的时候
-    this.lastCity = this.city // 保存上一个数据 city 值
+  mounted() {
+    this.lastCity = this.city // Save previous data city value
     this.getHomeInfo()
   },
-  activated() { // activated: 当使用 keep-alive 时，App.vue 将附加组件激活 当页面重新显示的时候将运行
+  activated() { // activated: when use keep-alive，App.vue Activate add-on Will run when the page is redisplayed
     if (this.lastCity !== this.city) {
-      this.lastCity = this.city // save preCity 城市变化时, 重新调用 getHomeInfo() 发请求
+      this.lastCity = this.city // save preCity When the city changes, invoked getHomeInfo()
       this.getHomeInfo()
     }
   },
