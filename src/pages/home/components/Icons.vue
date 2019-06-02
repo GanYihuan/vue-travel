@@ -42,7 +42,7 @@ export default {
   computed: {
     pages() {
       const pages = []
-      this.list.forEach((item, index) => { // Pagination
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8) // Number of icons per page
         if (!pages[page]) {
           pages[page] = []

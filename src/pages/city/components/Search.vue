@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="search">
-      <!-- Two-way binding: v-model -->
       <input
         v-model="keyword"
         class="search-input"
@@ -37,7 +36,6 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapMutations } from 'vuex'
-
 export default {
   name: 'CitySearch',
   props: {

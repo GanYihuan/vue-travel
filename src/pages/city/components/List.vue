@@ -3,7 +3,6 @@
     ref="wrapper"
     class="list">
     <div>
-      <!-- better-scroll 包裹两层 -->
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
@@ -53,7 +52,6 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
-
 export default {
   name: 'CityList',
   props: {
@@ -85,6 +83,7 @@ export default {
     letter() {
       if (this.letter) {
         const element = this.$refs[this.letter][0]
+        // console.log(this.$refs[this.letter], '---')
         this.scroll.scrollToElement(element)
       }
     }
