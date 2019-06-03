@@ -38,6 +38,12 @@ export default {
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
   },
+  activated() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  deativated() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll() {
       const top = document.documentElement.scrollTop
@@ -49,12 +55,6 @@ export default {
       } else {
         this.showAbs = true
       }
-    },
-    activated() {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    deativated() {
-      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 }
