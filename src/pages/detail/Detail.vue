@@ -13,10 +13,10 @@
 </template>
 
 <script>
+import axios from 'axios'
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
-import axios from 'axios'
 
 export default {
   name: 'Detail', // cache, Recursive

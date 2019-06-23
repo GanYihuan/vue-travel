@@ -7,7 +7,6 @@ import Vue from 'vue'
 import App from './App'
 import fastClick from 'fastclick' // Mobile delay 300ms
 import router from './router/route'
-// import VueLazyload from 'vue-lazyload'
 import store from './store/store' // vuex
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
@@ -19,9 +18,6 @@ import 'styles/iconfont.css'
 Vue.config.productionTip = false // close Vue production tip
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
-// Vue.use(VueLazyload, {
-//   loading: require('common/image/default.png')
-// })
 
 /* eslint-disable no-new */
 new Vue({

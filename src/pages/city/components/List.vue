@@ -52,6 +52,7 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
+
 export default {
   name: 'CityList',
   props: {
@@ -82,8 +83,8 @@ export default {
   watch: {
     letter() {
       if (this.letter) {
-        const element = this.$refs[this.letter][0]
         // console.log(this.$refs[this.letter], '---')
+        const element = this.$refs[this.letter][0]
         this.scroll.scrollToElement(element)
       }
     }
@@ -93,8 +94,6 @@ export default {
   },
   methods: {
     handleCityClick(city) {
-      // this.$store.dispatch('changeCity', city)  // 派发 actions: changeCity
-      // this.$store.commit('changeCity', city) // 直接调用 mutations, 不需要通过 actions
       this.changeCity(city)
       this.$router.push('/')
     },

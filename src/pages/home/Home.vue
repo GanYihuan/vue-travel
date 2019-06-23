@@ -39,12 +39,12 @@ export default {
     ...mapState(['city'])
   },
   mounted() {
-    this.lastCity = this.city // Save previous data city value
+    this.lastCity = this.city // Save current city value
     this.getHomeInfo()
   },
   activated() { // activated: when use keep-alive，App.vue Activate add-on Will run when the page is redisplayed
     if (this.lastCity !== this.city) {
-      this.lastCity = this.city // save preCity When the city changes, invoked getHomeInfo()
+      this.lastCity = this.city // When redisplayed after city changes, invoked getHomeInfo()
       this.getHomeInfo()
     }
   },
