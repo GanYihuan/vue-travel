@@ -7,7 +7,6 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <!-- <div class="button">{{this.$store.state.city}}</div> -->
             <div class="button">{{ currentCity }}</div>
           </div>
         </div>
@@ -83,14 +82,15 @@ export default {
   watch: {
     letter() {
       if (this.letter) {
-        // console.log(this.$refs[this.letter], '---')
         const element = this.$refs[this.letter][0]
         this.scroll.scrollToElement(element)
       }
     }
   },
   mounted() {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   methods: {
     handleCityClick(city) {

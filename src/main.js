@@ -19,7 +19,6 @@ Vue.config.productionTip = false // close Vue production tip
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

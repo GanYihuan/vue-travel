@@ -59,7 +59,7 @@ export default {
       return !this.list.length
     }
   },
-  watch: {
+  watch: { // listen change to execute, generate value, not recommend to change original value
     keyword() {
       if (!this.keyword) {
         this.list = []
