@@ -11,17 +11,25 @@
     <button @click="handleBtnClick">submit</button>
     <ul>
       <!-- <li v-for="(item, index) in list" :key="index">{{item}}</li> -->
-      <todo-item v-for="(item, index) in list" :key="index" :content="item"></todo-item>
+      <todo-item
+        v-for="(item, index) in list"
+        :key="index"
+        :content="item"
+      ></todo-item>
     </ul>
   </div>
   <script>
-    /* global component */
-    //  Vue.component('TodoItem', {
-    //    props: ['content'],
-    //    template: '<li>{{content}}</li>'
-    //  })
+    /*
+    global component
+    */
+    // Vue.component('TodoItem', {
+    //   props: ['content'],
+    //   template: '<li>{{content}}</li>'
+    // })
 
-    /* local component */
+    /*
+    local component
+    */
     let TodoItem = {
       props: ['content'],
       template: '<li>{{content}}</li>'
@@ -44,7 +52,7 @@
           this.inputValue = ''
         }
       }
-    })
+    });
   </script>
 </body>
 </html>
