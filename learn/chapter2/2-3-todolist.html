@@ -9,15 +9,16 @@
 </head>
 <body>
   <div id="app">
-    <!-- v-model: double bind -->
-    <input type="text" v-model="inputValue" />
+    <input type="text" v-model="inputValue" /> // v-model: double bind
     <button @click="handleBtnClick">submit</button>
     <ul>
       <li v-for="(item, index) in list" :key="index">{{ item }}</li>
     </ul>
   </div>
   <script>
-    // MVVM mode
+    /*
+    MVVM mode
+    */
     // M: model
     // V: view
     // VM: vue has been package
