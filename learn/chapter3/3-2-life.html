@@ -18,11 +18,11 @@
         }
       },
       // init event & lifecycle
-      beforeCreate() { // initialization dom not complete, Do not modify the data, Server rendering call
+      beforeCreate() { // no dom, don't modify data, Server render call
         console.log(this.$el, 'beforeCreate') // undefined
       },
       // init injections & reactivity
-      created() { // initialization dom not complete, Can change data, Data is not monitored, Server rendering call
+      created() { // no dom, can modify data, data not monitored, Server render call
         console.log(this.$el, 'created') // undefined
       },
       el: '#root',
@@ -30,7 +30,7 @@
       // Y: has 'template' option? N: compile outHTML(el) as template
       // Y: compile template as render function
       template: '<div>{{test}}</div>',
-      beforeMount() { // Data and templates are about to be combined with the moment before being mounted on the page, dom Related, No data, Server rendering is not called(Server rendering does not dom)
+      beforeMount() { // Data and templates ready combined before mounted on the page, dom Related, No data, Server rendering not called
         // <div></div>
         console.log(this.$el, 'beforeMount')
       },
