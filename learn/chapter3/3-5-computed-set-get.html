@@ -21,7 +21,7 @@
           get() {
             return this.firstName + ' ' + this.lastName
           },
-          set(value) {
+          set(value) { // value get() 返回值
             let arr = value.split(' ')
             this.firstName = arr[0]
             this.lastName = arr[1]
