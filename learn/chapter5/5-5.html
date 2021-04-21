@@ -20,14 +20,13 @@
   <div id="app">
     <!-- mode="in-out": 先显示再隐藏 -->
     <transition name="fade" mode="in-out">
-      <!-- 加key不让它复用dom, 否则动画不出现 -->
+      <!-- 加 key 不让它复用 dom, 否则动画不出现 -->
       <div v-if="show" key="hello">hello world 1</div>
       <div v-else key="bye">hello world 2</div>
     </transition>
     <button @click="handleClick">click3</button>
     <hr />
     <transition name="fade" mode="out-in">
-      <!-- 动态组件 -->
       <component :is="type"></component>
     </transition>
     <button @click="handleClick">click3</button>
@@ -43,15 +42,17 @@
       el: '#app',
       data() {
         return {
-          type: 'child'
+          type: 'child',
+          show: false
         }
       },
       methods: {
         handleClick() {
           this.type = this.type === 'child' ? 'child-one' : 'child'
+          this.show = !this.show
         }
       }
-    })
+    });
   </script>
 </body>
 </html>
