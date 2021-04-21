@@ -7,9 +7,9 @@
 </head>
 <body>
   <div id="app">
-    <child @click="handleClick">click</child>
+    <child @click="handleClick">click</child> <!-- alert('child click') -->
     <!-- @click.native trigger native event -->
-    <child @click.native="handleClick">native</child>
+    <child @click.native="handleClick">native</child> <!-- alert('child click') alert('custom event click') -->
   </div>
   <script>
     Vue.component('child', {
@@ -29,7 +29,7 @@
           alert('custom event click')
         }
       }
-    })
+    });
   </script>
 </body>
 </html>

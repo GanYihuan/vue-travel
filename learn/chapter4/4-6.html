@@ -20,7 +20,6 @@
   <script>
     // <slot></slot>: 被某些内容替换这部分
     Vue.component('child', {
-      // slot: <h1>Dell</h1>
       template: `<div>
                     <p>hello</p>
                     <slot>default value</slot>
@@ -28,8 +27,6 @@
     })
 
     Vue.component('body-content', {
-      // slot header: div slot=header
-      // slot footer: div slot=footer
       template: `<div>
                     <slot name="header"></slot>
                     <div class="content">content</div>
@@ -39,7 +36,7 @@
 
     let vm = new Vue({
       el: '#app'
-    })
+    });
   </script>
 </body>
 </html>

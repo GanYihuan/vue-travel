@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>动态组件与v-once指令</title>
+  <title>动态组件与 v-once</title>
   <script src="../vue.js"></script>
 </head>
 <body>
@@ -20,9 +20,11 @@
     Vue.component('child-one', {
       template: `<div v-once>child-one</div>` // v-once: 会缓存, 组件切换时不必销毁，提高静态资源性能
     })
+
     Vue.component('child-two', {
       template: `<div v-once>child-two</div>`
     })
+
     let vm = new Vue({
       el: '#app',
       data() {
@@ -35,7 +37,7 @@
           this.type = this.type === 'child-one' ? 'child-two' : 'child-one'
         }
       }
-    })
+    });
   </script>
 </body>
 </html>
