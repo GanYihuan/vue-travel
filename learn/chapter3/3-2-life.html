@@ -10,58 +10,70 @@
 <body>
   <div id="app"></div>
   <script>
-    // The lifecycle function is a function that is executed at a certain point in time
-    let vm = new Vue({ // vm: vue instance
+    /**
+     * life cycle function executed at certain point in time
+     **/
+    let vm = new Vue({ /*vm: vue instance*/
       data() {
         return {
           test: 'hello vue'
         }
       },
-      // init event & lifecycle
-      beforeCreate() { // no dom, don't modify data, Server render call
-        console.log(this.$el, 'beforeCreate') // undefined
+      /*init event & lifecycle*/
+      beforeCreate() { /*no dom, can't modify data, Server render call*/
+        console.log(this.$el, 'beforeCreate') /*undefined*/
       },
-      // init injections & reactivity
-      created() { // no dom, can modify data, data not monitored, Server render call
-        console.log(this.$el, 'created') // undefined
+      /*init injections & reactivity*/
+      created() { /*no dom, can modify data, data not monitored, Server render call*/
+        console.log(this.$el, 'created') /*undefined*/
       },
+      /*
+      has 'el' option? N: when vm.$mount(el) is called
+      has 'template' option? N: compile outHTML(el) as template
+      compile template as render function
+      */
       el: '#root',
-      // has 'el' option? N: when vm.$mount(el) is called
-      // Y: has 'template' option? N: compile outHTML(el) as template
-      // Y: compile template as render function
       template: '<div>{{test}}</div>',
-      beforeMount() { // Data and templates ready combined before mounted on the page, dom Related, No data, Server rendering not called
-        // <div></div>
-        console.log(this.$el, 'beforeMount')
+      /**
+       * 1. Data and templates ready combined before mounted on the page
+       * 2. No data
+       * 3. Server rendering not called
+       **/
+      beforeMount() {
+        console.log(this.$el, 'beforeMount') /*<div></div>*/
       },
-      render(h) { // h: createElement() -> time consuming, low efficiency
+      render(h) { /*h: createElement() -> time consuming, low efficiency*/
         throw new TypeError('render error')
       },
-      renderError(h, err) { // h: createElement() Used in development environment, Don't care about subcomponents
+      renderError(h, err) { /*h: createElement() Used in development environment, Don't care about subcomponents*/
         return h('div', {}, err.stack)
       },
-      errorCaptured() {}, // Will bubble up, Used in a production environment, Collecting errors
+      errorCaptured() {}, /*Will bubble up, Used in a production environment, Collecting errors*/
       // create vm.$el and replace 'el' with it
-      mounted() { // dom Related, Have data, Server rendering is not called, Server rendering does not dom, mounted after, Execution of the life cycle is required for external triggering
-        // <div>hello world</div>
-        console.log(this.$el, 'mounted')
+      /**
+       * 1. dom Related
+       * 2. have data
+       * 3. Server rendering is not called
+       **/
+      mounted() {
+        console.log(this.$el, 'mounted') /*<div>hello world</div>*/
       },
-      beforeUpdate() { // when data changes
+      beforeUpdate() { /*when data changes*/
         console.log(this, 'beforeUpdate')
       },
-      updated() { // virtual DMO re-render and patch Data updates are invoked
+      updated() { /*virtual DMO re-render and patch Data updates are invoked*/
         console.log(this, 'updated')
       },
-      activated() { // When used <keep-alive></keep-alive>, App.vue Activate add-on, Will run when the page is redisplayed
+      activated() { /*When used <keep-alive></keep-alive>, App.vue Activate add-on, Will run when the page is redisplayed*/
         console.log(this, 'activated')
       },
-      deactivated() { // deactivated(){}, contrast activated opposite
+      deactivated() { /*deactivated(){}, contrast activated opposite*/
         console.log(this, 'deactivated')
       },
-      beforeDestroy() { // when vm.$destory() is called
+      beforeDestroy() { /*when vm.$destory() is called*/
         console.log(this, 'beforeDestroy')
       },
-      destroyed() { // teardown watches, child components and events listeners
+      destroyed() { /*teardown watches, child components and events listeners*/
         console.log(this, 'destroyed')
       }
     });
