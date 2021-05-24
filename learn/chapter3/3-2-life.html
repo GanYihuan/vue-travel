@@ -11,6 +11,7 @@
   <div id="app"></div>
   <script>
     /**
+     * @name
      * life cycle function executed at certain point in time
      **/
     let vm = new Vue({ /*vm: vue instance*/
@@ -21,29 +22,39 @@
       },
       /*init event & lifecycle*/
       /**
+       * @name beforeCreate()
        * 1. no dom
        * 2. can't modify data
        * 3. server render call
-       **/
+       * */
       beforeCreate() {
         console.log(this.$el, 'beforeCreate') /*undefined*/
       },
       /*init injections & reactivity*/
-      created() { /*no dom, can modify data, data not monitored, Server render call*/
+      /**
+       * @name created()
+       * 1. no dom
+       * 2. can modify data
+       * 3. server render call
+       * 4. data not monitored
+       * */
+      created() {
         console.log(this.$el, 'created') /*undefined*/
       },
-      /*
-      has 'el' option? N: when vm.$mount(el) is called
-      has 'template' option? N: compile outHTML(el) as template
-      compile template as render function
-      */
+      /**
+       * @name
+       * has 'el' option? N: when vm.$mount(el) is called
+       * has 'template' option? N: compile outHTML(el) as template
+       * compile template as render function
+       * */
       el: '#root',
       template: '<div>{{test}}</div>',
       /**
+       * @name beforeMount()
        * 1. Data and templates ready combined before mounted on the page
        * 2. No data
        * 3. Server rendering not called
-       **/
+       * */
       beforeMount() {
         console.log(this.$el, 'beforeMount') /*<div></div>*/
       },
@@ -54,12 +65,13 @@
         return h('div', {}, err.stack)
       },
       errorCaptured() {}, /*Will bubble up, Used in a production environment, Collecting errors*/
-      // create vm.$el and replace 'el' with it
+      /*create vm.$el and replace 'el' with it*/
       /**
+       * @name mounted()
        * 1. dom Related
        * 2. have data
        * 3. Server rendering is not called
-       **/
+       * */
       mounted() {
         console.log(this.$el, 'mounted') /*<div>hello world</div>*/
       },
