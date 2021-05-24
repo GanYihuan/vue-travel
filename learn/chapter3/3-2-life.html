@@ -20,7 +20,12 @@
         }
       },
       /*init event & lifecycle*/
-      beforeCreate() { /*no dom, can't modify data, Server render call*/
+      /**
+       * 1. no dom
+       * 2. can't modify data
+       * 3. server render call
+       **/
+      beforeCreate() {
         console.log(this.$el, 'beforeCreate') /*undefined*/
       },
       /*init injections & reactivity*/
