@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>使用组件的细节点</title>
+  <title>comopnent detail</title>
   <script src="../vue.js"></script>
 </head>
 <body>
@@ -40,7 +40,7 @@
       methods: {
         handleClick() {
           this.number++
-          this.$emit('change') // trigger change event
+          this.$emit('change') /*trigger change event*/
         }
       }
     })
@@ -54,10 +54,10 @@
       },
       methods: {
         handleClick() {
-          alert(this.$refs.hello.innerHeight) // Acquired is dom element
+          alert(this.$refs.hello.innerHeight) /*Acquired is dom element*/
         },
         handleChange() {
-          this.total = this.$refs.one.number + this.$refs.two.number // 在组件上,获取子组件的引用
+          this.total = this.$refs.one.number + this.$refs.two.number /*Gets child component reference: $refs*/
         }
       }
     });

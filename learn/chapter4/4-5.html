@@ -11,8 +11,7 @@
     <child content="Lee"></child>
   </div>
   <script>
-    /* 当 new Vue 时, 每个组件都有 bus 属性 */
-    Vue.prototype.bus = new Vue()
+    Vue.prototype.bus = new Vue() /* Each component has a bus property  */
 
     Vue.component('child', {
       props: {

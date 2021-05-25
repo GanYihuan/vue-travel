@@ -12,20 +12,20 @@
   <script>
     Vue.component('child', {
       props: {
-        /*
-        props 特性: 父组件传递给子组件数据，子组件内部也定义好该数据名称
-        传入 content, 子组件在 props 声明了 content
-        标签里的 content 不会显示在 dom 上
-        可以使用 this.content 或 {{}} 来调用
-        非 props 特性: 子组件内部没有定义 props, 标签里的 content 会显示在 dom 上
-        不可以使用 this.content 或 {{}} 来调用
+        /**
+         * Props feature: The parent component passes data to the child component, and the child component also has the data name defined internally
+          When you pass in content, the child component declares content on props
+          The content inside the tag is not displayed on the DOM
+          This can be called using this.content or {{}}
+          Non-props feature: If there are no props defined inside the child component, the content in the tag will be displayed in the DOM
+          This cannot be called using this.content or {{}}
         */
         content: [String, Number],
         content2: {
-          type: String, // must String
-          required: true, // must pass me data
-          default: 'default value', // if not pass me data, use default
-          validator(data) { // data valid
+          type: String, /*must String*/
+          required: true, /*must pass me data*/
+          default: 'default value', /*if not pass me data, use default*/
+          validator(data) { /*data valid*/
             return data.length > 5
           }
         }

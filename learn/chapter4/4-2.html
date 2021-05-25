@@ -14,14 +14,14 @@
   </div>
   <script>
     let counter = {
-      props: { // access father data
+      props: { /*access father data*/
         count: {
           type: String
         }
       },
-      data() { // child component data must function
+      data() { /*child component data must function*/
         return {
-          number: this.count // Parent data is converted to subcomponent internal data
+          number: this.count /*Parent data is converted to subcomponent internal data*/
         }
       },
       /*
@@ -36,8 +36,8 @@
           Single data stream, count is props Parent incoming data, You cannot directly modify the data of the parent component below
           this.count++
           */
-          this.number++ // This is the inside of the subcomponent data defind data
-          this.$emit('change', 1) // Child component passes data information to parent component
+          this.number++ /*This is the inside of the subcomponent data defind data*/
+          this.$emit('change', 1) /*The child component carries the value to the parent component after it initiates the event*/
         }
       }
     }

@@ -11,15 +11,15 @@
       <h1>Dell</h1>
     </child>
     <hr />
-    <!-- content 是保留关键字 -->
+    <!-- content it's reserved keyword -->
     <body-content>
       <div class="header" slot="footer">footer</div>
       <div class="header" slot="header">header</div>
     </body-content>
   </div>
   <script>
-    // <slot></slot>: 被某些内容替换这部分
     Vue.component('child', {
+      /*<slot></slot>: Replace this section with the content*/
       template: `<div>
                     <p>hello</p>
                     <slot>default value</slot>
