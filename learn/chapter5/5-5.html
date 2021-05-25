@@ -18,7 +18,7 @@
 </head>
 <body>
   <div id="app">
-    <!-- mode="in-out": 先显示再隐藏 -->
+    <!-- mode="in-out": Show it first, then hide it -->
     <transition name="fade" mode="in-out">
       <!-- 加 key 不让它复用 dom, 否则动画不出现 -->
       <div v-if="show" key="hello">hello world 1</div>
