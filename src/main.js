@@ -7,7 +7,7 @@ import Vue from 'vue'
 import App from './App'
 import fastClick from 'fastclick' // Mobile delay 300ms
 import router from './router/route'
-import store from './store/store' // vuex
+import store from './store/store'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import 'swiper/dist/css/swiper.css'

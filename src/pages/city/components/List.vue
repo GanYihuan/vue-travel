@@ -1,7 +1,9 @@
 <template>
   <div
     ref="wrapper"
-    class="list">
+    class="list"
+  >
+    <!-- outer <div></div> for better-scroll  -->
     <div>
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
@@ -25,7 +27,7 @@
         </div>
       </div>
       <!-- cities it's object, so use (item, key) -->
-      <!-- (item, key)-> key: a,b,c... :ref='a,b,c...' -->
+      <!-- (item, key)-> key: A,B,C... :ref='A,B,C...' -->
       <div
         v-for="(item, key) of cities"
         :key="key"
