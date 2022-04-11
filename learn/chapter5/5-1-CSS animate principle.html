@@ -2,21 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vue 动画 - Vue中CSS动画原理</title>
+  <title>Vue动画 - Vue中CSS动画原理</title>
   <style>
     .fade-enter {
       opacity: 0;
     }
-
     .fade-enter-active {
       transition: opacity 2s;
       color: #00f;
     }
-
     .fade-leave-to {
       opacity: 0;
     }
-
     .fade-leave-active {
       transition: opacity 2s;
       color: #f00;
@@ -25,8 +22,8 @@
   <script src="../vue.js"></script>
 </head>
 <body>
-  <!-- animate time -->
   <!-- 5-1.png/5-12.png -->
+  <!-- Dom wraps <transiton></transition> tag which contains four class names to control the animation -->
   <div id="app">
     <transition name="fade">
       <div v-if="show">hello world</div>

@@ -12,15 +12,15 @@
   <script>
     /**
      * @name
-     * life cycle function executed at certain point in time
+     * life cycle: function executed at certain point in time
      **/
-    let vm = new Vue({ /*vm: vue instance*/
+    let vm = new Vue({ /* vm: vue instance */
       data() {
         return {
           test: 'hello vue'
         }
       },
-      /*init event & lifecycle*/
+      /* init event & lifecycle */
       /**
        * @name beforeCreate()
        * 1. no dom
@@ -28,15 +28,14 @@
        * 3. server render call
        * */
       beforeCreate() {
-        console.log(this.$el, 'beforeCreate') /*undefined*/
+        console.log(this.$el, 'beforeCreate') /* undefined */
       },
-      /*init injections & reactivity*/
+      /* init injections & reactivity */
       /**
        * @name created()
        * 1. no dom
-       * 2. can modify data
+       * 2. can modify data, data not monitored
        * 3. server render call
-       * 4. data not monitored
        * */
       created() {
         console.log(this.$el, 'created') /*undefined*/
@@ -53,7 +52,7 @@
        * @name beforeMount()
        * 1. Data and templates ready combined before mounted on the page
        * 2. No data
-       * 3. Server rendering not called
+       * 3. server render not called
        * */
       beforeMount() {
         console.log(this.$el, 'beforeMount') /*<div></div>*/
@@ -68,9 +67,9 @@
       /*create vm.$el and replace 'el' with it*/
       /**
        * @name mounted()
-       * 1. dom Related
+       * 1. dom related
        * 2. have data
-       * 3. Server rendering is not called
+       * 3. server render not called
        * */
       mounted() {
         console.log(this.$el, 'mounted') /*<div>hello world</div>*/

@@ -25,7 +25,10 @@
       <div v-else key="bye">hello world 2</div>
     </transition>
     <button @click="handleClick">click3</button>
+
     <hr />
+
+    <!-- bind -->
     <transition name="fade" mode="out-in">
       <component :is="type"></component>
     </transition>

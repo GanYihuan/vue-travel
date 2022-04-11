@@ -2,38 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>在Vue中使用 animate.css 库</title>
+  <title>在Vue中使用animate.css库</title>
   <link rel="stylesheet" href="../animate.css">
   <style>
     @keyframes bounce-in {
       0% {
         transform: scale(0);
       }
-
       50% {
         transform: scale(1.5);
       }
-
       100% {
         transform: scale(1);
       }
     }
-
     .fade-enter-active {
       transform-origin: left center;
       animation: bounce-in 2s;
     }
-
     .fade-leave-active {
       transform-origin: left center;
       animation: bounce-in 2s reverse;
     }
-
+    /* define animate name */
     .active {
       transform-origin: left center;
       animation: bounce-in 2s;
     }
-
     .leave {
       transform-origin: left center;
       animation: bounce-in 2s reverse;
@@ -58,8 +53,9 @@
 
     <hr />
 
-    <!-- use Animate.css library -->
+    <!-- use animate.css library -->
     <!-- animated: init Animate.css -->
+    <!-- swing: inside animate.css library -->
     <transition enter-active-class="animated swing" leave-active-class="animated shake">
       <div v-if="show">hello world 3</div>
     </transition>

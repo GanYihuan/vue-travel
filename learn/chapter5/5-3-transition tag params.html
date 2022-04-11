@@ -9,7 +9,6 @@
     .fade-leave-to {
       opacity: 0;
     }
-
     .fade-enter-active,
     .fade-leave-active {
       transition: opacity 2s;
@@ -21,7 +20,7 @@
   <div id="app">
     <!-- type="transition": Animation effects are self-defined first -->
     <!-- :duration="{enter: 5000, leave: 10000}": 5s after, enter animateClass will clear, 10s after, leave animateClass will clear -->
-    <!-- appear: Animation appears as soon as it loads -->
+    <!-- appear: Whether to apply transition on initial render -->
     <transition
       name="fade"
       type="transition"
