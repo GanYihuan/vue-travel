@@ -23,6 +23,6 @@ npm i nvm
 nvm ls
 nvm i 10.15.0
 nvm use 10.15.0
-vue init webpack imooc-travel
+vue init webpack vue-travel
 npm run start
 ```

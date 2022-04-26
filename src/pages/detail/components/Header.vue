@@ -4,15 +4,13 @@
       v-show="showAbs"
       class="header-abs"
       tag="div"
-      to="/"
-    >
+      to="/">
       <div class="iconfont header-abs-back">&#xe624;</div>
     </router-link>
     <div
       v-show="!showAbs"
       :style="opacityStyle"
-      class="header-fixed"
-    >
+      class="header-fixed">
       <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe624;</div>
       </router-link>
@@ -50,7 +48,9 @@ export default {
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
-        this.opacityStyle = { opacity: opacity }
+        this.opacityStyle = {
+          opacity: opacity
+        }
         this.showAbs = false
       } else {
         this.showAbs = true
