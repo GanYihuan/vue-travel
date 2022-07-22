@@ -11,10 +11,10 @@
     <!-- operate array: chrome: vm.list = {[...]} -->
     <!-- :key="index.id": A unique identifier -->
     <!-- (item, index) in list: Recommend to write of -->
-    <div v-for="(item, index) of list" :key="index.id">{{ item.text }} --- {{ index }}</div>
+    <div v-for="(item, index) of list" :key="item.id">{{ item.text }} --- {{ index }}</div>
     <hr />
     <!-- when cycle, template not render in page -->
-    <template v-for="(item, index) of list" :key="index.id">
+    <template v-for="(item, index) of list" :key="item.id">
       <div>{{ item.text }} --- {{ index }}</div>
       <span> {{ item.text }} </span>
     </template>

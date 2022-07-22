@@ -19,21 +19,18 @@
     </ul>
   </div>
   <script>
-    /**
-     * global component
-     * **/
+    // global component
     Vue.component('TodoItem', {
       props: ['content'],
       template: '<li>{{content}}</li>'
     })
 
-    /**
-     * local component
-     * **/
+    // local component
     let TodoItem = {
       props: ['content'],
       template: '<li>{{content}}</li>'
     }
+
     let app = new Vue({
       components: {
         TodoItem: TodoItem

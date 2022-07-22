@@ -7,8 +7,7 @@
         <div
           v-for="item of page"
           :key="item.id"
-          class="icon"
-        >
+          class="icon">
           <div class="icon-img">
             <img
               :src="item.imgUrl"

@@ -4,7 +4,8 @@ try {
   if (localStorage.city) {
     defaultCity = localStorage.city
   }
-} catch (e) { }
+} catch (e) {
+}
 
 export default {
   city: defaultCity
